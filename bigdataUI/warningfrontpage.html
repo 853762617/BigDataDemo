@@ -1,0 +1,565 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>风险预警推送与干预首页</title>
+<link href="css/style.css"  rel="stylesheet" type="text/css" media="all" />
+<script src="js/echarts.js" charset="utf-8"></script>
+<script src="js/hubei.js" charset="utf-8"></script>
+
+
+<body>
+<div class="wpbox">
+    <div class="bnt">
+        <div class="topbnt_left fl">
+            <ul><li><a href="index.html">首页</a></li>
+                <li><a href="#">报表查询</a></li>
+                <li class="active"><a href="WarringFrontPage.html">风险预警</a></li>
+                <li><a href="#">研判分析</a></li>
+            </ul>
+        </div>
+        <h1 class="tith1 fl">政工大数据平台</h1>
+        <div class=" fr topbnt_right">
+            <ul>
+                <li><a href="javascript:history.back(-1);">返回</a></li>
+                <li><a href="#">注销</a></li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- bnt end -->
+    <div class="left1">
+        <div class="aleftboxttop"><h2 class="tith2">今日风险预警数据统计</h2>
+            <div class="lefttoday_tit" style=" height:8%"><p class="fl">地区：湖北</p><p class="fr">2018-06-14</p></div>
+            <div class="lefttoday_number">
+                <div class="widget-inline-box text-center fl">
+                    <p>风险预警</p>
+                    <h3 class="ceeb1fd">54</h3>
+<!--                    <h4 class="text-muted pt6">环比<img src="img/iconup.png" height="16" />2%</h4>-->
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>已处理</p>
+                    <h3 class="c24c9ff">46</h3>
+<!--                    <h4 class="text-muted pt6">环比<img src="img/icondown.png" height="16" />3%</h4>-->
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>未处理</p>
+                    <h3 class="cffff00">4</h3>
+<!--                    <h4 class="text-muted pt6">环比<img src="img/icondown.png" height="16" />3%</h4>-->
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>处理中</p>
+                    <h3 class="c11e2dd">4</h3>
+<!--                    <h4 class="text-muted pt6">环比<img src="img/icondown.png" height="16" />3%</h4>-->
+                </div>
+            </div>
+            <!-- lefttoday_number end -->
+        </div>
+        <div class="aleftboxtmidd">
+            <h2 class="tith2">风险预警地区统计</h2>
+            <div class="lefttoday_tit height ht"><p class="fl">状态：已处理</p><p class="fr">时间段：2018-06-10 至 2018-06-14</p></div>
+            <div id="aleftboxtmidd" class="aleftboxtmiddcont"></div>
+        </div>
+        <div class="aleftboxtbott">
+            <h2 class="tith2">风险预警类型统计</h2>
+            <div class="lefttoday_tit height"><p class="fl">状态：已处理</p><p class="fr">时间段：2018-06-10 至 2018-06-14</p></div>
+            <div id="aleftboxtbott" class="aleftboxtbott_cont" ></div>
+        </div>
+    </div>
+    <!--  left1 end -->
+    <div class="mrbox">
+        <div class="mrbox_topmidd" style="width: 69%;">
+            <div id="hubeiwarningmap" class="amiddboxttop">
+<!--                <h2 class="tith2 pt1">实时监控统计</h2>-->
+            </div>
+            <!--  amiddboxttop end-->
+            <div class="amidd_bott">
+                <div class="amiddboxtbott1 fl" >
+                    <h2 class="tith2 pt1">风险预警七日统计</h2>
+                    <div id="amiddboxtbott1" class="amiddboxtbott1content" ></div>
+                </div>
+
+                <div class="amiddboxtbott2 fl"><h2 class="tith2 pt1">风险预警月度统计</h2>
+                    <div id="amiddboxtbott2" class="amiddboxtbott2content"></div>
+                </div>
+            </div>
+            <!-- amidd_bott end -->
+        </div>
+        <!-- mrbox_top end -->
+        <div class="mrbox_top_right">
+            <div class="arightboxtopfull"><h2 class="tith2">风险预警列表</h2>
+                <div class="lefttoday_tit"><p class="fl"></p><p class="fr"></p></div>
+                <div class="left2_table">
+                    <ul>
+                        <li>
+                            <p class="fl"><b>武汉市</b><br>
+                                武汉市支队XXX存在近期成绩连续下滑情况；<br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <p class="fl"><b>宜昌市</b><br>
+                                宜昌市支队XXX存在学习APP使用不达标情况；<br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li>
+                            <p class="fl"><b>武汉市</b><br>
+                                武汉市支队XXX存在未进行客观题考试情况；<br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <p class="fl"><b>黄石市</b><br>
+                                黄石市支队XXX存在体能连续下降情况；<br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li>
+                            <p class="fl"><b>武汉市</b><br>
+                                武汉市支队存在未录入收入情况；<br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <p class="fl"><b>宜昌市</b><br>
+                                宜昌市支队存在未录入收入情况；<br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li>
+                            <p class="fl"><b>黄冈市</b><br>
+                                黄冈市支队存在未录入收入情况；<br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <p class="fl"><b>随州市</b><br>
+                                随州市支队XXX存在未完成必修课情况；<br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li>
+                            <p class="fl"><b>···</b><br>······
+                                <br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                        <li class="bg">
+                            <p class="fl"><b>···</b><br>······
+                                 <br>
+                            </p>
+                            <p class="fr pt17">2018-06-22</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- mrbox_top_right end -->
+    </div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('aleftboxtmidd'));
+    option = {
+        color:['#76c4bf','#e5ffc7','#508097','#4d72d9'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left:10,
+            right:40,
+            top:20,
+            bottom:0,
+            containLabel: true
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c} ({d}%)",
+            textStyle:{
+                fontSize:12
+            }
+        },
+        calculable : true,
+        series : [
+
+            {
+                name:'面积模式',
+                type:'pie',
+                radius : [5, 60],
+                center : ['50%', '55%'],
+                roseType : 'area',
+                data:[
+                    {value:10, name:'武汉市'},
+                    {value:5, name:'宜昌市'},
+                    {value:15, name:'荆州市'},
+                    {value:25, name:'黄石市'},
+                    {value:13, name:'随州市'}
+                ].sort(function (a, b) { return a.value - b.value; }),
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('aleftboxtbott'));
+    option = {
+        color:['#7ecef4'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        /*grid: {
+            left:20,
+            right:20,
+            top:13,
+            bottom:6,
+            containLabel: true
+        },*/
+
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.2)"
+            },
+            axisTick:{
+                alignWithLabel:true
+            }
+        },
+        xAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.3)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                interval:0,
+                rotate:-90,
+                color:"rgba(255,255,255,.5)"
+            },
+            axisTick:{
+                alignWithLabel:true
+            },
+            data: ['学习教育','心理健康','网络消费','绩效考核','智慧党建','思想政治','体能训练']
+        },
+        series: [
+            {
+                name: ' ',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: 'rgba(230,253,139,.7)'},
+                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                            ]
+                        )
+                    }
+                },
+                data: [54,32,44,23,17,19,27]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('hubeiwarningmap'));
+
+    var option = {
+        title: {
+            text: '湖北省',
+            left:'center',
+            textStyle: {
+                color: '#ccc',
+                fontSize:14
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter:function (params) {
+                var res = '';
+                res+=params['data'].name+'</br>';
+                res+='预警数' +' : '+params['data'].value2+'</br>';
+                return res;
+            }
+            //formatter: '{b}<br/>{c}'
+        },//鼠标放在地图上时，显示的内容及样式控制
+        visualMap: {
+            show: false,//色系条是否显示
+            min: 0,
+            max: 45000,//取其区间值就代表色系inRange中的一种颜色
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'], // 文本，默认为数值文本
+            calculable: true,
+            inRange:{
+                color: ['#4d72d9', '#42a8be','#7ecef4'],//上色范围
+            }
+        },//给地图上色
+        series: [{
+            name: '湖北省',
+            type: 'map',
+            mapType: '湖北',
+            selectedMode : 'single',
+            label: {
+                normal: {show: true},
+                emphasis: {show: true}
+            },
+            itemStyle: {
+                normal: {
+                    borderColor: '#fff',
+                    areaColor: '#fff',
+                    borderWidth: 2,
+                },//正常样式
+                emphasis: {
+                    areaColor: 'red',
+                    borderWidth: 1,
+                    borderColor: 'yellow',
+                }//鼠标事件区块样式
+            },
+            data:[
+                {name: '武汉市', value: 40500,value2:10},
+                {name: '黄石市', value: 23000,value2:25},
+                {name: '十堰市', value: 22500,value2:9},
+                {name: '宜昌市', value: 40500,value2:1},
+                {name: '襄阳市', value: 45000,value2:23},
+                {name: '鄂州市', value: 37000,value2:11},
+                {name: '荆门市', value: 40500,value2:12},
+                {name: '孝感市', value: 0,value2:7},
+                {name: '荆州市', value: 11161,value2:15},
+                {name: '黄冈市', value: 15000,value2:5},
+                {name: '咸宁市', value: 20000,value2:22},
+                {name: '随州市', value: 25000,value2:13},
+                {name: '仙桃市', value: 30000,value2:18},
+                {name: '潜江市', value: 35000,value2:10},
+                {name: '天门市', value: 36000,value2:14},
+                {name: '恩施土家族苗族自治州', value: 45000,value2:6},
+                {name: '神农架林区', value: 23000,value2:8},
+            ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
+            label: {
+                normal: {
+                    show: true,
+                    formatter:function(val){
+                        var area_content =  '{a|' + val.name + '}' + '-' + '{b|' + val.data.value2 + '}';
+                        return area_content.split("-").join("\n");
+                    },//让series 中的文字进行换行
+                    rich: {
+                        a: {
+                            color: '#fff'
+                        },
+                        b: {
+                            color: 'yellow',
+                            fontFamily: 'Microsoft YaHei',
+                            fontSize: 14,
+                        }
+                    },//富文本样式,就是上面的formatter中'{a|'和'{b|'
+                },
+                emphasis: {show: true}
+            },//地图中文字内容及样式控制
+        }]
+    };
+    myChart.setOption(option, true);
+    myChart.on('click', function(params){
+        alert(1);
+        console.log(params);//此处写点击事件内容
+    });//点击事件，此事件还可以用到柱状图等其他地图
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('amiddboxtbott2'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left:60,
+            right:60,
+            top:50,
+            bottom:40
+        },
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['2017年','2018年']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel:{
+                    color:"rgba(255,255,255,.7)"
+                },
+
+                data: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+                axisPointer: {
+                    type: 'shadow'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 250,
+                interval: 50,
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+
+                axisLabel: {
+                    formatter: '{value}'
+                }
+            },
+            {
+                type: 'value',
+                name: '',
+                max: 25,
+                interval: 5,
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} °C'
+                }
+            }
+        ],
+        series: [
+
+            {
+                name:'2017年',
+                type:'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#b266ff'},
+                                {offset: 1, color: '#121b87'}
+                            ]
+                        )
+                    }
+                },
+                data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name:'2018年',
+                type:'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#00f0ff'},
+                                {offset: 1, color: '#032a72'}
+                            ]
+                        )
+                    }
+                },
+                data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('amiddboxtbott1'));
+    option = {
+        color:['#7de494','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+
+        grid: {
+            left: '5%',
+            right: '8%',
+            bottom: '7%',
+            top:'8%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.7)"
+            },
+            data: ['6-08','6-09','6-10','6-11','6-12','6-13','6-14']
+        },
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.7)"
+            },
+        },
+        series: [
+            {
+                name:'2014年',
+                type:'line',
+                stack: '总量',
+                areaStyle: {normal: {}},
+                data:[120, 132, 101, 134, 90, 230, 210]
+            }
+
+        ]
+    };
+    myChart.setOption(option);
+</script>
+
+
+</body>
+</html>

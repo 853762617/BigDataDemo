@@ -140,7 +140,7 @@ html,body{ font-family: 微软雅黑, MicrosoftYahei, sans-serif; color:#fff; ba
 .pt20{ padding-top: 22px;}
 /* .box_pad{ margin: 3px 20px; } */
 
-.mrboxtm-map{background:url(../img/mapbg.png); background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width: 90%; margin-left: 4%; margin-top: 1%;height: 90%;position: relative;}
+.mrboxtm-map{/*background:url(../img/mapbg.png); */background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width: 90%; margin-left: 4%; margin-top: 1%;height: 90%;position: relative;}
 .hdmrboxtm-map{background:url(../img/hdmap.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width: 90%; margin-left: 4%; margin-top: 1%;height: 66%; position: relative;}
 .mrboxtm-map li{ width: 23px; height: 22px; line-height: 22px; color: #fff; text-align: center; background-position: center; background-repeat: no-repeat;font-size: 12px; position: absolute;}
 .mrboxtm-map li.bluer{background-image:url(../img/blue_rico.png);}

@@ -1,0 +1,1267 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>个人画像首页</title>
+<link href="css/style-individualportrait.css"  rel="stylesheet" type="text/css" media="all" />
+<script src="js/echarts.js" charset="utf-8"></script>
+<script src="js/hubei.js" charset="utf-8"></script>
+
+
+<body>
+<div class="bnt">
+  <div class="topbnt_left fl">
+   <ul>
+           <li ><a href="index.html">首页</a></li>
+           <li ><a href="monthly.html">报表查询</a></li>
+           <li ><a href="warningfrontpage.html">风险预警</a></li>
+           <li class="active"><a href="multi-analysis.html">研判分析</a></li>
+   </ul>
+  </div>
+  <h1 class="tith1 fl">政工大数据</h1>
+  <div class=" fr topbnt_right">
+    <ul>
+        <li><a href="javascript:history.back(-1);">返回</a></li>
+        <li><a href="#">注销</a></li>
+        <li><a href="#" >生成月报</a></li>
+    </ul>
+   </ul>
+  </div>
+</div>
+<!-- bnt end -->
+<div class="left1 pleft1">
+    <div class="plefttoday"><h2 class="tith2">网络消费</h2>
+        <div id="internetconsume" class="lpeftmidbotcont"></div>
+    <!-- lefttoday_number end -->
+    <!--  lefttoday_bar end-->
+    </div>
+    <div class="lpeftmidbot">
+        <h2 class="tith2">应用阅读时长统计</h2>
+        <div id="lpeftmidbot" class="lpeftmidbotcont"></div>
+    </div>
+    <div class="lpeftbot">
+            <h2 class="tith2">体能训练</h2>
+            <div id="training" class="lpeftmidbotcont"></div>
+    </div>
+</div>
+<!--  left1 end -->
+<!--  <div class="left2">
+  <div class="pleftbox2top">
+    <h2 class="tith2">绩效成绩统计</h2>
+    <div id="pleftbox2top" class="pleftbox2topcont"></div>
+  </div>
+  <div class="pleftbox2midd"><h2 class="tith2">绩效评价情况</h2>
+  <div id="jixiao"class="pleftbox2topcont">
+      
+    </div>
+
+  </div>
+  <div class="lpeft2bot">
+    <h2 class="tith2">消费情况统计</h2>
+
+    <div class="pvr fl liwp lpeftb2otcont1" style="height:80%;" >
+      <div id="pleftbox2bott_cont"class="lpeftb2otcont"  style="height:100%;"></div>
+    </div>
+
+
+    </div>
+</div>
+</div>*left1 end -->
+<div class="mrbox prbox">
+      <div class="mrbox_top">
+          <div class="mrbox_top_midd">
+              <div class="mrboxtm-mbox"><h2 class="tith2 pt1">学习教育</h2>
+                <div id="pmrboxtop" class="pmrboxbottomcont" style=" ">
+                 </div>
+              </div>
+<!--  map end-->
+                <div class="pmrboxbottom"><h2 class="tith2 pt1">思想政治</h2>
+                    <div id="pmrboxbottom" class="pmrboxbottomcont" ></div>
+                </div>
+          </div>
+        <!-- mrbox_top_midd end -->
+        <div class="mrbox_top_right">
+          <div class="pmrtop1">
+            <h2 class="tith2">照片</h2>
+          </div>
+            <!-- pmrtop  -->
+
+            <div class="left2_table" style=" margin-top: 3.3%">
+              <h2 class="tith2">个人信息</h2>
+              <div class="pmrtop_cont pmrtop_wid" >
+                <ul>
+					
+                     <li>
+                     <p class="fl">
+                         岳佳奇
+                     </p>
+                     </li>
+					 
+                     <li class="bg">
+                     <p class="fl">
+                         男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;汉族
+                     </p>
+                     </li>
+					 
+					 <li>
+					 <p class="fl">
+                         1998-07-28
+					 </p>
+					 </li>
+					 
+					 <li class="bg">
+                         <p class="fl">
+                             珞珈山大队队长
+                         </p>
+					 </li>
+                    <li>
+                        <p class="fl">
+                            &nbsp;
+                        </p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl">
+                            &nbsp;
+                        </p>
+                    </li>
+                </ul>
+              </div>
+              </div>
+              <!-- pmrtop  -->
+
+        </div>
+      </div>
+
+
+      <div class="mrbox_bottom">
+          <div class="rbottom_box1"><h2 class="tith2">智慧党建</h2>
+              <div id="prbottom_box1" class="prbottom_box1cont" style="width:45%;float: left;"></div>
+              <div id="prbottom_box3" class="prbottom_box3cont" style="width:45%;float: left;"></div>
+          </div>
+          <div class="rbottom_box2"><h2 class="tith2 pt2">心理健康</h2>
+          <div id="mentalhealth" class="prbottom_box1cont"></div></div>
+
+      </div>
+</div>
+<script type="text/javascript">
+
+
+    var option = {
+        title: {
+            text: '',
+            link: 'http://echarts.baidu.com/',
+            subtext: ''
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter:function (params) {
+                var res = '';
+                res+=params['data'].name+'</br>';
+                res+='用户数' +' : '+params['data'].value2+'</br>';
+                return res;
+            }
+            //formatter: '{b}<br/>{c}'
+        },//鼠标放在地图上时，显示的内容及样式控制
+        visualMap: {
+            show: false,//色系条是否显示
+            min: 0,
+            max: 45000,//取其区间值就代表色系inRange中的一种颜色
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'], // 文本，默认为数值文本
+            calculable: true,
+            inRange:{
+                color: ['#42a8be','#00a69c', '#95ea95'],//上色范围
+            }
+        },//给地图上色
+        series: [{
+            name: '湖北省',
+            type: 'map',
+            mapType: '湖北',
+            selectedMode : 'single',
+            label: {
+                normal: {show: true},
+                emphasis: {show: true}
+            },
+            itemStyle: {
+                normal: {
+                    borderColor: '#fff',
+                    areaColor: '#fff',
+                    borderWidth: 2,
+                },//正常样式
+                emphasis: {
+                    areaColor: 'red',
+                    borderWidth: 1,
+                    borderColor: 'yellow',
+                }//鼠标事件区块样式
+            },
+            data:[
+                {name: '武汉市', value: 40500,value2:1024},
+                {name: '黄石市', value: 23000,value2:1024},
+                {name: '十堰市', value: 22500,value2:1024},
+                {name: '宜昌市', value: 40500,value2:1024},
+                {name: '襄阳市', value: 45000,value2:1024},
+                {name: '鄂州市', value: 37000,value2:1024},
+                {name: '荆门市', value: 40500,value2:1024},
+                {name: '孝感市', value: 0,value2:1024},
+                {name: '荆州市', value: 11161,value2:1024},
+                {name: '黄冈市', value: 15000,value2:1024},
+                {name: '咸宁市', value: 20000,value2:1024},
+                {name: '随州市', value: 25000,value2:1024},
+                {name: '仙桃市', value: 30000,value2:1024},
+                {name: '潜江市', value: 35000,value2:1024},
+                {name: '天门市', value: 36000,value2:1024},
+                {name: '恩施土家族苗族自治州', value: 45000,value2:1024},
+                {name: '神农架林区', value: 23000,value2:1024},
+            ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
+            label: {
+                normal: {
+                    show: true,
+                    formatter:function(val){
+                        var area_content =  '{a|}';
+                        return area_content.split("-").join("\n");
+                    },//让series 中的文字进行换行
+                    rich: {
+                        a: {
+                            color: 'black'
+                        },
+                        b: {
+                            color: 'yellow',
+                            fontFamily: 'Microsoft YaHei',
+                            fontSize: 14,
+                        }
+                    },//富文本样式,就是上面的formatter中'{a|'和'{b|'
+                },
+                emphasis: {show: true}
+            },//地图中文字内容及样式控制
+        }]
+    };
+    myChart.setOption(option, true);
+    myChart.on('click', function(params){
+        alert(1);
+        console.log(params);//此处写点击事件内容
+    });//点击事件，此事件还可以用到柱状图等其他地图
+</script>
+
+<script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('lpeftmidbot'));
+        option = {
+            backgroundColor: 'rgba(1,202,217,.2)',
+            grid: {
+                      left:60,
+                      right:20,
+                      top:45,
+                      bottom:40
+                    },
+
+     
+      legend: {
+        top:10,
+        textStyle:{
+          fontSize: 10,
+          color:'rgba(255,255,255,.7)'
+        },
+          data:['应用使用时长','阅读时长']
+      },
+      xAxis: [
+          {
+              type: 'category',
+              axisLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,.2)'
+                }
+              },
+              splitLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,.1)'
+                }
+              },
+              axisLabel:{
+                  color:"rgba(255,255,255,.7)"
+              },
+
+              data: ['武汉市支队','仙桃市支队'],
+              axisPointer: {
+                  type: 'shadow'
+              }
+          }
+      ],
+      yAxis: [
+          {
+              type: 'value',
+              name: '',
+              min: 0,
+              max: 2000,
+              interval: 500,
+              axisLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,.3)'
+                }
+              },
+              splitLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,.01)'
+                }
+              },
+
+              axisLabel: {
+                  formatter: '{value} h'
+              }
+          },
+          {
+              type: 'value',
+              name: '',
+              max: 25,
+              interval: 5,
+              axisLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,0)'
+                }
+              },
+              splitLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,0)'
+                }
+              },
+              axisLabel: {
+                  formatter: '{value} °C'
+              }
+          }
+      ],
+      series: [
+
+          {
+              name:'应用使用时长',
+              type:'bar',
+              itemStyle: {
+                              normal: {
+                                  color: new echarts.graphic.LinearGradient(
+                                      0, 0, 0, 1,
+                                      [
+                                          {offset: 0, color: '#b266ff'},
+                                          {offset: 1, color: '#121b87'}
+                                      ]
+                                  )
+                              }
+                          },
+              data:[1000, 1200]
+          },
+          {
+              name:'阅读时长',
+              type:'bar',
+
+              itemStyle: {
+                              normal: {
+                                  color: new echarts.graphic.LinearGradient(
+                                      0, 0, 0, 1,
+                                      [
+                                          {offset: 0, color: '#00f0ff'},
+                                          {offset: 1, color: '#032a72'}
+                                      ]
+                                  )
+                              }
+                          },
+              data:[900, 950]
+          }
+      ]
+  };
+        myChart.setOption(option);
+    </script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('internetconsume'));
+    option = {
+        color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['其他','电信','联通','移动','铁通','天威']
+        },
+        grid: {
+            left: 10,
+            right: 10,
+            top: 40,
+            bottom: 10,
+            containLabel: true
+        },
+
+        xAxis : [
+            {
+                type : 'category',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+                data : ['03-15','03-16','03-17','03-18','03-19','03-20','03-21']
+            }
+        ],
+        yAxis : [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 1000,
+                interval: 250,
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+
+
+                type : 'value'
+            }
+
+        ],
+        series : [
+
+            {
+                name:'其他',
+                type:'line',
+                data:[100, 500, 245, 600, 720, 680, 601]
+            },
+            {
+                name:'电信',
+                type:'line',
+                data:[200, 190, 210, 400, 200, 510, 200]
+            },
+            {
+                name:'联通',
+                type:'line',
+                data:[270, 690, 250, 50, 100, 260, 200]
+            },
+            {
+                name:'移动',
+                type:'line',
+                data:[900, 400, 700, 100, 900, 800, 700]
+            },
+            {
+                name:'铁通',
+                type:'line',
+                data:[600, 800, 700, 500, 900, 400, 400]
+            },
+            {
+                name:'天威',
+                type:'line',
+                data:[500, 700, 400, 600, 400, 500, 600]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('training'));
+    option = {
+        color:['#7ecef4'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left:20,
+            right:20,
+            top:15,
+            bottom:6,
+            containLabel: true
+        },
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.2)"
+            },
+            axisTick:{
+                alignWithLabel:true
+            }
+        },
+        xAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.3)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                interval:0,
+                color:"rgba(255,255,255,.5)"
+            },
+            axisTick:{
+                alignWithLabel:true
+            },
+            data: ['1','2','3','4','5','6','7','8','9','10','11','12']
+        },
+        series: [
+            {
+                name: ' ',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: 'rgba(230,253,139,.7)'},
+                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                            ]
+                        )
+                    }
+                },
+                data: [54,32,44,23,17,19,27,54,32,44,23,17]
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('mentalhealth'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip : {
+            trigger: 'axis'
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        legend: {
+            orient: 'vertical',
+            x : 'left',
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['武汉市','宜昌市','鄂州市']
+        },
+        calculable : true,
+        polar : [
+            {
+                indicator : [
+                    {text : '指标1',color:'rgba(255,255,255,.7)', max  : 100},
+                    {text : '指标2',color:'rgba(255,255,255,.7)', max  : 100},
+                    {text : '指标3',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '指标4',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '指标5',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '指标6',color:'rgba(255,255,255,.7)',  max  : 100}
+                ],
+                radius : 60
+            }
+        ],
+        series : [
+            {
+                name: '心理健康',
+                type: 'radar',
+                itemStyle: {
+                    normal: {
+                        areaStyle: {
+                            type: 'default'
+                        }
+                    }
+                },
+                data : [97, 42, 38, 54, 60, 86]
+            }
+        ]
+    };
+
+
+    myChart.setOption(option);
+</script>
+   
+        <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('pleftbox2top'));
+                var dataAxis = ['武汉市','仙桃市','宜昌市','襄阳市','随州市','孝感市'];
+                var data = [80, 85, 100, 95, 90, 70];
+                var yMax = 500;
+                var dataShadow = [];
+                
+                for (var i = 0; i < data.length; i++) {
+                    dataShadow.push(yMax);
+                }
+                
+                option = {
+					backgroundColor: 'rgba(1,202,217,.2)',
+								  
+                    title: {
+                        text: '',
+                        subtext: ''
+                    },
+                    xAxis: {
+                        data: dataAxis,
+                        axisLabel: {
+                            inside: true,
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLine: {
+                            show: false
+                        },
+                        z: 10
+                    },
+                    yAxis: {
+						type: 'value',
+						name: '',
+						min: 0,
+						max: 100,
+						interval: 20,
+                        axisLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    dataZoom: [
+                        {
+                            type: 'inside'
+                        }
+                    ],
+                    series: [
+                        { // For shadow
+                            type: 'bar',
+                            itemStyle: {
+                                normal: {color: 'rgba(0,0,0,0.05)'}
+                            },
+                            barGap:'-100%',
+                            barCategoryGap:'40%',
+                            data: dataShadow,
+                            animation: false
+                        },
+                        {
+                            type: 'bar',
+                            itemStyle: {
+                                normal: {
+                                    color: new echarts.graphic.LinearGradient(
+                                        0, 0, 0, 1,
+                                        [
+                                            {offset: 0, color: '#83bff6'},
+                                            {offset: 0.5, color: '#188df0'},
+                                            {offset: 1, color: '#188df0'}
+                                        ]
+                                    )
+                                },
+                                emphasis: {
+                                    color: new echarts.graphic.LinearGradient(
+                                        0, 0, 0, 1,
+                                        [
+                                            {offset: 0, color: '#2378f7'},
+                                            {offset: 0.7, color: '#2378f7'},
+                                            {offset: 1, color: '#83bff6'}
+                                        ]
+                                    )
+                                }
+                            },
+                            data: data
+                        }
+                    ]
+                };
+                
+                // Enable data zoom when user click bar.
+                var zoomSize = 6;
+                myChart.on('click', function (params) {
+                    console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+                    myChart.dispatchAction({
+                        type: 'dataZoom',
+                        startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+                        endValue: dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+                    });
+                });;
+                if (option && typeof option === "object") {
+                    myChart.setOption(option, true);
+                }
+            </script>
+			<script type="text/javascript">
+			        var myChart = echarts.init(document.getElementById('jixiao'));
+			        option = {
+						backgroundColor: 'rgba(1,202,217,.2)',
+			            tooltip: {
+			                trigger: 'item',
+			                formatter: "{a} <br/>{b}: {c} ({d}%)"
+			            },
+			            legend: {
+			                textStyle:{
+			                  fontSize: 10,
+			                  color:'rgba(255,255,255,.7)'
+			                },
+			                x: 'left',
+			                data:['优秀','称职','基本称职','不称职']
+			            },
+			            series: [
+			                {
+			                    name:'访问来源',
+			                    type:'pie',
+			                    radius: ['50%', '70%'],
+			                    avoidLabelOverlap: false,
+			                    label: {
+			                        normal: {
+			                            show: false,
+			                            position: 'center'
+			                        },
+			                        emphasis: {
+			                            show: true,
+			                            textStyle: {
+			                                fontSize: '30',
+			                                fontWeight: 'bold'
+			                            }
+			                        }
+			                    },
+			                    labelLine: {
+			                        normal: {
+			                            show: false
+			                        }
+			                    },
+			                    data:[
+			                        {value:335, name:'优秀'},
+			                        {value:310, name:'称职'},
+			                        {value:234, name:'基本称职'},
+			                        {value:135, name:'不称职'},
+			                    ]
+			                }
+			            ]
+			        };
+			        ;
+			        if (option && typeof option === "object") {
+			            myChart.setOption(option, true);
+			        }
+			    </script>
+            
+                <script type="text/javascript">
+                        var myChart = echarts.init(document.getElementById('pmrboxtop'));
+                        option = {
+                          color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+                            backgroundColor: 'rgba(1,202,217,.2)',
+                            legend: {
+                              top:10,
+                              textStyle:{
+                                fontSize: 10,
+                                color:'rgba(255,255,255,.7)'
+                              },
+                                  data:['必修','选修','主观题','客观题']
+                              },
+                              grid: {
+                                  left: 10,
+                                  right: 10,
+                                  top: 40,
+                                  bottom: 10,
+                                  containLabel: true
+                              },
+
+                              xAxis : [
+                                     {
+                                         type : 'category',
+                                         axisLine:{
+                                           lineStyle:{
+                                             color:'rgba(255,255,255,.3)'
+                                           }
+                                         },
+                                         splitLine:{
+                                           lineStyle:{
+                                             color:'rgba(255,255,255,.01)'
+                                           }
+                                         },
+                                         data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                                     }
+                                 ],
+                              yAxis : [
+                                  {
+									  type: 'value',
+									  name: '',
+									  min: 0,
+									  max: 100,
+									  interval: 20,
+                                    axisLine:{
+                                      lineStyle:{
+                                        color:'rgba(255,255,255,.3)'
+                                      }
+                                    },
+                                    splitLine:{
+                                      lineStyle:{
+                                        color:'rgba(255,255,255,.01)'
+                                      }
+                                    },
+
+                                    axisLabel: {
+                                        formatter: '{value} 分'
+                                    },
+                                      type : 'value'
+                                  }
+
+                              ],
+                              series : [
+
+                                  {
+                                      name:'必修',
+                                      type:'bar',
+                                      barWidth :40,
+                                      stack: '搜索引擎',
+                                      data:[40, 39, 40, 41, 40, 40, 39, 39, 40, 41, 40, 40]
+                                  },
+                                  {
+                                      name:'选修',
+                                      type:'bar',
+                                      stack: '搜索引擎',
+                                      data:[20, 19, 21, 20, 20, 21, 20, 19, 21, 20, 20, 21]
+                                  },
+                                  {
+                                      name:'主观题',
+                                      type:'bar',
+                                      stack: '搜索引擎',
+                                      data:[27, 29, 25, 24, 22, 26, 28, 27, 29, 25, 24, 22]
+                                  },
+                                  ,
+                                  {
+                                      name:'客观题',
+                                      type:'bar',
+                                      stack: '搜索引擎',
+                                      data:[9, 8, 7, 10, 9, 9, 9, 8, 7, 10, 9, 9]
+                                  }
+                              ]
+                              };
+                        myChart.setOption(option);
+                    </script>
+                <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('pmrboxbottom'));
+                    option = {
+                        color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+                        backgroundColor: 'rgba(1,202,217,.2)',
+                        legend: {
+                            top:10,
+                            textStyle:{
+                                fontSize: 10,
+                                color:'rgba(255,255,255,.7)'
+                            },
+                            data:['类别1','类别2','类别3','类别4']
+                        },
+                        grid: {
+                            left: 10,
+                            right: 10,
+                            top: 40,
+                            bottom: 10,
+                            containLabel: true
+                        },
+
+                        xAxis : [
+                            {
+                                type : 'category',
+                                axisLine:{
+                                    lineStyle:{
+                                        color:'rgba(255,255,255,.3)'
+                                    }
+                                },
+                                splitLine:{
+                                    lineStyle:{
+                                        color:'rgba(255,255,255,.01)'
+                                    }
+                                },
+                                data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                            }
+                        ],
+                        yAxis : [
+                            {
+                                type: 'value',
+                                name: '',
+                                min: 0,
+                                max: 16,
+                                interval: 2,
+                                axisLine:{
+                                    lineStyle:{
+                                        color:'rgba(255,255,255,.3)'
+                                    }
+                                },
+                                splitLine:{
+                                    lineStyle:{
+                                        color:'rgba(255,255,255,.01)'
+                                    }
+                                },
+
+                                axisLabel: {
+                                    formatter: '{value} 篇'
+                                },
+                                type : 'value'
+                            }
+
+                        ],
+                        series : [
+
+                            {
+                                name:'类别1',
+                                type:'bar',
+                                barWidth :40,
+                                stack: '搜索引擎',
+                                data:[2, 4, 1, 3, 1, 0, 5, 3, 2, 4, 0, 1]
+                            },
+                            {
+                                name:'类别2',
+                                type:'bar',
+                                stack: '搜索引擎',
+                                data:[3, 5, 2, 4, 3, 2, 1, 0, 3, 3, 1, 2]
+                            },
+                            {
+                                name:'类别3',
+                                type:'bar',
+                                stack: '搜索引擎',
+                                data:[3, 2, 2, 2, 2, 1, 2, 3, 2, 4, 1, 2]
+                            },
+                            ,
+                            {
+                                name:'类别4',
+                                type:'bar',
+                                stack: '搜索引擎',
+                                data:[1, 1, 2, 1, 2, 3, 1, 2, 1, 1, 4, 3]
+                            }
+                        ]
+                    };
+                    myChart.setOption(option);
+                </script>
+                <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('prbottom_box1'));
+                    option = {
+                        color:['#7ecef4'],
+                        backgroundColor: 'rgba(1,202,217,.2)',
+                        grid: {
+                            left:20,
+                            right:20,
+                            top:30,
+                            bottom:6,
+                            containLabel: true
+                        },
+                        title:{
+                            text: '组织生活积分',
+                            textStyle:{
+                                color: 'rgba(255,255,255,.7)',
+                                fontSize: '12px',
+                                fontWeight: 'normal'
+                            },
+                            left: 'center'
+                        },
+                        yAxis: {
+                            type: 'value',
+                            axisLine:{
+                                lineStyle:{
+                                    color:'rgba(255,255,255,.2)'
+                                }
+                            },
+                            splitLine:{
+                                lineStyle:{
+                                    color:'rgba(255,255,255,.2)'
+                                }
+                            },
+                            axisLabel:{
+                                color:"rgba(255,255,255,.2)"
+                            },
+                            axisTick:{
+                                alignWithLabel:true
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            axisLine:{
+                                lineStyle:{
+                                    color:'rgba(255,255,255,.3)'
+                                }
+                            },
+                            splitLine:{
+                                lineStyle:{
+                                    color:'rgba(255,255,255,.1)'
+                                }
+                            },
+                            axisLabel:{
+                                interval:0,
+                                color:"rgba(255,255,255,.5)"
+                            },
+                            axisTick:{
+                                alignWithLabel:true
+                            },
+                            data: ['1','2','3','4','5','6','7','8','9','10','11','12']
+                        },
+                        series: [
+                            {
+                                name: ' ',
+                                type: 'bar',
+                                itemStyle: {
+                                    normal: {
+                                        color: new echarts.graphic.LinearGradient(
+                                            1, 0, 0, 1,
+                                            [
+                                                {offset: 0, color: 'rgba(230,253,139,.7)'},
+                                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                                            ]
+                                        )
+                                    }
+                                },
+                                data: [54,32,44,23,17,19,27,54,32,44,23,17]
+                            }
+                        ]
+                    };
+
+                    myChart.setOption(option);
+                </script>
+               <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('prbottom_box3'));
+                    option = {
+                        color:['#7ecef4'],
+                        backgroundColor: 'rgba(1,202,217,.2)',
+                        grid: {
+                            left:20,
+                            right:20,
+                            top:30,
+                            bottom:6,
+                            containLabel: true
+                        },
+                        title:{
+                            text: '党员模范作用积分',
+                            textStyle:{
+                                color: 'rgba(255,255,255,.7)',
+                                fontSize: '12px',
+                                fontWeight: 'normal'
+                            },
+                            left: 'center'
+                        },
+                        yAxis: {
+                            type: 'value',
+                            axisLine:{
+                                lineStyle:{
+                                    color:'rgba(255,255,255,.2)'
+                                }
+                            },
+                            splitLine:{
+                                lineStyle:{
+                                    color:'rgba(255,255,255,.2)'
+                                }
+                            },
+                            axisLabel:{
+                                color:"rgba(255,255,255,.2)"
+                            },
+                            axisTick:{
+                                alignWithLabel:true
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            axisLine:{
+                                lineStyle:{
+                                    color:'rgba(255,255,255,.3)'
+                                }
+                            },
+                            splitLine:{
+                                lineStyle:{
+                                    color:'rgba(255,255,255,.1)'
+                                }
+                            },
+                            axisLabel:{
+                                interval:0,
+                                color:"rgba(255,255,255,.5)"
+                            },
+                            axisTick:{
+                                alignWithLabel:true
+                            },
+                            data: ['1','2','3','4','5','6','7','8','9','10','11','12']
+                        },
+                        series: [
+                            {
+                                name: ' ',
+                                type: 'bar',
+                                itemStyle: {
+                                    normal: {
+                                        color: new echarts.graphic.LinearGradient(
+                                            1, 0, 0, 1,
+                                            [
+                                                {offset: 0, color: 'rgba(230,253,139,.7)'},
+                                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                                            ]
+                                        )
+                                    }
+                                },
+                                data: [54,32,44,23,17,19,27,54,32,44,23,17]
+                            }
+                        ]
+                    };
+
+                    myChart.setOption(option);
+                </script>
+                    <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
+							option = {
+							  color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+							    backgroundColor: 'rgba(1,202,217,.2)',
+							    grid: {
+																left:20,
+																right:20,
+																top:0,
+																bottom:20
+															},
+							            legend: {
+							              top:10,
+							              textStyle:{
+							                fontSize: 10,
+							                color:'rgba(255,255,255,.7)'
+							              },
+							                data:['消费正常','消费异常']
+							            },
+							            series : [
+							     {
+							         name: '访问来源',
+							         type: 'pie',
+							         radius : '55%',
+							         center: ['50%', '55%'],
+							         data:[
+							             {value:335, name:'消费正常'},
+							             {value:200, name:'消费异常'}
+
+							         ],
+							         itemStyle: {
+							             emphasis: {
+							                 shadowBlur: 10,
+							                 shadowOffsetX: 0,
+							                 shadowColor: 'rgba(0, 0, 0, 0.5)'
+							             }
+							         }
+							     }
+							 ]
+							};
+							myChart.setOption(option);
+
+                        </script>
+						<script type="text/javascript">
+						        var myChart = echarts.init(document.getElementById('xinli'));
+								option = {
+								  color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+								    backgroundColor: 'rgba(1,202,217,.2)',
+								    grid: {
+																	left:20,
+																	right:20,
+																	top:0,
+																	bottom:20
+																},
+								            legend: {
+								              top:10,
+								              textStyle:{
+								                fontSize: 10,
+								                color:'rgba(255,255,255,.7)'
+								              },
+								                data:['心理健康','心理异常']
+								            },
+								            series : [
+								     {
+								         name: '访问来源',
+								         type: 'pie',
+								         radius : '55%',
+								         center: ['50%', '55%'],
+								         data:[
+								             {value:300, name:'心理健康'},
+								             {value:90, name:'心理异常'}
+								
+								         ],
+								         itemStyle: {
+								             emphasis: {
+								                 shadowBlur: 10,
+								                 shadowOffsetX: 0,
+								                 shadowColor: 'rgba(0, 0, 0, 0.5)'
+								             }
+								         }
+								     }
+								 ]
+								};
+								myChart.setOption(option);
+						       
+						    </script>
+
+                            <script type="text/javascript">
+                                    var myChart = echarts.init(document.getElementById('pmrmidd'));
+                                    option = {
+                                      color:['#f1ff00','#00c1ff', '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'],
+                                        // backgroundColor: 'rgba(1,202,217,.2)',
+                                        grid: {
+                            											left:20,
+                            											right:20,
+                            											top:30,
+                            											bottom:30
+                            										},
+                                       radar: {
+                                           name: {
+                                                  textStyle: {
+                                                      fontSize: 10,
+                                                      color: 'rgba(255,255,255,.8)'
+                                                  }
+                                              },
+                                              splitLine: {
+                                                  lineStyle: {
+                                                      color: [
+                                                          'rgba(1,202,217,.01)', 'rgba(1,202,217,.01)'
+                                                      ].reverse()
+                                                  }
+                                              },
+                                              splitArea: {
+                                                  show: false
+                                              },
+                                              axisLine: {
+                                                  lineStyle: {
+                                                      color: 'rgba(1,202,217,.7)'
+                                                  }
+                                              },
+                                           indicator: [
+                                              { name: '红色警情', max: 6500},
+                                              { name: '橙色警情', max: 16000},
+                                              { name: '黄色警情', max: 30000},
+                                              { name: '绿色警情', max: 44000}
+                                           ]
+                                       },
+                                       series: [{
+                                           name: '',
+                                           type: 'radar',
+                                           radius : [5, 100],
+                                           center: ['50%', '50%'],
+                                           data : [
+                                               {
+                                                   value : [4300, 10000, 28000, 19000],
+                                                   name : ''
+                                               },
+                                                {
+                                                   value : [5000, 14000,  22000, 41000],
+                                                   name : ''
+                                               }
+                                           ]
+                                       }]
+                                    };
+                                    myChart.setOption(option);
+                                </script>
+
+
+</body>
+</html>

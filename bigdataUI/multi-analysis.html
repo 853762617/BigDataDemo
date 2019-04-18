@@ -1,0 +1,826 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>大数据研判与多维分析</title>
+<link href="css/style.css"  rel="stylesheet" type="text/css" media="all" />
+<script src="js/echarts.js" charset="utf-8"></script>
+<script src="js/jquery-3.2.0.min.js" charset="utf-8"></script>
+<script src="js/hubei.js"></script>
+<body>
+<div class="wpbox">
+<div class="bnt">
+  <div class="topbnt_left fl">
+   <ul>
+       <li ><a href="index.html">首页</a></li>
+       <li ><a href="monthly.html">报表查询</a></li>
+       <li ><a href="warningfrontpage.html">风险预警</a></li>
+       <li class="active"><a href="multi-analysis.html">研判分析</a></li>
+   </ul>
+  </div>
+  <h1 class="tith1 fl">政工大数据平台</h1>
+  <div class=" fr topbnt_right">
+    <ul>
+        <li><a href="javascript:history.back(-1);">返回</a></li>
+        <li><a href="login.html">注销</a></li>
+        <li><a href="#">分析</a></li>
+        <li><a href="select.html">组合查询</a></li>
+    </ul>
+   </ul>
+  </div>
+</div>
+<!-- bnt end -->
+<div class="left1">
+    <div class="aleftboxttop pt1"><h2 class="tith2">学习成绩比较</h2>
+        <div id="xuexi" class="lpeftmidbotcont"></div>
+    <!-- lefttoday_number end -->
+    </div>
+    <div class="aleftboxtmidd">
+      <h2 class="tith2 pt2">党员积分情况比较</h2>
+        <div id="xiaofei" class="lpeftmidbotcont">
+
+        </div>
+  </div>
+  <div class="aleftboxtbott">
+    <h2 class="tith2">消费情况比较</h2>
+        <!-- <div class="lefttoday_tit height"><p class="fl">状态：已调节.æl,kmo</p><p class="fr">时间段：2018-06-10 至 2018-06-14</p></div> -->
+    <div id="aleftboxtmidd" class="aleftboxtbott_cont2" ></div>
+</div>
+</div>
+<!--  left1 end -->
+<div class="mrbox">
+      <div class="mrbox_topmidd" style="width: 69%;">
+          <div class="amiddboxttop">
+
+              <h2 class="tith2 pt1">大数据多维分析</h2>
+              <div class="lefttoday_tit">
+                  <div style="width:50%;float: right;">
+                      <select name="" style="width:50%;float: right;">
+                          <option value="1">仙桃市支队</option>
+                          <option value="2">武汉市支队</option>
+                      </select>
+                      <select name="" style="width:50%;float: right;">
+                          <option value="1">武汉市支队</option>
+                          <option value="2">仙桃市支队</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="left2_table">
+                  <ul>
+                      <a href=""><li>
+                          <p class="fl"><b>武汉市支队</b><br>
+                              <br>
+                              总人数：30人<br>
+                              大队数：15个<br>
+                              单位地址：湖北省武汉市<br>
+                              <br>
+                          </p>
+                      </li></a>
+                      <a href=""><li>
+                          <p class="fl"><b>仙桃市支队</b><br>
+                              <br>
+                              总人数：40人<br>
+                              大队数：10个<br>
+                              单位地址：湖北省仙桃市<br>
+                              <br>
+                          </p>
+                      </li></a>
+                  </ul>
+              </div>
+            </div>
+            <!--  amiddboxttop end-->
+                <div class="amidd_bott">
+                  <div class="amiddboxtbott1 fl" >
+                    <h2 class="tith2 pt1">绩效情况比较</h2>
+                    <div id="amiddboxtbott1" class="amiddboxtbott2content" ></div>
+                  </div>
+
+                <div class="amiddboxtbott2 fl"><h2 class="tith2 pt1">投稿情况比较</h2>
+                    <div id="arightboxbott1" class="amiddboxtbott2content"></div>
+                </div>
+            </div>
+            <!-- amidd_bott end -->
+          </div>
+        <!-- mrbox_top end -->
+        <div class="mrbox_top_right">
+          <div class="arightboxtop"><h2 class="tith2">训练成绩比较</h2>
+            <div id="aleftboxtbott"  class="aleftboxtbott_contr"></div>
+          </div>
+            <div class="arightboxbott"><h2 class="tith2 ">兴趣爱好情况比较</h2>
+
+              <div id="aleftboxtmiddr" class="arightboxbottcont2"></div>
+            </div>
+        </div>
+        <!-- mrbox_top_right end -->
+      </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('xuexi'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left:60,
+            right:20,
+            top:45,
+            bottom:40
+        },
+
+
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['平均成绩','主观题平均成绩','客观题平均成绩']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel:{
+                    color:"rgba(255,255,255,.7)"
+                },
+
+                data: ['武汉市支队','仙桃市支队'],
+                axisPointer: {
+                    type: 'shadow'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 100,
+                interval: 20,
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+
+                axisLabel: {
+                    formatter: '{value} 分'
+                }
+            },
+            {
+                type: 'value',
+                name: '',
+                max: 25,
+                interval: 5,
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,0)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,0)'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} °C'
+                }
+            }
+        ],
+        series: [
+
+            {
+                name:'平均成绩',
+                type:'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#b266ff'},
+                                {offset: 1, color: '#121b87'}
+                            ]
+                        )
+                    }
+                },
+                data:[90, 92]
+            },
+            {
+                name:'主观题平均成绩',
+                type:'bar',
+
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#00f0ff'},
+                                {offset: 1, color: '#032a72'}
+                            ]
+                        )
+                    }
+                },
+                data:[87, 95 ]
+            },
+            {
+                name:'客观题平均成绩',
+                type:'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#fffb34'},
+                                {offset: 1, color: '#032a72'}
+                            ]
+                        )
+                    }
+                },
+                data:[88, 92]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('xiaofei'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        legend: {
+            x : 'center',
+            y : 'bottom',
+            textStyle:{
+                color:'white'
+            },
+            data:['武汉市支队','仙桃市支队']
+        },
+        xAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月', '9月', '10月', '11月', '12月']
+        },
+        yAxis: {
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            type: 'value'
+        },
+        series: [{
+            name:'武汉市支队',
+            data: [98,45,66,78,89,98,45,78,89,97,48,89],
+            type: 'line'
+        },{
+            name:'仙桃市支队',
+            data: [89,65,62,86,98,92,76,84,96,87,86,84],
+            type: 'line'
+        }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('aleftboxtmidd'));
+option = {
+    backgroundColor: 'rgba(1,202,217,.2)',
+    color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        x : 'left',
+        textStyle:{
+            fontSize: 10,
+            color:'rgba(255,255,255,.7)'
+        },
+        data: ['消费金额', '消费频次']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        axisLine:{
+            lineStyle:{
+                color:'rgba(255,255,255,.7)'
+            }
+        },
+        splitLine:{
+            lineStyle:{
+                color:'rgba(255,255,255,.1)'
+            }
+        },
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        axisLine:{
+            lineStyle:{
+                color:'rgba(255,255,255,.7)'
+            }
+        },
+        splitLine:{
+            lineStyle:{
+                color:'rgba(255,255,255,.1)'
+            }
+        },
+        data: ['武汉市支队','仙桃市支队']
+    },
+    series: [
+        {
+            name: '消费金额',
+            type: 'bar',
+            data: [18203, 23489]
+        },
+        {
+            name: '消费频次',
+            type: 'bar',
+            data: [19325, 23438]
+        }
+    ]
+};
+
+myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('aleftboxtmiddr'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip : {
+            trigger: 'axis'
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        legend: {
+            orient: 'vertical',
+            x : 'left',
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['武汉市','仙桃市']
+        },
+        calculable : true,
+        polar : [
+            {
+                indicator : [
+                    {text : '体育',color:'rgba(255,255,255,.7)', max  : 100},
+                    {text : '游戏',color:'rgba(255,255,255,.7)', max  : 100},
+                    {text : '书籍',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '音乐',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '植物',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '动物',color:'rgba(255,255,255,.7)',  max  : 100}
+                ],
+                radius : 100
+            }
+        ],
+        series : [
+            {
+                name: '完全实况球员数据',
+                type: 'radar',
+                itemStyle: {
+                    normal: {
+                        areaStyle: {
+                            type: 'default'
+                        }
+                    }
+                },
+                data : [
+                    {
+                        value : [97, 42, 38, 54, 60, 86],
+                        name : '武汉市'
+                    },
+                    {
+                        value : [45, 32, 74, 56, 89, 10],
+                        name : '仙桃市'
+                    }
+                ]
+            }
+        ]
+    };
+
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('aleftboxtbott'));
+option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    backgroundColor: 'rgba(1,202,217,.2)',
+    color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+    legend: {
+        data: ['武汉市支队', '仙桃市支队'],
+        textStyle:{
+            color:'white'
+        },
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    yAxis: {
+        type: 'value',
+        axisLine:{
+            lineStyle:{
+                color:'rgba(255,255,255,.7)'
+            }
+        },
+        splitLine:{
+            lineStyle:{
+                color:'rgba(255,255,255,.1)'
+            }
+        },
+        boundaryGap: [0, 0.01]
+    },
+    xAxis: {
+        type: 'category',
+        axisLine:{
+            lineStyle:{
+                color:'rgba(255,255,255,.7)'
+            }
+        },
+        splitLine:{
+            lineStyle:{
+                color:'rgba(255,255,255,.1)'
+            }
+        },
+        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月', '9月', '10月', '11月', '12月']
+    },
+    series: [
+        {
+            name: '武汉市支队',
+            type: 'bar',
+            data: [98,45,66,78,89,98,45,78,89,97,48,89]
+        },
+        {
+            name: '仙桃市支队',
+            type: 'bar',
+            data: [89,65,62,86,98,92,76,84,96,87,86,84]
+        }
+    ]
+};
+
+myChart.setOption(option);
+</script>
+<script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('amiddboxtbott1'));
+  option = {
+      backgroundColor: 'rgba(1,202,217,.2)',
+      color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+      title : {
+          text: '左：武汉市  右：仙桃市',color:'white',
+          textStyle:{
+              color:'white',
+              fontSize: 10
+          },
+          x:'center'
+      },
+      legend: {
+          x : 'center',
+          y : 'bottom',
+          textStyle:{
+              color:'white',
+              fontSize: 10
+          },
+          data:['优秀','称职','基本称职','不称职']
+      },
+      calculable : true,
+      series : [
+          {
+              name:'武汉市',
+              type:'pie',
+              radius : [10, 35],
+              center : ['30%', '50%'],
+              roseType : 'radius',
+              data:[
+                  {value:70, name:'优秀'},
+                  {value:55, name:'称职'},
+                  {value:15, name:'基本称职'},
+                  {value:25, name:'不称职'},
+              ]
+          },
+          {
+              name:'仙桃市',
+              type:'pie',
+              radius : [10, 35],
+              center : ['75%', '50%'],
+              roseType : 'radius',
+              data:[
+                  {value:100, name:'优秀'},
+                  {value:25, name:'称职'},
+                  {value:15, name:'基本称职'},
+                  {value:45, name:'不称职'},
+              ]
+          }
+      ]
+  };
+  myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('amiddboxtbott2'));
+  option = {
+      backgroundColor: 'rgba(1,202,217,.2)',
+      grid: {
+								left:60,
+								right:60,
+								top:50,
+								bottom:40
+							},
+
+toolbox: {
+    feature: {
+        dataView: {show: true, readOnly: false},
+        magicType: {show: true, type: ['line', 'bar']},
+        restore: {show: true},
+        saveAsImage: {show: true}
+    }
+},
+legend: {
+  top:10,
+  textStyle:{
+    fontSize: 10,
+    color:'rgba(255,255,255,.7)'
+  },
+    data:['2017年','2018年','同比增速']
+},
+xAxis: [
+    {
+        type: 'category',
+        axisLine:{
+					lineStyle:{
+						color:'rgba(255,255,255,.2)'
+					}
+				},
+				splitLine:{
+					lineStyle:{
+						color:'rgba(255,255,255,.1)'
+					}
+				},
+				axisLabel:{
+						color:"rgba(255,255,255,.7)"
+				},
+
+        data: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+        axisPointer: {
+            type: 'shadow'
+        }
+    }
+],
+yAxis: [
+    {
+        type: 'value',
+        name: '',
+        min: 0,
+        max: 250,
+        interval: 50,
+        axisLine:{
+					lineStyle:{
+						color:'rgba(255,255,255,.3)'
+					}
+				},
+				splitLine:{
+					lineStyle:{
+						color:'rgba(255,255,255,.01)'
+					}
+				},
+
+        axisLabel: {
+            formatter: '{value} ml'
+        }
+    },
+    {
+        type: 'value',
+        name: '',
+        max: 25,
+        interval: 5,
+        axisLine:{
+					lineStyle:{
+						color:'rgba(255,255,255,.3)'
+					}
+				},
+				splitLine:{
+					lineStyle:{
+						color:'rgba(255,255,255,.1)'
+					}
+				},
+        axisLabel: {
+            formatter: '{value} °C'
+        }
+    }
+],
+series: [
+
+    {
+        name:'2017年',
+        type:'bar',
+        itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#b266ff'},
+                                    {offset: 1, color: '#121b87'}
+                                ]
+                            )
+                        }
+                    },
+        data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+    },
+    {
+        name:'2018年',
+        type:'bar',
+        itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#00f0ff'},
+                                    {offset: 1, color: '#032a72'}
+                                ]
+                            )
+                        }
+                    },
+        data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+    },
+    {
+        name:'同比增速',
+        type:'line',
+        itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#fffb34'},
+                                    {offset: 1, color: '#fffb34'}
+                                ]
+                            )
+                        }
+                    },
+        yAxisIndex: 1,
+        data:[2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+    }
+]
+};
+  myChart.setOption(option);
+</script>
+<script type="text/javascript">
+      var myChart = echarts.init(document.getElementById('arightboxbott'));
+      option = {
+          backgroundColor: 'rgba(1,202,217,.2)',
+          color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+          legend: {
+              x: 'left',
+              textStyle:{
+                  color:'white'
+              },
+              data:['武汉市支队','仙桃市支队']
+          },
+          series: [
+              {
+                  type:'pie',
+                  radius: ['50%', '70%'],
+                  avoidLabelOverlap: false,
+                  label: {
+                      normal: {
+                          show: false,
+                          position: 'center'
+                      },
+                      emphasis: {
+                          show: true,
+                          textStyle: {
+                              fontSize: '30',
+                              fontWeight: 'bold'
+                          }
+                      }
+                  },
+                  labelLine: {
+                      normal: {
+                          show: false
+                      }
+                  },
+                  data:[
+                      {value:335, name:'武汉市支队'},
+                      {value:310, name:'仙桃市支队'}
+                  ]
+              }
+          ]
+      };
+
+      myChart.setOption(option);
+  </script>
+  <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('arightboxbott1'));
+        option = {
+            backgroundColor: 'rgba(1,202,217,.2)',
+            color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+            },
+            legend: {
+                x: 'left',
+                textStyle:{
+                    color:'white'
+                },
+                data:['武汉市支队','仙桃市支队']
+            },
+            series: [
+                {
+                    name:'投稿数',
+                    type:'pie',
+                    radius: ['50%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data:[
+                        {value:335, name:'武汉市支队'},
+                        {value:310, name:'仙桃市支队'}
+                    ]
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+    </script>
+
+    <script type="text/javascript">
+    $(function(){
+        //使用echarts.init()方法初始化一个Echarts实例，在init方法中传入echarts map的容器 dom对象
+	var mapChart = echarts.init(document.getElementById('topmap'));
+	// mapChart的配置
+
+       // mapChart.setOption(option);
+
+});
+
+
+
+
+    </script>
+
+
+</body>
+</html>

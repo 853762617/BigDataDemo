@@ -151,7 +151,9 @@ i.redr{background-image:url(../img/ricon1.png);}
 .font14 p.fl,.font14 p.fr{ color: #fff;font-size: 14px;}
 .mrtop1{background: rgba(1,202,217,.2); overflow: hidden; margin: 4px 15px;}
 .widget-inline-box{ text-align: center; color:rgba(255,255,255,.9); width: 50%; padding: 10% 0;text-align: center; font-size: 12px;float: left; overflow:hidden;}
+.widget-inline-box1{ text-align: center; color:rgba(255,255,255,.9); width: 50%; padding: 10% 0;text-align: center; font-size: 12px;float: left; overflow:hidden;}
 .widget-inline-box h3{ font-size: 22px; font-weight: 100; font-weight: normal;}
+.widget-inline-box1 h3{ font-size: 22px; font-weight: 100; font-weight: normal;}
 .ceeb1fd{ color: #eeb1fd}
 .c24c9ff{ color: #24c9ff}
 .cffff00{ color: #ffff00}

@@ -375,11 +375,17 @@
             },//地图中文字内容及样式控制
         }]
     };
-    myChart.setOption(option, true);
-    myChart.on('click', function(params){
-        alert(1);
-        console.log(params);//此处写点击事件内容
+   myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+       switch(params.name){
+           case '武汉市':
+               location.href='warningbranchpage.html';
+               break;
+           default:
+               break;
+       }
     });//点击事件，此事件还可以用到柱状图等其他地图
+    myChart.setOption(option, true);
 </script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('amiddboxtbott2'));

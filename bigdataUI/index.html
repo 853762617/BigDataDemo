@@ -806,8 +806,14 @@
               };
               myChart.setOption(option, true);
               myChart.on('click', function(params){
-                  alert(1);
-                  console.log(params);//此处写点击事件内容
+                  console.log(params.name);//此处写点击事件内容
+                  switch(params.name){
+                      case '武汉市':
+                          location.href='';
+                          break;
+                      default:
+                          break;
+                  }
               });//点击事件，此事件还可以用到柱状图等其他地图
           </script>
       </div>

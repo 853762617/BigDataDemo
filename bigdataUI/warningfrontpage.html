@@ -215,7 +215,12 @@
             bottom:6,
             containLabel: true
         },*/
-
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
         yAxis: {
             type: 'value',
             axisLine:{
@@ -310,7 +315,7 @@
             text: ['高', '低'], // 文本，默认为数值文本
             calculable: true,
             inRange:{
-                color: ['#4d72d9', '#42a8be','#7ecef4'],//上色范围
+                color: ['#42a8be','#00a69c', '#95ea95'],//上色W范围
             }
         },//给地图上色
         series: [{
@@ -390,6 +395,12 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('amiddboxtbott2'));
     option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
         backgroundColor: 'rgba(1,202,217,.2)',
         grid: {
             left:60,
@@ -511,6 +522,12 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('amiddboxtbott1'));
     option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
         color:['#7de494','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
         backgroundColor: 'rgba(1,202,217,.2)',
 
@@ -557,7 +574,7 @@
         },
         series: [
             {
-                name:'2014年',
+                name:'',
                 type:'line',
                 stack: '总量',
                 areaStyle: {normal: {}},

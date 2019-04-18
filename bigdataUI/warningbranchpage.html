@@ -1,28 +1,26 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>风险预警干预</title>
+<title>武汉市大队风险预警</title>
 <link href="css/style.css"  rel="stylesheet" type="text/css" media="all" />
 <script src="js/echarts.js" charset="utf-8"></script>
 <script src="js/hubei.js" charset="utf-8"></script>
-
-
+<script src="js/wuhan.js" charset="utf-8"></script>
 <body>
 <div class="wpbox">
     <div class="bnt">
         <div class="topbnt_left fl">
-            <ul><li><a href="#">首页</a></li>
-                <li><a href="#">多维分析</a></li>
-                <li class="active"><a href="#">风险预警</a></li>
-                <li><a href="#">月报季报年报</a></li>
+            <ul>
+                <li ><a href="index.html">首页</a></li>
+                <li ><a href="monthly.html">报表查询</a></li>
+                <li class="active"><a href="warningfrontpage.html">风险预警</a></li>
+                <li ><a href="multi-analysis.html">研判分析</a></li>
             </ul>
         </div>
         <h1 class="tith1 fl">政工大数据平台</h1>
         <div class=" fr topbnt_right">
             <ul>
-                <li><a href="#">返回</a></li>
-                <li><a href="#">？</a></li>
-                <li><a href="#">？</a></li>
-                <li><a href="#">？</a></li>
+                <li><a href="javascript:history.back(-1);">返回</a></li>
+                <li><a href="#">注销</a></li>
             </ul>
             </ul>
         </div>
@@ -69,48 +67,14 @@
     <!--  left1 end -->
     <div class="mrbox">
         <div class="mrbox_topmidd" style="width: 69%;">
-            <div id="" class="amiddboxttop">
-                <h2 class="tith2 pt1">预警干预</h2>
-                <ul>
-                    <li>
-
-                        <p class="fl">
-                            <b style="font-size:large">武汉市支队XXX近期进行了一笔大金额消费</b>
-                        </p>
-                        <p class="fr"style="font-size: smaller">2018-06-22 19:00:31</p><br>
-                    </li>
-                    <li>
-                        <p class="fl"><b>详细情况</b><br>
-                            </p><br>
-                        <p class="fl">
-                            <div style="background-color: rgba(0,0,0,.1);border:1px solid rgba(255,255,255,.7)">
-                                XXX 于2018年6月22日 19:00:31 接收到信息，进行了一笔3300.00元的消费，本笔数额超过上限，请有关领导引起重视。预警单位：武汉市支队洪山区大队卓刀泉中队<br>
-                            </div>
-                        </p>
-                    </li>
-                    <li>
-
-                        <form>
-                            <p class="fl"><b>反馈信息</b></p><br>
-                            <textarea class="fl"
-                                      style="background-color: rgba(0,0,0,.1);color:rgba(255,255,255,.7);resize:none;"
-                                      cols="112" rows="10">反馈意见：已了解到为购买电子产品的大额消费，情况正常。</textarea>
-
-                            <div style="width:20%;padding:5px 10px;margin:0;float:left;box-sizing:border-box;">
-                                <button style="width:100%;color:#fff;border:none;padding:10px 15px;border-radius:10px;background:rgba(74,180,255,.9);">已处理</button>
-                            </div>
-                            <div style="width:20%;padding:5px 10px;margin:0;float:left;box-sizing:border-box;">
-                                <button style="width:100%;color:#fff;border:none;padding:10px 15px;border-radius:10px;background:rgba(255,255,255,.1);">未处理</button>
-                            </div>
-                        </form>
-                    </li>
-                </ul>
+            <div id="hubeiwarningmap" class="amiddboxttop">
+                <!--                <h2 class="tith2 pt1">实时监控统计</h2>-->
             </div>
             <!--  amiddboxttop end-->
             <div class="amidd_bott">
                 <div class="amiddboxtbott1 fl" >
                     <h2 class="tith2 pt1">风险预警七日统计</h2>
-                    <div id="hubeiwarningmap" class="amiddboxtbott1content" ></div>
+                    <div id="amiddboxtbott1" class="amiddboxtbott1content" ></div>
                 </div>
 
                 <div class="amiddboxtbott2 fl"><h2 class="tith2 pt1">风险预警月度统计</h2>
@@ -126,50 +90,50 @@
                 <div class="left2_table">
                     <ul>
                         <li>
-                            <p class="fl"><b>武汉市</b><br>
-                                武汉市支队XXX近期进行了一笔大金额消费；<br>
+                            <p class="fl"><b>洪山区</b><br>
+                                洪山区大队XXX近期进行了一笔大金额消费；<br>
                             </p>
                             <p class="fr pt17">2018-06-22</p>
                         </li>
                         <li class="bg">
-                            <p class="fl"><b>宜昌市</b><br>
-                                宜昌市支队XXX存在学习APP使用不达标情况；<br>
+                            <p class="fl"><b>武昌区</b><br>
+                                武昌区大队XXX存在学习APP使用不达标情况；<br>
                             </p>
                             <p class="fr pt17">2018-06-22</p>
                         </li>
                         <li>
-                            <p class="fl"><b>武汉市</b><br>
-                                武汉市支队XXX存在未进行客观题考试情况；<br>
+                            <p class="fl"><b>江岸区</b><br>
+                                江岸区大队XXX存在未进行客观题考试情况；<br>
                             </p>
                             <p class="fr pt17">2018-06-22</p>
                         </li>
                         <li class="bg">
-                            <p class="fl"><b>黄石市</b><br>
-                                黄石市支队XXX存在体能连续下降情况；<br>
+                            <p class="fl"><b>黄陂区</b><br>
+                                黄陂区大队XXX存在体能连续下降情况；<br>
                             </p>
                             <p class="fr pt17">2018-06-22</p>
                         </li>
                         <li>
-                            <p class="fl"><b>武汉市</b><br>
-                                武汉市支队存在未录入收入情况；<br>
+                            <p class="fl"><b>江汉区</b><br>
+                                江汉区大队存在未录入收入情况；<br>
                             </p>
                             <p class="fr pt17">2018-06-22</p>
                         </li>
                         <li class="bg">
-                            <p class="fl"><b>宜昌市</b><br>
-                                宜昌市支队存在未录入收入情况；<br>
+                            <p class="fl"><b>武昌区</b><br>
+                                武昌区大队存在未录入收入情况；<br>
                             </p>
                             <p class="fr pt17">2018-06-22</p>
                         </li>
                         <li>
-                            <p class="fl"><b>黄冈市</b><br>
-                                黄冈市支队存在未录入收入情况；<br>
+                            <p class="fl"><b>江岸区</b><br>
+                                江岸区大队存在未录入收入情况；<br>
                             </p>
                             <p class="fr pt17">2018-06-22</p>
                         </li>
                         <li class="bg">
-                            <p class="fl"><b>随州市</b><br>
-                                随州市支队XXX存在未完成必修课情况；<br>
+                            <p class="fl"><b>汉阳区</b><br>
+                                汉阳区大队XXX存在未完成必修课情况；<br>
                             </p>
                             <p class="fr pt17">2018-06-22</p>
                         </li>
@@ -225,11 +189,11 @@
                 center : ['50%', '55%'],
                 roseType : 'area',
                 data:[
-                    {value:10, name:'武汉市'},
-                    {value:5, name:'宜昌市'},
-                    {value:15, name:'荆州市'},
-                    {value:25, name:'黄石市'},
-                    {value:13, name:'随州市'}
+                    {value:10, name:'武昌区'},
+                    {value:5, name:'江岸区'},
+                    {value:15, name:'江汉区'},
+                    {value:25, name:'洪山区'},
+                    {value:13, name:'汉阳区'}
                 ].sort(function (a, b) { return a.value - b.value; }),
             }
         ]
@@ -314,10 +278,9 @@
 
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('hubeiwarningmap'));
-
     var option = {
         title: {
-            text: '湖北省武汉市',
+            text: '武汉市',
             left:'center',
             textStyle: {
                 color: '#ccc',
@@ -347,9 +310,9 @@
             }
         },//给地图上色
         series: [{
-            name: '湖北省',
+            name: '武汉市',
             type: 'map',
-            mapType: '湖北',
+            mapType: '武汉',
             selectedMode : 'single',
             label: {
                 normal: {show: true},
@@ -362,29 +325,25 @@
                     borderWidth: 2,
                 },//正常样式
                 emphasis: {
-                    areaColor: 'red',
+                    areaColor: '#16f',
                     borderWidth: 1,
                     borderColor: 'yellow',
                 }//鼠标事件区块样式
             },
             data:[
-                {name: '武汉市', value: 40500,value2:10},
-                {name: '黄石市', value: 23000,value2:25},
-                {name: '十堰市', value: 22500,value2:9},
-                {name: '宜昌市', value: 40500,value2:1},
-                {name: '襄阳市', value: 45000,value2:23},
-                {name: '鄂州市', value: 37000,value2:11},
-                {name: '荆门市', value: 40500,value2:12},
-                {name: '孝感市', value: 0,value2:7},
-                {name: '荆州市', value: 11161,value2:15},
-                {name: '黄冈市', value: 15000,value2:5},
-                {name: '咸宁市', value: 20000,value2:22},
-                {name: '随州市', value: 25000,value2:13},
-                {name: '仙桃市', value: 30000,value2:18},
-                {name: '潜江市', value: 35000,value2:10},
-                {name: '天门市', value: 36000,value2:14},
-                {name: '恩施土家族苗族自治州', value: 45000,value2:6},
-                {name: '神农架林区', value: 23000,value2:8},
+                {name: '汉南区', value: 40500,value2:10},
+                {name: '汉阳区', value: 23000,value2:25},
+                {name: '东西湖区', value: 22500,value2:9},
+                {name: '蔡甸区', value: 40500,value2:1},
+                {name: '硚口区', value: 45000,value2:23},
+                {name: '洪山区', value: 37000,value2:11},
+                {name: '黄陂区', value: 40500,value2:12},
+                {name: '江岸区', value: 0,value2:7},
+                {name: '江汉区', value: 11161,value2:15},
+                {name: '江夏区', value: 15000,value2:5},
+                {name: '青山区', value: 20000,value2:22},
+                {name: '武昌区', value: 25000,value2:13},
+                {name: '新洲区', value: 30000,value2:18},
             ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
             label: {
                 normal: {
@@ -409,10 +368,12 @@
         }]
     };
     myChart.setOption(option, true);
-    /*myChart.on('click', function(params){
+    myChart.on('click', function(params){
         alert(1);
         console.log(params);//此处写点击事件内容
-    });*///点击事件，此事件还可以用到柱状图等其他地图
+    });//点击事件，此事件还可以用到柱状图等其他地图
+
+
 </script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('amiddboxtbott2'));

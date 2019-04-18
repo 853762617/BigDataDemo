@@ -108,7 +108,7 @@
             <!--  amiddboxttop end-->
             <div class="amidd_bott">
                 <div class="amiddboxtbott1 fl" >
-                    <h2 class="tith2 pt1">风险预警七日统计</h2>
+                    <h2 class="tith2 pt1">风险预警位置</h2>
                     <div id="hubeiwarningmap" class="amiddboxtbott1content" ></div>
                 </div>
 
@@ -367,13 +367,13 @@
                     borderWidth: 2,
                 },//正常样式
                 emphasis: {
-                    areaColor: 'red',
+                    areaColor: 'orange',
                     borderWidth: 1,
                     borderColor: 'yellow',
                 }//鼠标事件区块样式
             },
             data:[
-                {name: '武汉市', value: 40500,value2:10},
+                {name: '武汉市', value: 40500,value2:10,selected:true},
                 {name: '黄石市', value: 23000,value2:25},
                 {name: '十堰市', value: 22500,value2:9},
                 {name: '宜昌市', value: 40500,value2:1},
@@ -391,6 +391,7 @@
                 {name: '恩施土家族苗族自治州', value: 45000,value2:6},
                 {name: '神农架林区', value: 23000,value2:8},
             ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
+
             label: {
                 normal: {
                     show: true,

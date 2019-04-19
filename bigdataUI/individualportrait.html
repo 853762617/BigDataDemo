@@ -79,7 +79,7 @@
           </div>
         <!-- mrbox_top_midd end -->
         <div class="mrbox_top_right">
-          <div class="pmrtop1">
+          <div class="pmrtop3">
             <h2 class="tith2">照片</h2>
           </div>
             <!-- pmrtop  -->
@@ -552,15 +552,6 @@
             bottom: '3%',
             containLabel: true
         },
-        legend: {
-            orient: 'vertical',
-            x : 'left',
-            textStyle:{
-                fontSize: 10,
-                color:'rgba(255,255,255,.7)'
-            },
-            data:['武汉市','宜昌市','鄂州市']
-        },
         calculable : true,
         polar : [
             {
@@ -586,9 +577,13 @@
                         }
                     }
                 },
-                data : [97, 42, 38, 54, 60, 86]
-            }
-        ]
+                data :[
+                    {
+                        value : [97, 42, 38, 54, 60, 86],
+                        name : '武汉市'
+                    }
+                ]
+            }]
     };
 
 

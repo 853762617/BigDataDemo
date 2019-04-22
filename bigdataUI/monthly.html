@@ -34,7 +34,7 @@
           <li class="bg">本季</li>
           <li></li>
           <li class="bg">本年</li>
-          
+
         </ul>
      </div>
     </div>
@@ -273,143 +273,139 @@
         option = {
             backgroundColor: 'rgba(1,202,217,.2)',
             grid: {
-                left:60,
-                right:20,
-                top:45,
-                bottom:40
-            },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'shadow'
-                }
-            },
-            legend: {
-                top:10,
-                textStyle:{
-                    fontSize: 10,
-                    color:'rgba(255,255,255,.7)'
-                },
-                data:['平均成绩','主观题成绩','客观题成绩']
-            },
-            xAxis: [
-                {
-                    type: 'category',
-                    axisLine:{
-                        lineStyle:{
-                            color:'rgba(255,255,255,.2)'
-                        }
-                    },
-                    splitLine:{
-                        lineStyle:{
-                            color:'rgba(255,255,255,.1)'
-                        }
-                    },
-                    axisLabel:{
-                        color:"rgba(255,255,255,.7)"
+                      left:60,
+                      right:20,
+                      top:45,
+                      bottom:40
                     },
 
-                    data: ['武汉市支队','仙桃市支队'],
-                    axisPointer: {
-                        type: 'shadow'
-                    }
-                }
-            ],
-            yAxis: [
-                {
-                    type: 'value',
-                    name: '',
-                    min: 0,
-                    max: 100,
-                    interval: 20,
-                    axisLine:{
-                        lineStyle:{
-                            color:'rgba(255,255,255,.3)'
-                        }
-                    },
-                    splitLine:{
-                        lineStyle:{
-                            color:'rgba(255,255,255,.01)'
-                        }
-                    },
 
-                    axisLabel: {
-                        formatter: '{value} 分'
-                    }
-                },
-                {
-                    type: 'value',
-                    name: '',
-                    max: 25,
-                    interval: 5,
-                    axisLine:{
-                        lineStyle:{
-                            color:'rgba(255,255,255,0)'
-                        }
-                    },
-                    splitLine:{
-                        lineStyle:{
-                            color:'rgba(255,255,255,0)'
-                        }
-                    },
-                    axisLabel: {
-                        formatter: '{value} °C'
-                    }
+      legend: {
+        top:10,
+        textStyle:{
+          fontSize: 10,
+          color:'rgba(255,255,255,.7)'
+        },
+          data:['平均成绩','主观题平均成绩','客观题平均成绩']
+      },
+      xAxis: [
+          {
+              type: 'category',
+              axisLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,.2)'
                 }
-            ],
-            series: [
-
-                {
-                    name:'平均成绩',
-                    type:'bar',
-                    itemStyle: {
-                        normal: {
-                            color: new echarts.graphic.LinearGradient(
-                                0, 0, 0, 1,
-                                [
-                                    {offset: 0, color: '#b266ff'},
-                                    {offset: 1, color: '#121b87'}
-                                ]
-                            )
-                        }
-                    },
-                    data:[90, 92]
-                },
-                {
-                    name:'主观题成绩',
-                    type:'bar',
-
-                    itemStyle: {
-                        normal: {
-                            color: new echarts.graphic.LinearGradient(
-                                0, 0, 0, 1,
-                                [
-                                    {offset: 0, color: '#00f0ff'},
-                                    {offset: 1, color: '#032a72'}
-                                ]
-                            )
-                        }
-                    },
-                    data:[87, 95 ]
-                },
-                {
-                    name:'客观题成绩',
-                    type:'bar',
-                    itemStyle: {
-                        normal: {
-                            color: new echarts.graphic.LinearGradient(
-                                0, 0, 0, 1,
-                                [
-                                    {offset: 0, color: '#fffb34'},
-                                    {offset: 1, color: '#032a72'}
-                                ]
-                            )
-                        }
-                    },
-                    data:[88, 92]
+              },
+              splitLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,.1)'
                 }
-            ]
-        };
+              },
+              axisLabel:{
+                  color:"rgba(255,255,255,.7)"
+              },
+
+              data: ['武汉市支队','仙桃市支队'],
+              axisPointer: {
+                  type: 'shadow'
+              }
+          }
+      ],
+      yAxis: [
+          {
+              type: 'value',
+              name: '',
+              min: 0,
+              max: 100,
+              interval: 20,
+              axisLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,.3)'
+                }
+              },
+              splitLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,.01)'
+                }
+              },
+
+              axisLabel: {
+                  formatter: '{value} 分'
+              }
+          },
+          {
+              type: 'value',
+              name: '',
+              max: 25,
+              interval: 5,
+              axisLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,0)'
+                }
+              },
+              splitLine:{
+                lineStyle:{
+                  color:'rgba(255,255,255,0)'
+                }
+              },
+              axisLabel: {
+                  formatter: '{value} °C'
+              }
+          }
+      ],
+      series: [
+
+          {
+              name:'平均成绩',
+              type:'bar',
+              itemStyle: {
+                              normal: {
+                                  color: new echarts.graphic.LinearGradient(
+                                      0, 0, 0, 1,
+                                      [
+                                          {offset: 0, color: '#b266ff'},
+                                          {offset: 1, color: '#121b87'}
+                                      ]
+                                  )
+                              }
+                          },
+              data:[90, 92]
+          },
+          {
+              name:'主观题平均成绩',
+              type:'bar',
+
+              itemStyle: {
+                              normal: {
+                                  color: new echarts.graphic.LinearGradient(
+                                      0, 0, 0, 1,
+                                      [
+                                          {offset: 0, color: '#00f0ff'},
+                                          {offset: 1, color: '#032a72'}
+                                      ]
+                                  )
+                              }
+                          },
+              data:[87, 95 ]
+          },
+          {
+              name:'客观题平均成绩',
+              type:'bar',
+              itemStyle: {
+                              normal: {
+                                  color: new echarts.graphic.LinearGradient(
+                                      0, 0, 0, 1,
+                                      [
+                                          {offset: 0, color: '#fffb34'},
+                                          {offset: 1, color: '#032a72'}
+                                      ]
+                                  )
+                              }
+                          },
+              data:[88, 92]
+          }
+      ]
+  };
         myChart.setOption(option);
     </script>
 <script type="text/javascript">
@@ -422,12 +418,7 @@
                       top:45,
                       bottom:40
                     },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'shadow'
-                }
-            },
+
      
       legend: {
         top:10,
@@ -958,7 +949,7 @@
                                         }
                                    },
                                    series: [{
-                                       data: [60, 95, 80, 45, 88, 89],
+                                       data: [90, 95, 80, 84, 88, 89],
                                        type: 'line'
                                    }]
                                };

@@ -124,15 +124,19 @@
             top:45,
             bottom:40
         },
-
-
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
         legend: {
             top:10,
             textStyle:{
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data:['平均成绩','主观题平均成绩','客观题平均成绩']
+            data:['平均成绩','主观题成绩','客观题成绩']
         },
         xAxis: [
             {
@@ -218,7 +222,7 @@
                 data:[90, 92]
             },
             {
-                name:'主观题平均成绩',
+                name:'主观题成绩',
                 type:'bar',
 
                 itemStyle: {
@@ -235,7 +239,7 @@
                 data:[87, 95 ]
             },
             {
-                name:'客观题平均成绩',
+                name:'客观题成绩',
                 type:'bar',
                 itemStyle: {
                     normal: {
@@ -266,6 +270,12 @@
                 color:'white'
             },
             data:['武汉市支队','仙桃市支队']
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
         },
         xAxis: {
             type: 'category',
@@ -457,6 +467,12 @@ option = {
         textStyle:{
             color:'white'
         },
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
     grid: {
         left: '3%',

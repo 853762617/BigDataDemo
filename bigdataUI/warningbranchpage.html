@@ -385,7 +385,7 @@
             ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
             label: {
                 normal: {
-                    show: true,
+                    show: false,
                     formatter:function(val){
                         var area_content =  '{a|' + val.name + '}' + '-' + '{b|' + val.data.value2 + '}';
                         return area_content.split("-").join("\n");

@@ -1,11 +1,13 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>大数据平台首页</title>
-<link href="css/style.css"  rel="stylesheet" type="text/css" media="all" />
+<title>大数据平台首页1.0</title>
+<link href="css/style1.0.css"  rel="stylesheet" type="text/css" media="all" />
 <script src="js/echarts.js" charset="utf-8"></script>
 <script src="js/jquery-3.2.0.min.js" charset="utf-8"></script>
 <script src="js/hubei.js"></script>
 <body>
+
+<!-- title & menu -->
 <div class="bnt">
   <div class="topbnt_left fl">
    <ul>
@@ -17,103 +19,81 @@
   </div>
   <h1 class="tith1 fl">政工大数据平台</h1>
   <div class=" fr topbnt_right">
-   <ul>
+    <ul>
        <li><a href="javascript:history.back(-1);">返回</a></li>
        <li><a href="login.html">注销</a></li>
-   </ul>
+    </ul>
   </div>
 </div>
-<!-- bnt end -->
-<div class="left1 pleft1">
-    <div class="lefttime"><h2 class="tith2">统计时间</h2>
-     <div class="lefttime_text">
-        <ul>
-            <li class="bg active">本月</li>
-            <li></li>
-            <li class="bg" >本季</li>
-            <li></li>
-            <li class="bg">本年</li>
-        </ul>
-     </div>
-    </div>
+<!--  title & menu end -->
+
+<!-- left1 -->
+<div class="left1" >
     <div class="plefttoday"><h2 class="tith2">实时监控</h2>
-    <div class="lefttoday_tit" style=" height:8%"><p class="fl">湖北省总队</p><p class="fr">2019-01-01</p></div>
-    <div class="lefttoday_number">
-      <div class="widget-inline-box text-center fl">
-        <p>监控人数</p>
-        <h3 class="ceeb1fd">54</h3>
-        <h4 class="text-muted">变动<img src="img/iconup.png" height="16" />2%</h4>
-      </div>
-      <div class="widget-inline-box text-center fl">
-         <p>监控支队</p>
-        <h3 class="c24c9ff">54</h3>
-        <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
-      </div>
-      <div class="widget-inline-box text-center fl">
-         <p>访问次数</p>
-        <h3 class="cffff00">4</h3>
-        <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
-      </div>
-      <div class="widget-inline-box text-center fl">
-         <p>最新动态</p>
-        <h3 class="c11e2dd">4</h3>
-        <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
-      </div>
+        <div id="lpeftmidbot11" class="lpeftmidbotcont"></div>
     </div>
-    <!-- lefttoday_number end -->
-    <!--  lefttoday_bar end-->
+    <div class="plefttoday"><h2 class="tith2">敏感话题</h2>
+         <div id="topic" class="lpeftmidbotcont"></div>
     </div>
-    <div class="lpeftmidbot">
-      <h2 class="tith2">敏感话题</h2>
-      <div id="topic" class="lpeftmidbotcont"></div>
-  </div>
-    <div class="lpeftbot">
-      <h2 class="tith2">训练成绩排行</h2>
+    <div class="plefttoday"><h2 class="tith2">训练成绩排行</h2>
       <div id="lpeftmidbot" class="lpeftbotcont" ></div>
-  </div>
+    </div>
 </div>
 <!--  left1 end -->
+
+<!-- left2 -->
 <div class="left2">
-  <div class="pleftbox2top">
+    <div class="plefttoday">
       <h2 class="tith2"><a href="group_learning.html" style=" text-decoration: none;color: #ffffff;">学习成绩排行</a></h2>
     <div id="pleftbox2top" class="pleftbox2topcont"></div>
   </div>
-  <div class="pleftbox2midd"><h2 class="tith2">党员工作考评</h2>
-  <!-- <div id="pleftbox2midd" class="pleftbox2middcont"></div> -->
-  <div class="pvr fl  lpeftb2otcont1 hdtop" style=" height:82%;" >
-
-    <div id="pleftbox2bott_cont"class="pleftbox2middcont" style=" height:100%;" ></div>
-  </div>
-  </div>
-  <div class="lpeft2bot" >
-    <h2 class="tith2 " >绩效考核情况</h2>
-<div id="prbottom_box1"class="lpeftb2otcont" ></div>
+    <div class="plefttoday"><h2 class="tith2">党员工作考评</h2>
+    <div class="pvr fl  lpeftb2otcont1 hdtop" style=" height:82%;" >
+        <div id="pleftbox2bott_cont"class="pleftbox2middcont" style=" height:100%;" ></div>
     </div>
+  </div>
+    <div class="plefttoday" ><h2 class="tith2 " >绩效考核情况</h2>
+    <div id="prbottom_box1"class="lpeftb2otcont" ></div>
+  </div>
 </div>
-</div>
+<!--  left2 end -->
+
+<!-- map & wp -->
 <div class="mrbox prbox">
-      <div class="hdmrbox_top">
-          <div class="mrbox_top_midd">
-                <div class="hdmrboxtm-mbox"><h2 class="tith2 pt1">湖北省总队</h2>
-
-                <div  class="hot_map" id="hubei_map" style="">
-                 </div>
-              </div>
-<!--  map end-->
-                <!-- <div class="pmrboxbottom"><h2 class="tith2 pt1">涉稳警情</h2>
-                    <div id="pmrboxbottom" class="pmrboxbottomcont" ></div>
-                </div> -->
-                <div class="mrbox_bottom_bott">
-                    <div class="rbottom_box1 hdwid" ><h2 class="tith2">网络消费变动</h2>
-                    <div id="prbottom_box2" class="prbottom_box1cont"></div></div>
-                    <div class="rbottom_box2 hdwid"><h2 class="tith2">心理健康总体分布</h2>
-                    <div id="pleftbox2midd" class="prbottom_box1cont" ></div></div>
-              </div>
-
-          </div>
-        <!-- mrbox_top_midd end -->
-        <div class="mrbox_top_right">
-            <div class="hdrightboxtop" ><a href="warningfrontpage.html" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">风险预警信息</h2></a>
+    <div class="mrbox_top_midd">
+        <div class="hdmrboxtm-mbox"><h2 class="tith2" style="padding-top: 1%">湖北省总队</h2>
+            <div class="lefttoday_number" style="position: absolute; width: 12%; height: 11%; margin-left: 23%">
+                <div class="widget-inline-box text-center fl">
+                    <p>监控人数</p>
+                    <h3 class="ceeb1fd">54</h3>
+                    <h4 class="text-muted">变动<img src="img/iconup.png" height="16" />2%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>监控支队</p>
+                    <h3 class="c24c9ff">54</h3>
+                    <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>访问次数</p>
+                    <h3 class="cffff00">4</h3>
+                    <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>最新动态</p>
+                    <h3 class="c11e2dd">4</h3>
+                    <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
+                </div>
+            </div>
+            <div  class="hot_map" id="hubei_map" ></div>
+        </div>
+        <div class="mrbox_bottom_bott" >
+            <div class="rbottom_box0" ><h2 class="tith2" style="padding-top: 1.2%">网络消费变动</h2>
+                <div id="prbottom_box2" class="prbottom_box1cont"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mrbox_top_right">
+        <div class="hdrightboxtop" ><a href="warningfrontpage.html" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">风险预警信息</h2></a>
             <div class="lefttoday_tit" style="height:4%"><p class="fl">状态：待处理</p><p class="fr">时间：2018-06-10</p></div>
             <div class="left2_table hdleft2_table">
                <ul>
@@ -193,18 +173,68 @@
                </ul>
             </div>
         </div>
-
-
-      <!-- <div class="mrbox_bottom">
-          <div class="rbottom_box1"><h2 class="tith2">高危人员分类分析</h2>
-          <div id="prbottom_box2" class="prbottom_box1cont"></div></div>
-          <div class="rbottom_box2"><h2 class="tith2">活动人口统计</h2>
-          <div id="pleftbox2midd" class="prbottom_box1cont" ></div></div>
-          <div class="rbottom_box3"><h2 class="tith2 pt2">流动人口年龄分析</h2>
-          <div id="prbottom_box3" class="prbottom_box1cont"></div></div>
-
-      </div> -->
+    </div>
 </div>
+<!--  map & wp end -->
+
+<!-- js -->
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈']
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        xAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈'],
+
+        },
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            }
+        },
+        series: [{
+            data: [98, 60, 76, 90, 85, 69, 92],
+            type: 'bar'
+        }]
+    };
+
+
+    myChart.setOption(option);
+</script>
 <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('lpeftmidbot'));
         option = {
@@ -262,8 +292,7 @@
 
         myChart.setOption(option);
     </script>
-
-    <script type="text/javascript">
+<script type="text/javascript">
             var myChart = echarts.init(document.getElementById('topic'));
             option = {
                 backgroundColor: 'rgba(1,202,217,.2)',
@@ -320,7 +349,7 @@
 
             myChart.setOption(option);
         </script>
-        <script type="text/javascript">
+<script type="text/javascript">
                 var myChart = echarts.init(document.getElementById('pleftbox2top'));
                 option = {
                     color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
@@ -449,7 +478,7 @@
                 };
                 myChart.setOption(option);
             </script>
-            <script type="text/javascript">
+<script type="text/javascript">
                     var myChart = echarts.init(document.getElementById('pleftbox2midd'));
                     option = {
                         backgroundColor: 'rgba(1,202,217,.2)',
@@ -518,7 +547,7 @@
 
                     myChart.setOption(option);
                 </script>
-                    <script type="text/javascript">
+<script type="text/javascript">
                             var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
                             option = {
                               color:['#7ecef4'],
@@ -593,7 +622,7 @@
                                   };
                             myChart.setOption(option);
                         </script>
-                        <script type="text/javascript">
+<script type="text/javascript">
                                 var myChart = echarts.init(document.getElementById('prbottom_box1'));
                                 option = {
                                     backgroundColor: 'rgba(1,202,217,.2)',
@@ -634,7 +663,7 @@
                                     };
                                 myChart.setOption(option);
                             </script>
-                    <script type="text/javascript">
+<script type="text/javascript">
                             var myChart = echarts.init(document.getElementById('prbottom_box2'));
                             option = {
                                 backgroundColor: 'rgba(1,202,217,.2)',
@@ -726,7 +755,7 @@
                             };
                             myChart.setOption(option);
                     </script>
-          <script type="text/javascript">
+<script type="text/javascript">
               var myChart = echarts.init(document.getElementById('hubei_map'));
               var option = {
                   tooltip: {
@@ -754,7 +783,7 @@
                       name: '湖北省',
                       type: 'map',
                       mapType: '湖北',
-                      zoom:1.2,
+                      zoom: 1.05,
                       selectedMode : 'single',
                       label: {
                           normal: {show: true},
@@ -774,7 +803,7 @@
                       },
                       data:[
                           {name: '武汉市', value: 40500},
-                          {name: '黄石市', value: 43000},
+                          {name: '黄石市', value: 23000},
                           {name: '十堰市', value: 22500},
                           {name: '宜昌市', value: 40500},
                           {name: '襄阳市', value: 45000},
@@ -785,11 +814,11 @@
                           {name: '黄冈市', value: 15000},
                           {name: '咸宁市', value: 20000},
                           {name: '随州市', value: 25000},
-                          {name: '仙桃市', value: 23000},
-                          {name: '潜江市', value: 23000},
-                          {name: '天门市', value: 23000},
-                          {name: '恩施土家族苗族自治州', value: 45000},
-                          {name: '神农架林区', value: 23000},
+                          {name: '仙桃市', value: 30000},
+                          {name: '潜江市', value: 35000},
+                          {name: '天门市', value: 36000},
+                          {name: '恩施土家族苗族自治州', value: 45000,value2:1024},
+                          {name: '神农架林区', value: 23000,value2:1024},
                       ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
                       label: {
                           normal: {
@@ -825,7 +854,7 @@
                   }
               });//点击事件，此事件还可以用到柱状图等其他地图
           </script>
-      </div>
-</div>
+<!-- js -->
+
 </body>
 </html>

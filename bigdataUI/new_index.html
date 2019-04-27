@@ -802,41 +802,32 @@
                           }//鼠标事件区块样式
                       },
                       data:[
-                          {name: '武汉市', value: 40500},
-                          {name: '黄石市', value: 23000},
-                          {name: '十堰市', value: 22500},
-                          {name: '宜昌市', value: 40500},
-                          {name: '襄阳市', value: 45000},
-                          {name: '鄂州市', value: 37000},
-                          {name: '荆门市', value: 40500},
-                          {name: '孝感市', value: 0},
-                          {name: '荆州市', value: 11161},
-                          {name: '黄冈市', value: 15000},
-                          {name: '咸宁市', value: 20000},
-                          {name: '随州市', value: 25000},
-                          {name: '仙桃市', value: 30000},
-                          {name: '潜江市', value: 35000},
-                          {name: '天门市', value: 36000},
-                          {name: '恩施土家族苗族自治州', value: 45000,value2:1024},
-                          {name: '神农架林区', value: 23000,value2:1024},
+                          {name: '武汉市',name2:'武汉支队' ,value: 40500},
+                          {name: '黄石市',name2:'黄石支队' ,value: 43000},
+                          {name: '十堰市',name2:'十堰支队' , value: 30000},
+                          {name: '宜昌市',name2:'宜昌支队' , value: 40500},
+                          {name: '襄阳市',name2:'襄阳支队' , value: 45000},
+                          {name: '鄂州市',name2:'鄂州支队' , value: 37000},
+                          {name: '荆门市',name2:'荆门支队' , value: 40500},
+                          {name: '孝感市',name2:'孝感支队' , value: 0},
+                          {name: '荆州市',name2:'荆州支队' , value: 11161},
+                          {name: '黄冈市',name2:'黄冈支队' , value: 15000},
+                          {name: '咸宁市',name2:'咸宁支队' , value: 20000},
+                          {name: '随州市',name2:'随州支队' , value: 38000},
+                          {name: '仙桃市',name2:'汉江支队' , value: 23000},
+                          {name: '潜江市',name2:'汉江支队' , value: 23000},
+                          {name: '天门市',name2:'汉江支队' , value: 23000},
+                          {name: '恩施土家族苗族自治州',name2:'恩施支队' , value: 45000},
+                          {name: '神农架林区',name2:'汉江支队' , value: 23000},
                       ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
                       label: {
                           normal: {
                               show: true,
+                              color:'#FFF',
                               formatter:function(val){
-                                  var area_content =  '{a|' + val.name + '}';
+                                  var area_content =  val['data'].name2 ;
                                   return area_content.split("-").join("\n");
                               },//让series 中的文字进行换行
-                              rich: {
-                                  a: {
-                                      color: 'WHITE'
-                                  },
-                                  b: {
-                                      color: 'yellow',
-                                      fontFamily: 'Microsoft YaHei',
-                                      fontSize: 14,
-                                  }
-                              },//富文本样式,就是上面的formatter中'{a|'和'{b|'
                           },
                           emphasis: {show: true}
                       },//地图中文字内容及样式控制

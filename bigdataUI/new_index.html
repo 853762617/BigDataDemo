@@ -463,75 +463,6 @@
                 myChart.setOption(option);
             </script>
 <script type="text/javascript">
-                    var myChart = echarts.init(document.getElementById('pleftbox2midd'));
-                    option = {
-                        backgroundColor: 'rgba(1,202,217,.2)',
-                        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-                        tooltip : {
-                            trigger: 'axis'
-                        },
-                        grid: {
-                            left: '3%',
-                            right: '4%',
-                            top: '3%',
-                            containLabel: true
-                        },
-                        legend: {
-                            orient: 'vertical',
-                            x : 'left',
-                            textStyle:{
-                                fontSize: 10,
-                                color:'rgba(255,255,255,.7)'
-                            },
-                            data:['武汉市','宜昌市','鄂州市']
-                        },
-                        calculable : true,
-                        polar : [
-                            {
-                                indicator : [
-                                    {text : '体育',color:'rgba(255,255,255,.7)', max  : 100},
-                                    {text : '游戏',color:'rgba(255,255,255,.7)', max  : 100},
-                                    {text : '书籍',color:'rgba(255,255,255,.7)',  max  : 100},
-                                    {text : '音乐',color:'rgba(255,255,255,.7)',  max  : 100},
-                                    {text : '植物',color:'rgba(255,255,255,.7)',  max  : 100},
-                                    {text : '动物',color:'rgba(255,255,255,.7)',  max  : 100}
-                                ],
-                                radius : 60
-                            }
-                        ],
-                        series : [
-                            {
-                                name: '完全实况球员数据',
-                                type: 'radar',
-                                itemStyle: {
-                                    normal: {
-                                        areaStyle: {
-                                            type: 'default'
-                                        }
-                                    }
-                                },
-                                data : [
-                                    {
-                                        value : [97, 42, 38, 54, 60, 86],
-                                        name : '武汉市'
-                                    },
-                                    {
-                                        value : [45, 32, 74, 56, 89, 10],
-                                        name : '鄂州市'
-                                    },
-                                    {
-                                        value : [10, 80, 40, 65, 45, 60],
-                                        name : '宜昌市'
-                                    }
-                                ]
-                            }
-                        ]
-                    };
-
-
-                    myChart.setOption(option);
-                </script>
-<script type="text/javascript">
                 var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
                 option = {
                     color:['#d88b74','#d2d17c','#00b7ee', '#5578cf'],
@@ -615,97 +546,78 @@
                 myChart.setOption(option);
 </script>
 <script type="text/javascript">
-                            var myChart = echarts.init(document.getElementById('prbottom_box2'));
-                            option = {
-                                backgroundColor: 'rgba(1,202,217,.2)',
-                                color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-                                tooltip: {
-                                    trigger: 'axis'
-                                },
-                                legend: {
-                                    top:10,
-                                    textStyle:{
-                                        fontSize: 10,
-                                        color:'rgba(255,255,255,.7)'
-                                    },
-                                    data:['武汉市','宜昌市','鄂州市','天门市','仙桃市']
-                                },
-                                grid: {
-                                    left: '3%',
-                                    right: '4%',
-                                    bottom: '3%',
-                                    containLabel: true
-                                },
-                                xAxis: {
-                                    type: 'category',
-                                    boundaryGap: false,
-                                    axisLine:{
-                                        lineStyle:{
-                                            color:'rgba(255,255,255,.5)'
-                                        }
-                                    },
-                                    splitLine:{
-                                        lineStyle:{
-                                            color:'rgba(255,255,255,.1)'
-                                        }
-                                    },
-                                    axisLabel:{
-                                        color:"rgba(255,255,255,.5)"
-                                    },
-                                    data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月','9月','10月','11月','12月']
-                                },
-                                yAxis: {
-                                    type: 'value',
-                                    axisLine:{
-                                        lineStyle:{
-                                            color:'rgba(255,255,255,.5)'
-                                        }
-                                    },
-                                    splitLine:{
-                                        lineStyle:{
-                                            color:'rgba(255,255,255,.1)'
-                                        }
-                                    },
-                                    axisLabel:{
-                                        color:"rgba(255,255,255,.5)"
-                                    },
+                var myChart = echarts.init(document.getElementById('prbottom_box2'));
+                option = {
+                    backgroundColor: 'rgba(1,202,217,.2)',
+                    color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+                    tooltip: {
+                        trigger: 'axis',
+                        formatter: "{b} : {c}分"
 
-                                },
-                                series: [
-                                    {
-                                        name:'武汉市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    },
-                                    {
-                                        name:'宜昌市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    },
-                                    {
-                                        name:'鄂州市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    },
-                                    {
-                                        name:'天门市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    },
-                                    {
-                                        name:'仙桃市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    }
-                                ]
-                            };
-                            myChart.setOption(option);
-                    </script>
+                    },
+                    // legend: {
+                    //     textStyle:{
+                    //         fontSize: 10,
+                    //         color:'rgba(255,255,255,.7)'
+                    //     },
+                    //     data:['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江']
+                    // },
+                    grid: {
+                        left: '3%',
+                        right: '3%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        axisLine:{
+                            lineStyle:{
+                                color:'rgba(255,255,255,.5)'
+                            }
+                        },
+                        splitLine:{
+                            lineStyle:{
+                                color:'rgba(255,255,255,.1)'
+                            }
+                        },
+                        axisLabel:{
+                            color:"rgba(255,255,255,.5)"
+                        },
+                        data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江']
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLine:{
+                            lineStyle:{
+                                color:'rgba(255,255,255,.5)'
+                            }
+                        },
+                        splitLine:{
+                            lineStyle:{
+                                color:'rgba(255,255,255,.1)'
+                            }
+                        },
+                        axisLabel:{
+                            color:"rgba(255,255,255,.5)"
+                        },
+
+                    },
+                    series: [{
+                        data: [90, 81, 73, 94, 89, 70, 82, 92, 78, 94, 90, 87, 92, 85],
+                        type: 'line',
+                        label:{
+                            normal:{
+                                show:true,
+                                position:'top',
+                                color:'rgba(255,255,255,.9)',
+                                formatter: "{c}",
+                            }
+                        }
+                    }],
+                };
+                myChart.setOption(option);
+        </script>
 <script type="text/javascript">
               var myChart = echarts.init(document.getElementById('hubei_map'));
               var option = {

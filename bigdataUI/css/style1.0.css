@@ -41,9 +41,9 @@ html,body{
 .lefttoday_tit{ overflow: hidden; padding: 1.9% 5% .2%;  height: 6%; position: relative;}
 .lefttoday_tit.height{height: 12%;}
 .lefttoday_number{overflow: hidden; height: 74%; width: 91%; margin: 1% 4%;}
-.lefttoday_tit p.fl{ font-size: 12px; color: rgba(255,255,255,1);  position: absolute;left: 5%;top: 22%}
-.lefttoday_tit p.fr{ font-size: 12px; color: rgba(255,255,255,.6); position: absolute;right: 5%;top: 25%}
-.lefttoday_tit p.fm{font-size: 12px; color: rgba(255,255,255,1); position: absolute;left: 40%;top: 25%}
+.lefttoday_tit p.fl{ font-size: 14px; color: rgba(255,255,255,1);  position: absolute;left: 5%;top: 22%}
+.lefttoday_tit p.fr{ font-size: 14px; color: rgba(255,255,255,.6); position: absolute;right: 5%;top: 25%}
+.lefttoday_tit p.fm{font-size: 14px; color: rgba(255,255,255,1); position: absolute;left: 40%;top: 25%}
 
 .lefttoday_tit.height.ht{height: 16%;}
 .lefttoday_tit.height p.fl{position: absolute;left:5%;top: 15%;}
@@ -68,8 +68,8 @@ html,body{
 
 .leftclass{background:url(../img/leftb1.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width:350px; height:291px;}
 .leftbox2_table{background:url(../img/leftbox2.png);background-repeat: no-repeat;background-position: -2px -2px; width:354px; height:680px;}
-.left2_table{ width: 120%; margin-left: 7%; font-size: 12px;height:27%; overflow: hidden;}
-.hdleft2_table{ width: 91%; margin-left: 5%; font-size: 12px;height:91.6%; overflow: hidden;}
+.left2_table{ width: 120%; margin-left: 7%; font-size: 16px;height:27%; overflow: hidden;}
+.hdleft2_table{ width: 91%; margin-left: 5%; font-size: 16px;height:91.6%; overflow: hidden;}
 .left2_table li{background: rgba(1,202,217,.2) url(../img/icosjx.png) no-repeat  top left; position: relative;overflow: hidden; padding: 2% 6%; color:rgba(255,255,255,.7); line-height: 150%}
 .left2_table li b{color:rgba(255,255,255,1); font-weight: normal;}
 .left2_table li p.fl{ width: 80%; overflow: hidden;}
@@ -95,7 +95,7 @@ html,body{
 .prbottom_box2cont{ margin-left: 5.2%; width: 90.6%; height: 82%; margin-top: 1.8%;}
 .prbottom_box3cont{ margin-left: 5.2%; width: 90.6%; height: 82%; margin-top: 1.8%;}
 
-.tith2{ text-align: center; width: 100%; font-size: 12px; padding-top: 1.9%;  font-weight: normal;letter-spacing:2px; font-weight:  normal; overflow: hidden;}
+.tith2{ text-align: center; width: 100%; font-size: 18px; padding-top: 0.5%;  font-weight: normal;letter-spacing:2px; font-weight:  normal; overflow: hidden;}
 .fl{ float: left;}
 .fr{ float: right;}
 .topbnt_left{width: 33%}

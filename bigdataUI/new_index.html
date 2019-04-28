@@ -305,7 +305,8 @@
                 grid: {
                     left: '3%',
                     right: '3%',
-                    bottom: '3%',
+                    top: '3%',
+                    bottom:0
                 },
                 series: [
                     {
@@ -345,10 +346,11 @@
                         left: '3%',
                         right: '3%',
                         top:'3%',
-                        bottom: '3%'
+                        bottom: '0%'
                     },
                     series: [{
                         type:'pie',
+                        radius : ['0%','70%'],
                         data:[
                             {value:3367, name:'健康人数'},
                             {value:2003, name:'未参与人数'},
@@ -377,7 +379,7 @@
                         grid: {
                             left: '3%',
                             right: '4%',
-                            bottom: '3%',
+                            top: '3%',
                             containLabel: true
                         },
                         legend: {
@@ -438,73 +440,35 @@
 <script type="text/javascript">
                 var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
                 option = {
-                    color:['#7ecef4'],
+                    color:['#d88b74','#d2d17c','#00b7ee', '#5578cf'],
                     backgroundColor: 'rgba(1,202,217,.2)',
                     grid:{
                         left:'3%',
                         right:'3%',
-                        top:'10%',
+                        top:'3%',
                         bottom:0,
                         containLabel: true
                     },
                     tooltip: {
-                        trigger: 'axis',
-                        axisPointer: {
-                            type: 'shadow'
-                        }
-                    },
-
-                    xAxis: {
-                      type: 'value',
-                      axisLine:{
-                       lineStyle:{
-                         color:'rgba(255,255,255,0)'
-                       }
-                     },
-                     splitLine:{
-                       lineStyle:{
-                         color:'rgba(255,255,255,0)'
-                       }
-                     },
-                     axisLabel:{
-                         color:"rgba(255,255,255,0)"
-                     },
-                      boundaryGap: [0, 0.01]
-                    },
-                    yAxis: {
-                      type: 'category',
-                      axisLine:{
-                       lineStyle:{
-                         color:'rgba(255,255,255,.5)'
-                       }
-                     },
-                     splitLine:{
-                       lineStyle:{
-                         color:'rgba(255,255,255,.1)'
-                       }
-                     },
-                     axisLabel:{
-                         color:"rgba(255,255,255,.5)"
-                     },
-                      data: ['差','较差','一般','良好','优秀']
+                        trigger: 'item',
+                        formatter: "{b}: {c}人 ({d}%)"
                     },
                     series: [
                       {
-                          name: '2011年',
-                          type: 'bar',
-                          barWidth :20,
-                          itemStyle: {
-                              normal: {
-                                  color: new echarts.graphic.LinearGradient(
-                                      1, 0, 0, 1,
-                                      [
-                                          {offset: 0, color: 'rgba(230,253,139,.7)'},
-                                          {offset: 1, color: 'rgba(41,220,205,.7)'}
-                                      ]
-                                  )
+                          type: 'pie',
+                          radius : ['0%','70%'],
+                          data: [
+                              {value:89,name:'不称职'},
+                              {value:1034,name:'基本称职'},
+                              {value:6970,name:'称职'},
+                              {value:2744,name:'优秀'},
+                          ],
+                          label:{
+                              normal:{
+                                  show:true,
+                                  formatter: "{b}",
                               }
-                          },
-                          data: [18203, 23489, 29034, 104970, 131744]
+                          }
                       }
                     ]
                       };
@@ -514,7 +478,7 @@
                                 var myChart = echarts.init(document.getElementById('prbottom_box1'));
                                 option = {
                                     backgroundColor: 'rgba(1,202,217,.2)',
-                                  color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+                                    color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
                                     tooltip : {
                                         trigger: 'item',
                                         formatter: "{a} <br/>{b} : {c} ({d}%)"

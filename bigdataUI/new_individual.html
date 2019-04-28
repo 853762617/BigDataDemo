@@ -74,8 +74,8 @@
                 </ul>
             </div>
         </div>
-        <div class="plefttoday3" style="margin-top: 9%;height:28%;"><h2 class="tith2">实时监控</h2>
-            <div id="lpeftmidbot6" class="lpeftmidbotcont" ></div>
+        <div class="plefttoday3" style="margin-top: 9%;height:28%;"><h2 class="tith2">心理健康</h2>
+            <div id="mentalhealth" class="lpeftmidbotcont" ></div>
         </div>
     </div>
 </div>
@@ -83,14 +83,14 @@
 
 <!-- left1 -->
 <div class="left4" style="margin-left: 1.0%">
-    <div class="plefttoday3"><h2 class="tith2">实时监控</h2>
+    <div class="plefttoday3"><h2 class="tith2">学习教育</h2>
         <div id="lpeftmidbot11" class="lpeftmidbotcont"></div>
     </div>
-    <div class="plefttoday3"><h2 class="tith2">敏感话题</h2>
-         <div id="topic" class="lpeftmidbotcont"></div>
+    <div class="plefttoday3"><h2 class="tith2">绩效考核</h2>
+        <div id="topic" class="lpeftmidbotcont"></div>
     </div>
-    <div class="plefttoday3"><h2 class="tith2">训练成绩排行</h2>
-      <div id="lpeftmidbot" class="lpeftbotcont" ></div>
+    <div class="plefttoday3"><h2 class="tith2">思想政治</h2>
+        <div id="lpeftmidbot" class="lpeftbotcont" ></div>
     </div>
 </div>
 <!--  left1 end -->
@@ -98,15 +98,15 @@
 <!-- left2 -->
 <div class="left4" >
     <div class="plefttoday3">
-      <h2 class="tith2"><a href="group_learning.html" style=" text-decoration: none;color: #ffffff;">学习成绩排行</a></h2>
+      <h2 class="tith2"><a href="group_learning.html" style=" text-decoration: none;color: #ffffff;">网络消费</a></h2>
     <div id="pleftbox2top" class="pleftbox2middcont"></div>
   </div>
-    <div class="plefttoday3"><h2 class="tith2">党员工作考评</h2>
+    <div class="plefttoday3"><h2 class="tith2">智慧党建</h2>
     <div class="pvr fl  lpeftb2otcont1 hdtop" style=" height:82%;" >
         <div id="pleftbox2bott_cont"class="pleftbox2middcont" style=" height:100%;" ></div>
     </div>
   </div>
-    <div class="plefttoday3" ><h2 class="tith2 " >绩效考核情况</h2>
+    <div class="plefttoday3" ><h2 class="tith2">体能训练</h2>
     <div id="prbottom_box1"class="lpeftb2otcont" ></div>
   </div>
 </div>
@@ -126,8 +126,8 @@
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>宜昌市支队</b><br>
-                            宜昌市支队XXX存在APP使用不达标情况；<br>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在体能下降情况；<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
@@ -161,36 +161,6 @@
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
-                    <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
-                        </p>
-                        <p class="fr pt17">2018-06-22</p>
-                    </li>
-                    <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
-                        </p>
-                        <p class="fr pt17">2018-06-22</p>
-                    </li>
-                    <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
-                        </p>
-                        <p class="fr pt17">2018-06-22</p>
-                    </li>
-                    <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
-                        </p>
-                        <p class="fr pt17">2018-06-22</p>
-                    </li>
-                    <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
-                        </p>
-                        <p class="fr pt17">2018-06-22</p>
-                    </li>
 
                 </ul>
             </div>
@@ -201,24 +171,84 @@
 
 <!-- js -->
 <script type="text/javascript">
-    var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
+    var myChart = echarts.init(document.getElementById('mentalhealth'));
     option = {
         backgroundColor: 'rgba(1,202,217,.2)',
-
         color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip : {
+            trigger: 'axis'
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        calculable : true,
+        polar : [
+            {
+                indicator : [
+                    {text : '指标1',color:'rgba(255,255,255,.7)', max  : 100},
+                    {text : '指标2',color:'rgba(255,255,255,.7)', max  : 100},
+                    {text : '指标3',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '指标4',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '指标5',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '指标6',color:'rgba(255,255,255,.7)',  max  : 100}
+                ],
+                radius : 60
+            }
+        ],
+        series : [
+            {
+                name: '心理健康',
+                type: 'radar',
+                itemStyle: {
+                    normal: {
+                        areaStyle: {
+                            type: 'default'
+                        }
+                    }
+                },
+                data :[
+                    {
+                        value : [97, 42, 38, 54, 60, 86],
+                        name : '武汉市'
+                    }
+                ]
+            }]
+    };
+
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
+    option = {
+        title:{
+            show:false,
+            text:'学习指标平均合格率',
+            x:'center',
+            textStyle:{
+                color:'rgba(255,255,255,.7)',
+                fontSize:16,
+            },
+        },
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb'],
         legend: {
             top:10,
             textStyle:{
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈']
+            data: ['必修', '选修', '客观题', '主观题']
         },
         tooltip : {
             trigger: 'axis',
             axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-            }
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            },
+            formatter: "{b}: {c}分",
         },
         xAxis: {
             type: 'category',
@@ -232,7 +262,7 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈'],
+            data: ['必修', '选修', '客观题', '主观题'],
 
         },
         yAxis: {
@@ -249,9 +279,17 @@
             }
         },
         series: [{
-            data: [98, 60, 76, 90, 85, 69, 92],
-            type: 'bar'
-        }]
+            data: [38, 20, 29, 9],
+            type: 'bar',
+            label:{
+                normal:{
+                    show:true,
+                    position:'top',
+                    color:'rgba(255,255,255,.9)',
+                    formatter: "{c}",
+                }
+            }
+        }],
     };
 
 
@@ -261,21 +299,20 @@
         var myChart = echarts.init(document.getElementById('lpeftmidbot'));
         option = {
             backgroundColor: 'rgba(1,202,217,.2)',
-
-            color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+            color:['#7fd7b1', '#5578cf', '#5ebbeb'],
             legend: {
-                top:10,
                 textStyle:{
                     fontSize: 10,
                     color:'rgba(255,255,255,.7)'
                 },
-                data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈']
+                data: ['类别1', '类别2', '类别3', '类别4']
             },
             tooltip : {
                 trigger: 'axis',
                 axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                }
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter: "{b}: {c}篇",
             },
             xAxis: {
                 type: 'category',
@@ -289,7 +326,7 @@
                         color:'rgba(255,255,255,.1)'
                     }
                 },
-                data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈'],
+                data: ['类别1', '类别2', '类别3', '类别4'],
 
             },
             yAxis: {
@@ -306,9 +343,17 @@
                 }
             },
             series: [{
-                data: [98, 60, 76, 90, 85, 69, 92],
-                type: 'bar'
-            }]
+                data: [8, 2, 9, 7],
+                type: 'bar',
+                label:{
+                    normal:{
+                        show:true,
+                        position:'top',
+                        color:'rgba(255,255,255,.9)',
+                        formatter: "{c}",
+                    }
+                }
+            }],
         };
 
 
@@ -318,564 +363,310 @@
             var myChart = echarts.init(document.getElementById('topic'));
             option = {
                 backgroundColor: 'rgba(1,202,217,.2)',
-                series: [{
-                    color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-                    name: '话题',
-                    type: 'treemap',
-                    tooltip : {
-                        trigger: 'item',
-                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb'],
+                legend: {
+                    textStyle:{
+                        fontSize: 10,
+                        color:'rgba(255,255,255,.7)'
                     },
-                    data: [{
-                        name: '政事',            // First tree
-                        value: 15,
-                        children: [{
-                            name: '国家',       // First leaf of first tree
-                            value: 3
-                        }, {
-                            name: '中国',       // Second leaf of first tree
-                            value: 2
-                        },{
-                            name: '和平',       // Second leaf of first tree
-                            value: 2
-                        },{
-                            name: '巴黎',       // Second leaf of first tree
-                            value: 1
-                        },{
-                            name: '美国',       // Second leaf of first tree
-                            value: 1
-                        }]
-                    }, {
-                        name: '体育',            // Second tree
-                        value: 20,
-                        children: [{
-                            name: '篮球',  // Granson of first tree
-                            value: 5
-                        },{
-                            name: '足球',  // Granson of first tree
-                            value: 10
-                        }]
-                    }, {
-                        name: '游戏',            // Second tree
-                        value: 20,
-                        children: [{
-                            name: '王者荣耀',  // Granson of first tree
-                            value: 10
-                        },{
-                            name: '英雄联盟',  // Granson of first tree
-                            value: 10
-                        }]
-                    }]
-                }]
+                    data: ['自评价', '领导评价']
+                },
+                tooltip : {
+                    trigger: 'axis',
+                    axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    },
+                    formatter: "{b}: 称职",
+                },
+                xAxis: {
+                    type: 'category',
+                    axisLine:{
+                        lineStyle:{
+                            color:'rgba(255,255,255,.7)'
+                        }
+                    },
+                    splitLine:{
+                        lineStyle:{
+                            color:'rgba(255,255,255,.1)'
+                        }
+                    },
+                    data: ['自评价', '领导评价'],
+
+                },
+                yAxis: {
+                    type: 'value',
+                    axisTick:{
+                        show:false,
+                    },
+                    axisLabel:{
+                        show:false,
+                    },
+                    axisLine:{
+                        lineStyle:{
+                            color:'rgba(255,255,255,.2)'
+                        }
+                    },
+                    splitLine:{
+                        lineStyle:{
+                            color:'rgba(255,255,255,.1)'
+                        }
+                    }
+                },
+                series: [{
+                    data: [3,3],
+                    type: 'bar',
+                    label:{
+                        normal:{
+                            show:true,
+                            position:'top',
+                            color:'rgba(255,255,255,.9)',
+                            formatter: "称职",
+                        }
+                    }
+                }],
             };
 
             myChart.setOption(option);
         </script>
 <script type="text/javascript">
-                var myChart = echarts.init(document.getElementById('pleftbox2top'));
-                option = {
-                    color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-                    backgroundColor: 'rgba(1,202,217,.2)',
-                    tooltip : {
-                        trigger: 'axis',
-                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                        }
-                    },
-                    grid: {
-                        left:20,
-                        right:20,
-                        top:0,
-                        bottom:20
-                    },
-                    legend: {
-                        textStyle:{
-                            fontSize: 10,
-                            color:'rgba(255,255,255,.7)'
-                        },
-                        data: ['主观题', '客观题','必修','选修','总分']
-                    },
-                    grid: {
-                        left: '3%',
-                        right: '4%',
-                        bottom: '3%',
-                        containLabel: true
-                    },
-                    xAxis:  {
-                        type: 'value',
-                        axisLine:{
-                            lineStyle:{
-                                color:'rgba(255,255,255,.2)'
-                            }
-                        },
-                        splitLine:{
-                            lineStyle:{
-                                color:'rgba(255,255,255,.1)'
-                            }
-                        }
-                    },
-                    yAxis: {
-                        type: 'category',
-                        axisLine:{
-                            lineStyle:{
-                                color:'rgba(255,255,255,.7)'
-                            }
-                        },
-                        splitLine:{
-                            lineStyle:{
-                                color:'rgba(255,255,255,.1)'
-                            }
-                        },
-                        data: ['武汉','宜昌','鄂州','十堰','黄冈','仙桃','天门']
-                    },
-                    series: [
-                        {
-                            name: '主观题',
-                            type: 'bar',
-                            stack: '总量',
-                            label: {
-                                normal: {
-                                    show: true,
-                                    position: 'insideRight'
-                                }
-                            },
-                            data: [40, 44, 49, 36, 45, 44, 48]
-                        },
-                        {
-                            name: '客观题',
-                            type: 'bar',
-                            stack: '总量',
-                            label: {
-                                normal: {
-                                    show: true,
-                                    position: 'insideRight'
-                                }
-                            },
-                            data: [45, 42, 41, 50, 43, 38, 35]
-                        },
-                        {
-                            name: '必修',
-                            type: 'bar',
-                            stack: '总量',
-                            label: {
-                                normal: {
-                                    show: true,
-                                    position: 'insideRight'
-                                }
-                            },
-                            data: [40, 44, 49, 36, 45, 44, 48]
-                        },
-                        {
-                            name: '选修',
-                            type: 'bar',
-                            stack: '总量',
-                            label: {
-                                normal: {
-                                    show: true,
-                                    position: 'insideRight'
-                                }
-                            },
-                            data: [45, 42, 41, 50, 43, 38, 35]
-                        },
-                        {
-                            name: '总分',
-                            type: 'bar',
-                            stack: '总量',
-                            label: {
-                                normal: {
-                                    show: true,
-                                    position: 'insideRight'
-                                }
-                            },
-                            data: [85, 86, 90, 86, 88, 82, 83]
-                        }
-                    ],
-                    itemStyle: {
-                        emphasis: {
-                            shadowBlur: 10,
-                            shadowOffsetX: 0,
-                            shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        }
+        var myChart = echarts.init(document.getElementById('pleftbox2top'));
+        option = {
+            backgroundColor: 'rgba(1,202,217,.2)',
+            color:['#80cad2','#7fd7b1', '#5578cf', '#5ebbeb'],
+            legend: {
+                textStyle:{
+                    fontSize: 10,
+                    color:'rgba(255,255,255,.7)'
+                },
+                data: ['收入', '支出', '余额']
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter: "{b}: {c}元",
+            },
+            xAxis: {
+                type: 'category',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.7)'
                     }
-                };
-                myChart.setOption(option);
-            </script>
-<script type="text/javascript">
-                    var myChart = echarts.init(document.getElementById('pleftbox2midd'));
-                    option = {
-                        backgroundColor: 'rgba(1,202,217,.2)',
-                        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-                        tooltip : {
-                            trigger: 'axis'
-                        },
-                        grid: {
-                            left: '3%',
-                            right: '4%',
-                            bottom: '3%',
-                            containLabel: true
-                        },
-                        legend: {
-                            orient: 'vertical',
-                            x : 'left',
-                            textStyle:{
-                                fontSize: 10,
-                                color:'rgba(255,255,255,.7)'
-                            },
-                            data:['武汉市','宜昌市','鄂州市']
-                        },
-                        calculable : true,
-                        polar : [
-                            {
-                                indicator : [
-                                    {text : '体育',color:'rgba(255,255,255,.7)', max  : 100},
-                                    {text : '游戏',color:'rgba(255,255,255,.7)', max  : 100},
-                                    {text : '书籍',color:'rgba(255,255,255,.7)',  max  : 100},
-                                    {text : '音乐',color:'rgba(255,255,255,.7)',  max  : 100},
-                                    {text : '植物',color:'rgba(255,255,255,.7)',  max  : 100},
-                                    {text : '动物',color:'rgba(255,255,255,.7)',  max  : 100}
-                                ],
-                                radius : 60
-                            }
-                        ],
-                        series : [
-                            {
-                                name: '完全实况球员数据',
-                                type: 'radar',
-                                itemStyle: {
-                                    normal: {
-                                        areaStyle: {
-                                            type: 'default'
-                                        }
-                                    }
-                                },
-                                data : [
-                                    {
-                                        value : [97, 42, 38, 54, 60, 86],
-                                        name : '武汉市'
-                                    },
-                                    {
-                                        value : [45, 32, 74, 56, 89, 10],
-                                        name : '鄂州市'
-                                    },
-                                    {
-                                        value : [10, 80, 40, 65, 45, 60],
-                                        name : '宜昌市'
-                                    }
-                                ]
-                            }
-                        ]
-                    };
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                data: ['收入', '支出', '余额'],
 
+            },
+            yAxis: {
+                type: 'value',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                }
+            },
+            series: [{
+                data: [
+                    {value:7000, name:'收入'},
+                    {value:5000, name:'支出'},
+                    {value:2000, name:'余额'}],
+                type: 'bar',
+                label:{
+                    normal:{
+                        show:true,
+                        position:'top',
+                        color:'rgba(255,255,255,.9)',
+                        formatter: "{c}",
+                    }
+                }
+            }],
+        };
+        myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color: ['#d8715a', '#7fd7b1', '#5578cf', '#5ebbeb'],
+        legend: {
+            textStyle: {
+                fontSize: 10,
+                color: 'rgba(255,255,255,.7)'
+            },
+            data: ['组织生活', '党员模范作用', '党员工作考评', '党内评价']
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            },
+            formatter: "{b}: {c}分",
+        },
+        xAxis: {
+            type: 'category',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                interval: 0,
+                formatter:function(value)
+                {
+                    var ret = "";//拼接加\n返回的类目项
+                    var maxLength = 2;//每项显示文字个数
+                    var valLength = value.length;//X轴类目项的文字个数
+                    var rowN = Math.ceil(valLength / maxLength); //类目项需要换行的行数
+                    if (rowN > 1)//如果类目项的文字大于3,
+                    {
+                        for (var i = 0; i < rowN; i++) {
+                            var temp = "";//每次截取的字符串
+                            var start = i * maxLength;//开始截取的位置
+                            var end = start + maxLength;//结束截取的位置
+                            //这里也可以加一个是否是最后一行的判断，但是不加也没有影响，那就不加吧
+                            temp = value.substring(start, end) + "\n";
+                            ret += temp; //凭借最终的字符串
+                        }
+                        return ret;
+                    }
+                    else {
+                        return value;
+                    }
+                }
+            },
+            data: ['组织生活', '党员模范作用', '党员工作考评', '党内评价'],
 
-                    myChart.setOption(option);
-                </script>
+        },
+        yAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            }
+        },
+        series: [{
+            data: [85, 90, 69, 90],
+            type: 'bar',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    color: 'rgba(255,255,255,.9)',
+                    formatter: "{c}",
+                }
+            }
+        }],
+    };
+    myChart.setOption(option);
+</script>
 <script type="text/javascript">
-                            var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
-                            option = {
-                              color:['#7ecef4'],
-                                backgroundColor: 'rgba(1,202,217,.2)',
-                                grid: {
-                    											left:40,
-                    											right:20,
-                    											top:30,
-                    											bottom:0,
-                                          containLabel: true
-                    										},
-                                tooltip: {
-                                    trigger: 'axis',
-                                    axisPointer: {
-                                        type: 'shadow'
-                                    }
-                                },
+    var myChart = echarts.init(document.getElementById('prbottom_box1'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color: ['#3ed8eb'],
+        legend: {
+            textStyle: {
+                fontSize: 10,
+                color: 'rgba(255,255,255,.7)'
+            },
+            data: ['单杠引体向上', '10米×4往返跑', '1000米跑', '原地跳高']
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            },
+            formatter: "{b}: {c}分",
+        },
+        xAxis: {
+            type: 'category',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                interval: 0,
+                formatter:function(value)
+                {
+                    var ret = "";//拼接加\n返回的类目项
+                    var maxLength = 4;//每项显示文字个数
+                    var valLength = value.length;//X轴类目项的文字个数
+                    var rowN = Math.ceil(valLength / maxLength); //类目项需要换行的行数
+                    if (rowN > 1)//如果类目项的文字大于3,
+                    {
+                        for (var i = 0; i < rowN; i++) {
+                            var temp = "";//每次截取的字符串
+                            var start = i * maxLength;//开始截取的位置
+                            var end = start + maxLength;//结束截取的位置
+                            //这里也可以加一个是否是最后一行的判断，但是不加也没有影响，那就不加吧
+                            temp = value.substring(start, end) + "\n";
+                            ret += temp; //凭借最终的字符串
+                        }
+                        return ret;
+                    }
+                    else {
+                        return value;
+                    }
+                }
+            },
+            data: ['单杠引体向上', '10米×4往返跑', '1000米跑', '原地跳高'],
 
-                                      xAxis: {
-                                          type: 'value',
-                                          axisLine:{
-                                           lineStyle:{
-                                             color:'rgba(255,255,255,0)'
-                                           }
-                                         },
-                                         splitLine:{
-                                           lineStyle:{
-                                             color:'rgba(255,255,255,0)'
-                                           }
-                                         },
-                                         axisLabel:{
-                                             color:"rgba(255,255,255,0)"
-                                         },
-                                          boundaryGap: [0, 0.01]
-                                      },
-                                      yAxis: {
-                                          type: 'category',
-                                          axisLine:{
-                                           lineStyle:{
-                                             color:'rgba(255,255,255,.5)'
-                                           }
-                                         },
-                                         splitLine:{
-                                           lineStyle:{
-                                             color:'rgba(255,255,255,.1)'
-                                           }
-                                         },
-                                         axisLabel:{
-                                             color:"rgba(255,255,255,.5)"
-                                         },
-                                          data: ['差','较差','一般','良好','优秀']
-                                      },
-                                      series: [
-                                          {
-                                              name: '2011年',
-                                              type: 'bar',
-                                              barWidth :20,
-                                              itemStyle: {
-                                                  normal: {
-                                                      color: new echarts.graphic.LinearGradient(
-                                                          1, 0, 0, 1,
-                                                          [
-                                                              {offset: 0, color: 'rgba(230,253,139,.7)'},
-                                                              {offset: 1, color: 'rgba(41,220,205,.7)'}
-                                                          ]
-                                                      )
-                                                  }
-                                              },
-                                              data: [18203, 23489, 29034, 104970, 131744]
-                                          }
-                                      ]
-                                  };
-                            myChart.setOption(option);
-                        </script>
-<script type="text/javascript">
-                                var myChart = echarts.init(document.getElementById('prbottom_box1'));
-                                option = {
-                                    backgroundColor: 'rgba(1,202,217,.2)',
-                                  color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-                                    tooltip : {
-                                        trigger: 'item',
-                                        formatter: "{a} <br/>{b} : {c} ({d}%)"
-                                    },
-                                    legend: {
-                                        top:10,
-                                        textStyle:{
-                                            fontSize: 10,
-                                            color:'rgba(255,255,255,.7)'
-                                        },
-                                        data: ['优秀','称职','基本称职','不称职']
-                                    },
-                                    series : [
-                                        {
-                                            name: '等级',
-                                            type: 'pie',
-                                            radius : '55%',
-                                            center: ['50%', '60%'],
-                                            data:[
-                                                {value:335, name:'优秀'},
-                                                {value:310, name:'称职'},
-                                                {value:234, name:'基本称职'},
-                                                {value:135, name:'不称职'}
-                                            ],
-                                            itemStyle: {
-                                                emphasis: {
-                                                    shadowBlur: 10,
-                                                    shadowOffsetX: 0,
-                                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                                                }
-                                            }
-                                        }
-                                    ]
-                                    };
-                                myChart.setOption(option);
-                            </script>
-<script type="text/javascript">
-                            var myChart = echarts.init(document.getElementById('prbottom_box2'));
-                            option = {
-                                backgroundColor: 'rgba(1,202,217,.2)',
-                                color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-                                tooltip: {
-                                    trigger: 'axis'
-                                },
-                                legend: {
-                                    top:10,
-                                    textStyle:{
-                                        fontSize: 10,
-                                        color:'rgba(255,255,255,.7)'
-                                    },
-                                    data:['武汉市','宜昌市','鄂州市','天门市','仙桃市']
-                                },
-                                grid: {
-                                    left: '3%',
-                                    right: '4%',
-                                    bottom: '3%',
-                                    containLabel: true
-                                },
-                                xAxis: {
-                                    type: 'category',
-                                    boundaryGap: false,
-                                    axisLine:{
-                                        lineStyle:{
-                                            color:'rgba(255,255,255,.5)'
-                                        }
-                                    },
-                                    splitLine:{
-                                        lineStyle:{
-                                            color:'rgba(255,255,255,.1)'
-                                        }
-                                    },
-                                    axisLabel:{
-                                        color:"rgba(255,255,255,.5)"
-                                    },
-                                    data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月','9月','10月','11月','12月']
-                                },
-                                yAxis: {
-                                    type: 'value',
-                                    axisLine:{
-                                        lineStyle:{
-                                            color:'rgba(255,255,255,.5)'
-                                        }
-                                    },
-                                    splitLine:{
-                                        lineStyle:{
-                                            color:'rgba(255,255,255,.1)'
-                                        }
-                                    },
-                                    axisLabel:{
-                                        color:"rgba(255,255,255,.5)"
-                                    },
-
-                                },
-                                series: [
-                                    {
-                                        name:'武汉市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    },
-                                    {
-                                        name:'宜昌市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    },
-                                    {
-                                        name:'鄂州市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    },
-                                    {
-                                        name:'天门市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    },
-                                    {
-                                        name:'仙桃市',
-                                        type:'line',
-                                        stack: '总量',
-                                        data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-                                    }
-                                ]
-                            };
-                            myChart.setOption(option);
-                    </script>
-<script type="text/javascript">
-              var myChart = echarts.init(document.getElementById('hubei_map'));
-              var option = {
-                  tooltip: {
-                      trigger: 'item',
-                      formatter:function (params) {
-                          var res = '';
-                          res+=params['data'].name+'</br>';
-                          return res;
-                      }
-                      //formatter: '{b}<br/>{c}'
-                  },//鼠标放在地图上时，显示的内容及样式控制
-                  visualMap: {
-                      show: false,//色系条是否显示
-                      min: 0,
-                      max: 45000,//取其区间值就代表色系inRange中的一种颜色
-                      left: 'left',
-                      top: 'bottom',
-                      text: ['高', '低'], // 文本，默认为数值文本
-                      calculable: true,
-                      inRange:{
-                          color: ['#42a8be','#00a69c', '#95ea95'],//上色范围
-                      }
-                  },//给地图上色
-                  series: [{
-                      name: '湖北省',
-                      type: 'map',
-                      mapType: '湖北',
-                      zoom: 1.05,
-                      selectedMode : 'single',
-                      label: {
-                          normal: {show: true},
-                          emphasis: {show: true}
-                      },
-                      itemStyle: {
-                          normal: {
-                              borderColor: '#fff',
-                              areaColor: '#fff',
-                              borderWidth: 2,
-                          },//正常样式
-                          emphasis: {
-                              areaColor: 'orange',
-                              borderWidth: 1,
-                              borderColor: 'yellow',
-                          }//鼠标事件区块样式
-                      },
-                      data:[
-                          {name: '武汉市', value: 40500},
-                          {name: '黄石市', value: 23000},
-                          {name: '十堰市', value: 22500},
-                          {name: '宜昌市', value: 40500},
-                          {name: '襄阳市', value: 45000},
-                          {name: '鄂州市', value: 37000},
-                          {name: '荆门市', value: 40500},
-                          {name: '孝感市', value: 0},
-                          {name: '荆州市', value: 11161},
-                          {name: '黄冈市', value: 15000},
-                          {name: '咸宁市', value: 20000},
-                          {name: '随州市', value: 25000},
-                          {name: '仙桃市', value: 30000},
-                          {name: '潜江市', value: 35000},
-                          {name: '天门市', value: 36000},
-                          {name: '恩施土家族苗族自治州', value: 45000,value2:1024},
-                          {name: '神农架林区', value: 23000,value2:1024},
-                      ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
-                      label: {
-                          normal: {
-                              show: true,
-                              formatter:function(val){
-                                  var area_content =  '{a|' + val.name + '}';
-                                  return area_content.split("-").join("\n");
-                              },//让series 中的文字进行换行
-                              rich: {
-                                  a: {
-                                      color: 'WHITE'
-                                  },
-                                  b: {
-                                      color: 'yellow',
-                                      fontFamily: 'Microsoft YaHei',
-                                      fontSize: 14,
-                                  }
-                              },//富文本样式,就是上面的formatter中'{a|'和'{b|'
-                          },
-                          emphasis: {show: true}
-                      },//地图中文字内容及样式控制
-                  }]
-              };
-              myChart.setOption(option, true);
-              myChart.on('click', function(params){
-                  console.log(params.name);//此处写点击事件内容
-                  switch(params.name){
-                      case '武汉市':
-                          location.href='group.html';
-                          break;
-                      default:
-                          break;
-                  }
-              });//点击事件，此事件还可以用到柱状图等其他地图
-          </script>
+        },
+        yAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            }
+        },
+        series: [{
+            data: [5, 10, 9, 8],
+            type: 'bar',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    color: 'rgba(255,255,255,.9)',
+                    formatter: "{c}",
+                }
+            }
+        }],
+    };
+    myChart.setOption(option);
+</script>
 <!-- js -->
 
 </body>

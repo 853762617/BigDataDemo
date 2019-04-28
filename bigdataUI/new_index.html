@@ -291,7 +291,15 @@
             },
             series: [{
                 data: [98, 60, 76, 90, 85, 69, 92, 72, 88, 91, 83, 77, 90, 86],
-                type: 'bar'
+                type: 'bar',
+                label:{
+                    normal:{
+                        show:true,
+                        position:'top',
+                        color:'rgba(255,255,255,.9)',
+                        formatter: "{c}",
+                    }
+                }
             }]
         };
 

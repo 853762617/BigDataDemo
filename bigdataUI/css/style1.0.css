@@ -29,6 +29,8 @@ html,body{
 .left2{width: 18%; height: 97%;float: left;padding-left:2.2%;}
 .left3{width: 18%; height: 97%;float: left;padding-left:1.2%;}
 .left4{width: 18%; height: 97%;float: left;padding-left:7.0%;}
+.left5{width: 18%; height: 97%;float: left;padding-left:3%;}
+.left6{width: 53%; height: 97%;float: left;padding-left:1.2%;}
 .mrbox{float: left; width: 79%; height: 100%}
 .mrbox.prbox{float: left; width: 60%; height: 100%;}
 .mrbox_bottom{float: left; width: 100%; height: 28%}
@@ -181,6 +183,8 @@ html,body{
 .plefttoday2 .widget-inline-box{ width: 48%; padding: 4% 0}
 .plefttoday3{background:url(../img/pleft1middt.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width:135%; height:29%;margin-top: 0%;margin-bottom: 4.5%}
 .plefttoday3 .widget-inline-box{ width: 48%; padding: 4% 0}
+.plefttoday4{background:url(../img/pleft1middt.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width:104%; height:40%;margin-top: 0%;margin-bottom: 4.5%}
+.plefttoday4 .widget-inline-box{ width: 48%; padding: 4% 0}
 
 .lpeftmidbot{background:url(../img/pleft1middb.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width:95.8%; height:27.6%;margin-top: 3.4%;}
 .lpeftmidbotcont{width: 90.1%; margin-top: 2%; margin-left: 5.2%;height: 82%;}

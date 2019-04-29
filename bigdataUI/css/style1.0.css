@@ -75,8 +75,8 @@ html,body{
 .leftbox2_table{background:url(../img/leftbox2.png);background-repeat: no-repeat;background-position: -2px -2px; width:354px; height:680px;}
 .left2_table{ width: 120%; margin-left: 7%; font-size: 16px;height:27%; overflow: hidden;}
 .hdleft2_table{ width: 91%; margin-left: 5%; font-size: 16px;height:91.6%; overflow: hidden;}
-.left2_table li{background: rgba(1,202,217,.2) url(../img/icosjx.png) no-repeat  top left; position: relative;overflow: hidden; padding: 2% 6%; color:rgba(255,255,255,1); line-height: 150%}
-.left2_table li b{color:rgba(255,255,255,1); font-weight: bold;}
+.left2_table li{background: rgba(1,202,217,.2) url(../img/icosjx.png) no-repeat  top left; position: relative;overflow: hidden; padding: 2% 6%; color:rgba(255,255,255,.7); line-height: 150%}
+.left2_table li b{color:rgba(255,255,255,1); font-weight: normal;}
 .left2_table li p.fl{ width: 80%; overflow: hidden;}
 .left2_table li p.fr{ position: absolute; right: 5%; top: -20%;}
 .yellow{ color: #fff45c}
@@ -104,9 +104,9 @@ html,body{
 .fl{ float: left;}
 .fr{ float: right;}
 .topbnt_left{width: 33%}
-.topbnt_left ul{ padding-top: 3.5%; padding-left: 5%; width: 50%}
-.topbnt_left li { background:url(../img/nav-activei.png) center;background-size:cover;font-size: 20px; line-height: 35px;background-repeat: no-repeat;width:150px; height:50px;float: left; text-align: center; margin-left: 1%}
-.topbnt_left li.active,.topbnt_right li.active{background:url(../img/navi.png) center;background-size:cover; background-repeat:no-repeat;width:150px;}
+.topbnt_left ul{ padding-top: 30px; padding-left: 5%; width: 50%}
+.topbnt_left li { background:url(../img/nav-activei.png) center;background-size:cover;font-size: 16px; line-height: 33px;background-repeat: no-repeat;width:150px; height:35px;float: left; text-align: center; margin-left: 1%}
+.topbnt_left li.active,.topbnt_right li.active{background:url(../img/navi.png) center;background-size:cover; background-repeat:no-repeat;width:150px; }
 .topbnt_left li a{ text-decoration: none; color: #fff;}
 .tith1{ width: 33%; text-align: center; padding-top: 16px; font-weight: bold; letter-spacing:8px; font-size: 36px;}
 .topbnt_right{padding-top: 30px; padding-right:2.5%; width: 27%;}

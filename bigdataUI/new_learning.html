@@ -17,8 +17,36 @@
   <h1 class="tith1 fl">政工大数据平台</h1>
   <div class=" fr topbnt_right">
     <ul>
-       <li><a href="javascript:history.back(-1);">返回</a></li>
-       <li><a href="login.html">注销</a></li>
+        <li><a href="javascript:history.back(-1);">返回</a></li>
+        <li><a href="login.html">注销</a></li>
+        <li><a href="">生成报表</a></li>
+        <div style="float: left;right: 425px;position: absolute">
+            <div style="float:left;width: 100px">
+                <select id="item0" onchange="items()" style="margin-top:5%;text-align:center;text-align-last:center;width:100%;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
+                    <option value="0">月报</option>
+                    <option value="1">季报</option>
+                    <option value="2">年报</option>
+                </select>
+            </div>
+            <div style="float:left;width: 100px">
+                <select id="item" style="margin-top:5%;text-align:center;text-align-last:center;width:100%;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
+                    <option value="0">-----</option>
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                </select>
+            </div>
+
+        </div>
     </ul>
   </div>
 </div>

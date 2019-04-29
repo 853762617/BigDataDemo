@@ -30,6 +30,7 @@
         <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">党建积分排名统计</h2></a>
             <div class="lefttoday_tit" style="height:4%"><p class="fl"></p><p class="fr">更新时间：2018-06-10</p></div>
             <div class="left2_table hdleft2_table">
+                <div id="rank" class="vertical1"></div>
                 <ul>
                     <li>
                         <p class="fl"><b>武汉支队</b><br>
@@ -210,6 +211,84 @@
 <!--  left1 end -->
 
 <!-- js -->
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('rank'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+
+        color:['#81dabe','#5fc5ce'],
+        grid:{
+            top:'3%',
+            bottom:'3%',
+            left:'20%',
+            right:'15%'
+        },
+        legend: {
+            top: 10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+        },
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}: {c}分",
+        },
+        xAxis: {
+            type: 'value',
+            name: '分',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+
+        },
+        yAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,1)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['汉江','十堰','宜昌','随州','襄阳','恩施','鄂州','荆门','孝感','荆州','咸宁','黄冈','黄石','武汉']
+        },
+        series: [
+            {
+                data: [65, 67, 67, 69, 70, 75, 76, 78, 78, 85, 90, 95, 95, 99],
+                type: 'bar',
+                label:{
+                    normal:{
+                        show:true,
+                        position:'right',
+                        formatter: "{c}",
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
+</script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
     option = {

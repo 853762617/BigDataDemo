@@ -14,10 +14,10 @@
 <div class="bnt">
   <div class="topbnt_left fl">
    <ul>
-       <li ><a href="index.html">首页</a></li>
-       <li ><a href="monthly.html">报表查询</a></li>
-       <li ><a href="warningfrontpage.html">风险预警</a></li>
-       <li ><a href="multi-analysis.html">研判分析</a></li>
+       <li ><a href="index.html">湖北省总队</a></li>
+       <li ><a href="monthly.html">武汉支队</a></li>
+       <li ><a href="warningfrontpage.html">洪山大队</a></li>
+       <li ><a href="multi-analysis.html">卓刀泉中队</a></li>
    </ul>
   </div>
   <h1 class="tith1 fl">政工大数据平台</h1>
@@ -646,7 +646,8 @@
                       name: '湖北省',
                       type: 'map',
                       mapType: '湖北',
-                      zoom: 1.05,
+                      layoutCenter:['50%','48%'],
+                      layoutSize: '115%',
                       selectedMode : 'single',
                       label: {
                           normal: {show: true},
@@ -701,7 +702,7 @@
                   console.log(params.name);//此处写点击事件内容
                   switch(params.name){
                       case '武汉市':
-                          location.href='group.html';
+                          location.href='new_wuhanindex.html';
                           break;
                       default:
                           break;

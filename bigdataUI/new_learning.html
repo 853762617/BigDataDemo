@@ -11,17 +11,42 @@
 <div class="bnt">
   <div class="topbnt_left fl">
    <ul>
-       <li class="active"><a href="index.html">首页</a></li>
-       <li ><a href="monthly.html">报表查询</a></li>
-       <li ><a href="warningfrontpage.html">风险预警</a></li>
-       <li ><a href="multi-analysis.html">研判分析</a></li>
+       <li class="active"><a href="new_index.html">湖北总队</a></li>
    </ul>
   </div>
   <h1 class="tith1 fl">政工大数据平台</h1>
   <div class=" fr topbnt_right">
     <ul>
-       <li><a href="javascript:history.back(-1);">返回</a></li>
-       <li><a href="login.html">注销</a></li>
+        <li><a href="javascript:history.back(-1);">返回</a></li>
+        <li><a href="login.html">注销</a></li>
+        <li><a href="">生成报表</a></li>
+        <div style="float: left;right: 425px;position: absolute">
+            <div style="float:left;width: 100px">
+                <select id="item0" onchange="items()" style="margin-top:5%;text-align:center;text-align-last:center;width:100%;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
+                    <option value="0">月报</option>
+                    <option value="1">季报</option>
+                    <option value="2">年报</option>
+                </select>
+            </div>
+            <div style="float:left;width: 100px">
+                <select id="item" style="margin-top:5%;text-align:center;text-align-last:center;width:100%;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
+                    <option value="0">-----</option>
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                </select>
+            </div>
+
+        </div>
     </ul>
   </div>
 </div>
@@ -31,7 +56,6 @@
 <div class="left1" >
     <div class="mrbox_top_right1">
         <div class="hdrightboxtop" ><a href="warningfrontpage.html" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">支队分数排名</h2></a>
-            <div class="lefttoday_tit" style="height:4%"><p class="fl">状态：待处理</p><p class="fr">时间：2018-06-10</p></div>
             <div class="left2_table hdleft2_table">
                 <div id="rank" class="vertical1"></div>
             </div>
@@ -49,7 +73,7 @@
             <div id="xuanxiu" class="pleftbox2middcont"></div>
         </div>
         <div class="plefttodayhorizontal"><h2 class="tith2">参会情况统计</h2>
-
+            <div id="meetings" class="pleftbox2middcont"></div>
         </div>
     </div>
     <div class="lefthorizontal" >
@@ -120,79 +144,79 @@
 <!-- left1 -->
 <div class="left8">
     <div class="mrbox_top_right1">
-        <div class="hdrightboxtop" ><a href="warningfrontpage.html" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">风险预警信息</h2></a>
+        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">风险预警信息</h2></a>
             <div class="lefttoday_tit" style="height:4%"><p class="fl">状态：待处理</p><p class="fr">时间：2018-06-10</p></div>
             <div class="left2_table hdleft2_table">
                 <ul>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>宜昌市支队</b><br>
-                            宜昌市支队XXX存在APP使用不达标情况；<br>
+                        <p class="fl"><b>宜昌支队</b><br>
+                            宜昌支队XXX存在APP使用不达标情况；<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在未进行考试情况；<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在未进行考试情况；<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在近期成绩连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在近期成绩连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
@@ -211,6 +235,12 @@
         backgroundColor: 'rgba(1,202,217,.2)',
 
         color:['#81dabe','#5fc5ce'],
+        grid:{
+            top:'3%',
+            bottom:'6%',
+            left:'20%',
+            right:'15%'
+        },
         legend: {
             top: 10,
             textStyle:{
@@ -220,16 +250,14 @@
         },
         tooltip : {
             trigger: 'axis',
-            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-            }
+            formatter: "{b}: {c}分",
         },
         xAxis: {
             type: 'value',
-            name: '分数',
+            name: '分',
             axisLine:{
                 lineStyle:{
-                    color:'rgba(255,255,255,.7)'
+                    color:'rgba(255,255,255,.9)'
                 }
             },
             splitLine:{
@@ -240,29 +268,44 @@
 
         },
         yAxis: {
-                type: 'category',
-                axisLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.2)'
-                    }
-                },
-                splitLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.1)'
-                    }
-                },
-                data: ['武汉支队','黄石支队','十堰支队','宜昌支队','襄阳支队','鄂州支队','荆门支队','孝感支队','荆州支队','黄冈支队','咸宁支队','随州支队','汉江支队','恩施支队']
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,1)'
+                }
             },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['汉江','十堰','宜昌','随州','襄阳','恩施','鄂州','荆门','孝感','荆州','咸宁','黄冈','黄石','武汉']
+        },
         series: [
             {
-                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
-                type: 'bar'
+                data: [4, 9, 10, 14, 15, 21, 22, 23, 32, 34, 35, 40, 46, 51],
+                type: 'bar',
+                label:{
+                    normal:{
+                        show:true,
+                        position:'right',
+                        formatter: "{c}",
+                    }
+                }
             }
         ]
     };
-
-
     myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
 </script>
 
 <script type="text/javascript">
@@ -297,7 +340,14 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+            axisLabel: {
+                interval: 0,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                }
+            },
+            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
 
         },
         yAxis:[
@@ -306,7 +356,7 @@
                 name: '分数',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -320,7 +370,7 @@
                 name: '合格率',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -336,12 +386,12 @@
         series: [
             {
                 name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92],
+                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
                 type: 'bar'
             },
             {
                 name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92],
+                data: [60, 60, 80, 90, 88, 77, 92, 60, 60, 80, 90, 88, 77, 92],
                 type: 'line'
             }
         ]
@@ -349,6 +399,16 @@
 
 
     myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
 </script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('xuanxiu'));
@@ -382,7 +442,14 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+            axisLabel: {
+                interval: 0,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                }
+            },
+            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
 
         },
         yAxis:[
@@ -391,7 +458,7 @@
                 name: '分数',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -405,7 +472,7 @@
                 name: '合格率',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -421,12 +488,12 @@
         series: [
             {
                 name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92],
+                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
                 type: 'bar'
             },
             {
                 name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92],
+                data: [60, 60, 80, 90, 88, 77, 92, 60, 60, 80, 90, 88, 77, 92],
                 type: 'line'
             }
         ]
@@ -434,8 +501,121 @@
 
 
     myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
 </script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('meetings'));
+    option = {
+        color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['优','良','中','差']
+        },
+        grid: {
+            left: 10,
+            right: 10,
+            top: 40,
+            bottom: 10,
+            containLabel: true
+        },
 
+        xAxis : [
+            {
+                type : 'category',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.7)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel: {
+                    interval: 0,
+                    formatter:function(value)
+                    {
+                        return value.split("").join("\n");
+                    }
+                },
+                data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+            }
+        ],
+        yAxis : [
+            {
+                type: 'value',
+                name: '',
+
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.5)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                type : 'value'
+            }
+
+        ],
+        series : [
+
+            {
+                name:'优',
+                type:'bar',
+                stack: '搜索引擎',
+                data:[3, 4, 2, 5, 6, 3, 4, 3, 4, 2, 5, 6, 3, 4]
+            },
+            {
+                name:'良',
+                type:'bar',
+                stack: '搜索引擎',
+                data:[2,1,3,1,4,2,1,2,1,3,1,4,2,1]
+            },
+            ,
+            {
+                name:'中',
+                type:'bar',
+                stack: '搜索引擎',
+                data:[1,2,1,2,3,2,0,1,2,1,2,3,2,0]
+            },
+            {
+                name:'差',
+                type:'bar',
+                stack: '搜索引擎',
+                data:[0,1,0,1,1,2,1,0,1,0,1,1,2,1]
+            }
+        ]
+    };
+    myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
+</script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('zongti'));
     option = {
@@ -468,7 +648,7 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
 
         },
         yAxis:[
@@ -477,7 +657,7 @@
                 name: '分数',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -491,7 +671,7 @@
                 name: '合格率',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -507,12 +687,12 @@
         series: [
             {
                 name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92, 76, 90, 85, 69, 92],
+                data: [98, 60, 76, 90, 85, 69, 92, 76, 90, 85, 69, 92, 85, 69],
                 type: 'bar'
             },
             {
                 name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92, 80, 90, 88, 77, 92],
+                data: [60, 60, 80, 90, 88, 77, 92, 80, 90, 88, 77, 92, 88, 77],
                 type: 'line'
             }
         ]
@@ -520,6 +700,16 @@
 
 
     myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
 </script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('keguan'));
@@ -553,7 +743,14 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+            axisLabel: {
+                interval: 0,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                }
+            },
+            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
 
         },
         yAxis:[
@@ -562,7 +759,7 @@
                 name: '分数',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -576,7 +773,7 @@
                 name: '合格率',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -592,12 +789,12 @@
         series: [
             {
                 name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92],
+                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
                 type: 'bar'
             },
             {
                 name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92],
+                data: [60, 60, 80, 90, 88, 77, 92, 60, 60, 80, 90, 88, 77, 92],
                 type: 'line'
             }
         ]
@@ -605,6 +802,16 @@
 
 
     myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
 </script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('zhuguan'));
@@ -638,7 +845,14 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+            axisLabel: {
+                interval: 0,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                }
+            },
+            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
 
         },
         yAxis:[
@@ -647,7 +861,7 @@
                 name: '分数',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -661,7 +875,7 @@
                 name: '合格率',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -677,12 +891,12 @@
         series: [
             {
                 name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92],
+                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
                 type: 'bar'
             },
             {
                 name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92],
+                data: [60, 60, 80, 90, 88, 77, 92, 60, 60, 80, 90, 88, 77, 92],
                 type: 'line'
             }
         ]
@@ -690,6 +904,16 @@
 
 
     myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
 </script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('shichang'));
@@ -723,7 +947,14 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+            axisLabel: {
+                interval: 0,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                }
+            },
+            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
 
         },
         yAxis:[
@@ -732,7 +963,7 @@
                 name: '分钟',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -746,7 +977,7 @@
                 name: '分钟',
                 axisLine:{
                     lineStyle:{
-                        color:'rgba(255,255,255,.2)'
+                        color:'rgba(255,255,255,.5)'
                     }
                 },
                 splitLine:{
@@ -760,12 +991,12 @@
         series: [
             {
                 name: 'app使用时长',
-                data: [120, 40, 76, 25, 77, 105, 92],
+                data: [120, 40, 76, 25, 77, 105, 92, 120, 40, 76, 25, 77, 105, 92],
                 type: 'bar'
             },
             {
                 name: '文章阅读时长',
-                data: [60, 23, 44, 10, 22, 80, 70],
+                data: [60, 23, 44, 10, 22, 80, 70, 60, 23, 44, 10, 22, 80, 70],
                 type: 'line'
             }
         ]
@@ -773,6 +1004,16 @@
 
 
     myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
 </script>
 
 <script type="text/javascript">

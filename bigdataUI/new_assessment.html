@@ -27,43 +27,43 @@
 <!-- left1 -->
 <div class="left1" >
     <div class="mrbox_top_right1">
-        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">工作申报</h2></a>
+        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">整体工作绩效排名</h2></a>
             <div class="lefttoday_tit" style="height:4%"><p class="fl"></p><p class="fr">更新时间：2018-06-10</p></div>
-
-            <div style="float: left">
-                <div style="float:left;margin-left:40%;width: 200px">
-                    <select id="item0" onchange="items()" style="margin-top:5%;text-align:center;text-align-last:center;width:100%;height:30px;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
-                        <option >武汉市</option>
-                        <option >宜昌市</option>
-                        <option >鄂州市</option>
-                        <option >天门市</option>
-                        <option >仙桃市</option>
-                        <option >十堰市</option>
-                    </select>
-                </div>
-                </div>
-
-            <div class="left2_table hdleft2_table" style="background:rgba(1,202,217,.2);color:#ffffff;margin-top: 20%;height:50%">
-                <div>
-                <p class="bg">
-                    <p>&nbsp</p>
-                    <p>武汉市支队完成工作情况如下：</p>
-                    <p>&nbsp</p>
-                    <p>1、*********************</p>
-                    <p>&nbsp</p>
-                    <p>2、*********************</p>
-                    <p>&nbsp</p>
-                    <p>3、*********************</p>
-                    <p>&nbsp</p>
-                    <p>4、*********************</p>
-                    <p>&nbsp</p>
-                    <p>5、*********************</p>
-                    <p>&nbsp</p>
-                    <p>6、*********************</p>
-
-                </p>
-                </div>
+            <div class="left2_table hdleft2_table">
+                <div id="rank" class="vertical1"></div>
             </div>
+<!--            <div style="float: left">-->
+<!--                <div style="float:left;margin-left:40%;width: 200px">-->
+<!--                    <select id="item0" onchange="items()" style="margin-top:5%;text-align:center;text-align-last:center;width:100%;height:30px;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">-->
+<!--                        <option >武汉市</option>-->
+<!--                        <option >宜昌市</option>-->
+<!--                        <option >鄂州市</option>-->
+<!--                        <option >天门市</option>-->
+<!--                        <option >仙桃市</option>-->
+<!--                        <option >十堰市</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                </div>-->
+<!--            <div class="left2_table hdleft2_table" style="background:rgba(1,202,217,.2);color:#ffffff;margin-top: 20%;height:50%">-->
+<!--                <div>-->
+<!--                <p class="bg">-->
+<!--                    <p>&nbsp</p>-->
+<!--                    <p>武汉市支队完成工作情况如下：</p>-->
+<!--                    <p>&nbsp</p>-->
+<!--                    <p>1、*********************</p>-->
+<!--                    <p>&nbsp</p>-->
+<!--                    <p>2、*********************</p>-->
+<!--                    <p>&nbsp</p>-->
+<!--                    <p>3、*********************</p>-->
+<!--                    <p>&nbsp</p>-->
+<!--                    <p>4、*********************</p>-->
+<!--                    <p>&nbsp</p>-->
+<!--                    <p>5、*********************</p>-->
+<!--                    <p>&nbsp</p>-->
+<!--                    <p>6、*********************</p>-->
+<!--                </p>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
 </div>
@@ -177,6 +177,84 @@
 <!--  left1 end -->
 
 <!-- js -->
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('rank'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+
+        color:['#81dabe','#5fc5ce'],
+        grid:{
+            top:'1%',
+            bottom:'4%',
+            left:'20%',
+            right:'15%'
+        },
+        legend: {
+            top: 10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+        },
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}: {c}%",
+        },
+        xAxis: {
+            type: 'value',
+            name: '称职\n以上\n人员\n比例',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.9)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+
+        },
+        yAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,1)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['汉江','十堰','宜昌','随州','襄阳','恩施','鄂州','荆门','孝感','荆州','咸宁','黄冈','黄石','武汉']
+        },
+        series: [
+            {
+                data: [87, 89, 90, 91, 93, 94, 94, 96, 96, 96, 97, 98, 98, 99],
+                type: 'bar',
+                label:{
+                    normal:{
+                        show:true,
+                        position:'right',
+                        formatter: "{c}%",
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉':
+                location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
+</script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
     var dataAxis = ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'];

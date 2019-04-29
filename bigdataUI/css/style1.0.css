@@ -106,7 +106,7 @@ html,body{
 .topbnt_left li.active,.topbnt_right li.active{background:url(../img/bntactive.png) no-repeat center; }
 .topbnt_left li a{ text-decoration: none; color: #fff;}
 .tith1{ width: 33%; text-align: center; padding-top: 16px; font-weight: bold; letter-spacing:8px; font-size: 36px;}
-.topbnt_right{padding-top: 2%; padding-right:2.5%; width: 27%}
+.topbnt_right{padding-top: 2%; padding-right:2.5%; width: 27%;}
 .topbnt_right li { background:url(../img/bnt.png) center; font-size: 14px; line-height: 33px;background-repeat: no-repeat;width:22%; height:35px;float: right; text-align: center; margin-right:1%}
 .topbnt_right li a{ text-decoration: none; color: #fff;}
 .pt1{padding-top: 1.3%; }

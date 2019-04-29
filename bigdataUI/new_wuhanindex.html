@@ -1,0 +1,728 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>大数据平台首页1.0</title>
+<link href="css/style1.0.css"  rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/notiflix-1.3.0.min.css">
+<script src="js/echarts.js" charset="utf-8"></script>
+<script src="js/jquery-3.2.0.min.js" charset="utf-8"></script>
+<script src="js/hubei.js"></script>
+<script src="js/wuhan.js"></script>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/notiflix-1.3.0.min.js" type="text/javascript"></script>
+<body onload="auto()">
+
+<!-- title & menu -->
+<div class="bnt">
+    <div class="topbnt_left fl">
+        <ul>
+            <li ><a href="new_index.html" >湖北总队</a></li>
+            <li class="active"  style="left:125px; position: absolute"><a href="new_wuhanindex.html">武汉支队</a></li>
+        </ul>
+    </div>
+    <h1 class="tith1 fl">政工大数据平台</h1>
+    <div class=" fr topbnt_right">
+        <ul>
+            <li><a href="javascript:history.back(-1);">返回</a></li>
+            <li><a href="login.html">注销</a></li>
+            <div style="margin-top:1.5%; float: right;width:50%; height: 100%">
+                <select id="item0" onchange="items()" style="text-align:center;text-align-last:center;width:50%;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
+                    <option value="0">月报</option>
+                    <option value="1">季报</option>
+                    <option value="2">年报</option>
+                </select>
+                <select id="item" style="text-align:center;text-align-last:center;width:50%;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
+                    <option value="">-----</option>
+                </select>
+            </div>
+        </ul>
+    </div>
+</div>
+<!--  title & menu end -->
+
+<!-- left1 -->
+<div class="left1" >
+    <div class="plefttoday"><h2 class="tith2">学习教育</h2>
+        <div id="lpeftmidbot11" class="lpeftmidbotcont"></div>
+    </div>
+    <div class="plefttoday"><h2 class="tith2">网络消费</h2>
+        <div id="consume" class="lpeftmidbotcont"></div>
+    </div>
+    <div class="plefttoday"><h2 class="tith2">智慧党建</h2>
+        <div id="lpeftmidbot" class="lpeftbotcont" ></div>
+    </div>
+</div>
+<!--  left1 end -->
+
+<!-- left2 -->
+<div class="left2">
+    <div class="plefttoday">
+        <h2 class="tith2"><a href="group_learning.html" style=" text-decoration: none;color: #ffffff;">心理健康</a></h2>
+        <div id="pleftbox2top" class="pleftbox2topcont"></div>
+    </div>
+    <div class="plefttoday"><h2 class="tith2">绩效考核</h2>
+        <div class="pvr fl  lpeftb2otcont1 hdtop" style=" height:82%;" >
+            <div id="pleftbox2bott_cont"class="pleftbox2middcont" style=" height:100%;" ></div>
+        </div>
+    </div>
+    <div class="plefttoday" ><h2 class="tith2 " >思想政治</h2>
+        <div id="prbottom_box1"class="lpeftb2otcont" ></div>
+    </div>
+</div>
+<!--  left2 end -->
+
+<!-- map & wp -->
+
+<div class="mrbox prbox" style="float: right">
+    <div class="mrbox_top_midd">
+        <div class="hdmrboxtm-mbox"><h2 class="tith2">武汉支队</h2>
+            <div class="lefttoday_number" style="position: absolute; width: 12%; height: 11%; margin-left: 23%">
+                <div class="widget-inline-box text-center fl">
+                    <p>监控人数</p>
+                    <h3 class="ceeb1fd">54</h3>
+                    <h4 class="text-muted">变动<img src="img/iconup.png" height="16" />2%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>监控支队</p>
+                    <h3 class="c24c9ff">54</h3>
+                    <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>访问次数</p>
+                    <h3 class="cffff00">4</h3>
+                    <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
+                </div>
+                <div class="widget-inline-box text-center fl">
+                    <p>最新动态</p>
+                    <h3 class="c11e2dd">4</h3>
+                    <h4 class="text-muted">变动<img src="img/icondown.png" height="16" />3%</h4>
+                </div>
+            </div>
+            <div  class="hot_map" id="wuhan_map" ></div>
+        </div>
+        <div class="mrbox_bottom_bott" >
+            <div class="rbottom_box0" ><h2 class="tith2" >体能训练</h2>
+                <div id="prbottom_box2" class="prbottom_box1cont"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mrbox_top_right">
+        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">风险预警信息</h2></a>
+            <div class="lefttoday_tit" style="height:4%"><p class="fl">状态：待处理</p><p class="fr">时间：2018-06-22</p></div>
+            <div class="left2_table hdleft2_table">
+                <ul>
+                    <a href="#" id="msg-warning">
+                    <li>
+                        <p class="fl"><b>洪山</b>
+                            未处理<br>
+                            洪山大队XXX近期进行了一笔大金额消费；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    </a>
+                    <li class="bg">
+                        <p class="fl"><b>武昌</b>
+                            未处理<br>
+                            武昌大队XXX存在学习APP使用不达标情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>江岸</b>
+                            未处理<br>
+                            江岸大队XXX存在未进行客观题考试情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>黄陂</b>
+                            未处理<br>
+                            黄陂大队XXX存在体能连续下降情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>江汉</b>
+                            未处理<br>
+                            江汉大队存在未录入收入情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>武昌</b>
+                            未处理<br>
+                            武昌大队存在未录入收入情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>江岸</b>
+                            未处理<br>
+                            江岸大队存在未录入收入情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>汉阳</b>
+                            未处理<br>
+                            汉阳大队XXX存在未完成必修课情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>汉阳</b>
+                            未处理<br>
+                            汉阳大队XXX存在体能下降情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  map & wp end -->
+
+<!-- js -->
+<script type="text/javascript">
+    function items() {
+        var select = document.getElementById("item0");
+        var v=select.value;
+        var optionTags1;
+        Notiflix.Notify.Init();
+        if(v==0){
+            optionTags1 = '<option value="1">1月</option>'
+                +'<option value="2">2月</option>'
+                +'<option value="3">3月</option>'
+                +'<option value="4">4月</option>'
+                +'<option value="5">5月</option>'
+                +'<option value="6">6月</option>'
+                +'<option value="7">7月</option>'
+                +'<option value="8">8月</option>'
+                +'<option value="9">9月</option>'
+                +'<option value="10">10月</option>'
+                +'<option value="11">11月</option>'
+                +'<option value="12">12月</option>';
+            Notiflix.Notify.Success('报表时间已更改为月报！');
+        }else if(v==1){
+            optionTags1 = '<option value="1">1季度</option>'
+                +'<option value="2">2季度</option>'
+                +'<option value="3">3季度</option>'
+                +'<option value="4">4季度</option>';
+            Notiflix.Notify.Success('报表时间已更改为季报！');
+        }else {
+            optionTags1 = '<option value="1">2019年</option>'
+                +'<option value="2">2018年</option>'
+                +'<option value="3">2017年</option>';
+            Notiflix.Notify.Success('报表时间已更改为年报！');
+        }
+        $('#item option:gt(0)').remove();
+        $('#item').append(optionTags1);
+    }
+</script>
+<script type="text/javascript">
+    $(function(){
+        Notiflix.Report.Init();
+        $('#msg-warning').click(function(){
+            Notiflix.Report.Warning( '风险警告', '武汉支队xxx存在近期成绩连续下滑情况', 'ok');
+        })
+    })
+</script>
+<script type="text/javascript">
+    function auto() {
+        Notiflix.Report.Init();
+        Notiflix.Report.Warning( '风险警告', '武汉支队xxx存在近期成绩连续下滑情况', 'ok');
+    }
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
+    option = {
+        title:{
+            show:true,
+            text:'学习指标平均合格率',
+            x:'center',
+            textStyle:{
+                color:'rgba(255,255,255,.7)',
+                fontSize:16,
+            },
+        },
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb'],
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['必修', '选修', '客观题', '主观题']
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            },
+            formatter: "{b}"+"合格率: {c}"+"%",
+        },
+        xAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['必修', '选修', '客观题', '主观题'],
+
+        },
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            }
+        },
+        series: [{
+            data: [98, 85, 80, 90],
+            type: 'bar',
+            label:{
+                normal:{
+                    show:true,
+                    position:'top',
+                    color:'rgba(255,255,255,.9)',
+                    formatter: "{c}"+"%",
+                }
+            }
+        }],
+    };
+
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('lpeftmidbot'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+
+        color:['#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['汉南','汉阳','东西湖','蔡甸','硚口','洪山','黄陂','江岸','江汉','江夏','青山','武昌','新洲']
+
+        },
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}: {c}分",
+        },
+        xAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                interval: 0,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                }
+            },
+            data: ['汉南','汉阳','东西湖','蔡甸','硚口','洪山','黄陂','江岸','江汉','江夏','青山','武昌','新洲'],
+        },
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            }
+        },
+        series: [{
+            data: [98, 60, 76, 90, 85, 69, 92, 72, 88, 91, 83, 77, 90],
+            type: 'bar',
+            label:{
+                normal:{
+                    show:true,
+                    position:'top',
+                    color:'rgba(255,255,255,.9)',
+                    formatter: "{c}",
+                }
+            }
+        }]
+    };
+
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('consume'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#7091cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip: {
+            trigger: 'item',
+            formatter: "{b}: {c}人 ({d}%)"
+        },
+        grid: {
+            left: '3%',
+            right: '3%',
+            top: '3%',
+            bottom:0
+        },
+        legend: {
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['合格','未参与','不合格']
+        },
+        series: [
+            {
+                name:'消费情况',
+                type:'pie',
+                radius: ['35%', '60%'],
+                center: ['50%', '60%'],
+                data:[
+                    {value:6452, name:'合格'},
+                    {value:135, name:'未参与'},
+                    {value:2548, name:'不合格'}
+                ].sort(function (a, b) { return a.value - b.value; }),
+                avoidLabelOverlap: false,
+            }]
+    };
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pleftbox2top'));
+    option = {
+        title:{
+            show:false,
+            text:'心理健康情况',
+            x:'center',
+            textStyle:{
+                color:'rgba(255,255,255,.7)',
+                fontSize:16,
+            },
+        },
+        color:['#d88b74','#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c}人 ({d}%)"
+        },
+        grid: {
+            left: '3%',
+            right: '3%',
+            top:'3%',
+            bottom: '0%'
+        },
+        legend: {
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['健康人数','未参与人数','不健康人数']
+        },
+        series: [{
+            type:'pie',
+            radius : ['0%','60%'],
+            center: ['50%', '60%'],
+            data:[
+                {value:3367, name:'健康人数'},
+                {value:2003, name:'未参与人数'},
+                {value:1380, name:'不健康人数'}
+            ].sort(function (a, b) { return a.value - b.value; }),
+            roseType: 'radius',
+        }],
+        itemStyle: {
+            emphasis: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+        }
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
+    option = {
+        color:['#d88b74','#d2d17c','#00b7ee', '#5578cf'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid:{
+            left:'3%',
+            right:'3%',
+            top:'3%',
+            bottom:0,
+            containLabel: true
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{b}: {c}人 ({d}%)"
+        },
+        legend: {
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['不称职','基本称职','称职','优秀']
+        },
+        series: [
+            {
+                type: 'pie',
+                radius : ['0%','60%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value:89,name:'不称职'},
+                    {value:1034,name:'基本称职'},
+                    {value:6970,name:'称职'},
+                    {value:2744,name:'优秀'},
+                ],
+                label:{
+                    normal:{
+                        show:true,
+                        formatter: "{b}",
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('prbottom_box1'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d8715a','#d7d26d', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c} ({d}%)"
+        },
+        legend: {
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['异常','不积极','积极']
+        },
+        series : [
+            {
+                type: 'pie',
+                radius : '60%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:234, name:'异常'},
+                    {value:2110, name:'不积极'},
+                    {value:5350, name:'积极'},
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('prbottom_box2'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip: {
+            trigger: 'axis',
+            formatter: "{b} : {c}分"
+
+        },
+        // legend: {
+        //     textStyle:{
+        //         fontSize: 10,
+        //         color:'rgba(255,255,255,.7)'
+        //     },
+        //     data:['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江']
+        // },
+        grid: {
+            left: '3%',
+            right: '3%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.5)"
+            },
+            data: ['汉南','汉阳','东西湖','蔡甸','硚口','洪山','黄陂','江岸','江汉','江夏','青山','武昌','新洲']
+        },
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.5)"
+            },
+
+        },
+        series: [{
+            data: [90, 81, 73, 94, 89, 70, 82, 92, 78, 94, 90, 87, 92],
+            type: 'line',
+            label:{
+                normal:{
+                    show:true,
+                    position:'top',
+                    color:'rgba(255,255,255,.9)',
+                    formatter: "{c}",
+                }
+            }
+        }],
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('wuhan_map'));
+    var option = {
+        title: {
+            show:false,
+            text: '武汉',
+            left:'center',
+            textStyle: {
+                color: '#ccc',
+                fontSize:14
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter:function (params) {
+                var res = '';
+                res+=params['data'].name+'</br>';
+                res+='预警数' +' : '+params['data'].value2+'</br>';
+                return res;
+            }
+            //formatter: '{b}<br/>{c}'
+        },//鼠标放在地图上时，显示的内容及样式控制
+        visualMap: {
+            show: false,//色系条是否显示
+            min: 0,
+            max: 45000,//取其区间值就代表色系inRange中的一种颜色
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'], // 文本，默认为数值文本
+            calculable: true,
+            inRange:{
+                color: ['#42a8be','#00a69c', '#95ea95'],//上色范围
+            }
+        },//给地图上色
+        series: [{
+            name: '武汉',
+            type: 'map',
+            mapType: '武汉',
+            layoutCenter:['50%','46%'],
+            layoutSize: '90%',
+            selectedMode : 'single',
+            label: {
+                normal: {show: true},
+                emphasis: {show: true}
+            },
+            itemStyle: {
+                normal: {
+                    borderColor: '#fff',
+                    areaColor: '#fff',
+                    borderWidth: 2,
+                },//正常样式
+                emphasis: {
+                    areaColor: 'orange',
+                    borderWidth: 1,
+                    borderColor: 'yellow',
+                }//鼠标事件区块样式
+            },
+            data:[
+                {name: '汉南区', value: 40500,value2:10},
+                {name: '汉阳区', value: 23000,value2:25},
+                {name: '东西湖区', value: 22500,value2:9},
+                {name: '蔡甸区', value: 40500,value2:1},
+                {name: '硚口区', value: 45000,value2:23},
+                {name: '洪山区', value: 37000,value2:11},
+                {name: '黄陂区', value: 40500,value2:12},
+                {name: '江岸区', value: 0,value2:7},
+                {name: '江汉区', value: 11161,value2:15},
+                {name: '江夏区', value: 15000,value2:5},
+                {name: '青山区', value: 20000,value2:22},
+                {name: '武昌区', value: 25000,value2:13},
+                {name: '新洲区', value: 30000,value2:18},
+            ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
+            label: {
+                normal: {
+                    show: false,
+                    formatter:function(val){
+                        var area_content =  '{a|' + val.name + '}';
+                        return area_content.split("-").join("\n");
+                    },//让series 中的文字进行换行
+                    rich: {
+                        a: {
+                            color: '#fff'
+                        },
+                        b: {
+                            color: 'yellow',
+                            fontFamily: 'Microsoft YaHei',
+                            fontSize: 14,
+                        }
+                    },//富文本样式,就是上面的formatter中'{a|'和'{b|'
+                },
+                emphasis: {show: true}
+            },//地图中文字内容及样式控制
+        }]
+    };
+    myChart.setOption(option, true);
+</script>
+<!-- js -->
+
+</body>
+</html>

@@ -104,8 +104,8 @@ html,body{
 .fl{ float: left;}
 .fr{ float: right;}
 .topbnt_left{width: 33%}
-.topbnt_left ul{ padding-top: 30px; padding-left: 5%; width: 50%}
-.topbnt_left li { background:url(../img/nav-activei.png) center;background-size:cover;font-size: 16px; line-height: 33px;background-repeat: no-repeat;width:150px; height:35px;float: left; text-align: center; margin-left: 1%}
+.topbnt_left ul{ padding-top: 5%; padding-left: 5%; width: 50%}
+.topbnt_left li { background:url(../img/nav-activei.png) center;background-size:cover;font-size: 18px; line-height: 33px;background-repeat: no-repeat;width:150px; height:35px;float: left; text-align: center; margin-left: 1%}
 .topbnt_left li.active,.topbnt_right li.active{background:url(../img/navi.png) center;background-size:cover; background-repeat:no-repeat;width:150px; }
 .topbnt_left li a{ text-decoration: none; color: #fff;}
 .tith1{ width: 33%; text-align: center; padding-top: 16px; font-weight: bold; letter-spacing:8px; font-size: 36px;}
@@ -204,7 +204,7 @@ html,body{
 .lpeft2bot{background:url(../img/pleft1middb.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width:97.8%; height:24.6%;  margin-top: 4.2%;}
 .lpeftb2otcont1{width:100%; height: 100%;}
 .hdrightboxtop{background:url(../img/hdbjr.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width:105%; height: 87%;}
-.indiv_photo{background:url(../img/cxk.jpg);background-size: 100% 100%;width: 90.1%; margin-top: 2%; margin-left: 5.2%;height: 82%;}
+.indiv_photo{background:url(../img/photo.jpg);background-size: 100% 100%;width: 90.1%; margin-top: 2%; margin-left: 5.2%;height: 82%;}
 
 .lpeftb2otcont{width: 90.1%;margin-top: 2%; margin-left:5.2%;height: 82%;}
 .pmrboxbottom{background:url(../img/pmiddboxmidd.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center;position: relative; width: 100%; height: 32.9%; margin-top: 1.8%;}

@@ -28,7 +28,7 @@
 <div class="left1" >
     <div class="mrbox_top_right1">
         <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">网络消费异常排名</h2></a>
-            <div class="lefttoday_tit" style="height:4%"><p class="fl">状态:已更新</p><p class="fr">时间：2018-06-22</p></div>
+            <div class="lefttoday_tit" style="height:4%"><p class="fl">状态:已更新</p><p class="fr">更新时间：2018-06-22</p></div>
             <div class="left2_table hdleft2_table">
                 <ul>
                     <li>
@@ -100,26 +100,23 @@
 <!--  left1 end -->
 
 <!-- left1 -->
-<div class="left3" style="margin-left: 1.0%">
-    <div class="plefttoday1"><h2 class="tith2">平均收入统计</h2>
+<div class="left7" style="margin-left: 1.0%">
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">平均收入统计</h2>
         <div id="lpeftmidbot11" class="lpeftmidbotcont"></div>
     </div>
-    <div class="plefttoday1"><h2 class="tith2">平均余额统计</h2>
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">平均余额统计</h2>
         <div id="topic" class="lpeftmidbotcont"></div>
     </div>
 </div>
 <!--  left1 end -->
 
 <!-- left2 -->
-<div class="left3">
-    <div class="plefttoday1">
-        <h2 class="tith2"><a href="group_learning.html" style=" text-decoration: none;color: #ffffff;">平均消费金额</a></h2>
+<div class="left7">
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">平均消费金额</a></h2>
         <div id="pleftbox2top" class="pleftbox2middcont"></div>
     </div>
-    <div class="plefttoday1"><h2 class="tith2">平均单次消费超限次数</h2>
-        <div class="pvr fl  lpeftb2otcont1 hdtop" style=" height:82%;" >
-            <div id="pleftbox2bott_cont"class="pleftbox2middcont" style=" height:100%;" ></div>
-        </div>
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">平均单次消费超限次数</h2>
+        <div id="pleftbox2bott_cont"class="pleftbox2middcont"></div>
     </div>
 </div>
 <!--  left2 end -->
@@ -363,20 +360,20 @@
         ],
         series: [
             {
-                name:'平均收入',
+                name:'平均余额',
                 type:'bar',
                 itemStyle: {
                     normal: {
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#38fff3'},
-                                {offset: 1, color: '#d5d871'},
+                                {offset: 0, color: '#14ff6f'},
+                                {offset: 1, color: '#77d8a3'},
                             ]
                         )
                     }
                 },
-                data:[2000, 2700, 2300, 2300, 1000, 1300,2000,1800,1500,2200,1400,1800,1100,1900]
+                data:[2000, 2700, 2300, 2300, 1000, 1300,2000,1800,1500,2200,1400,1800,1100,1700]
             }
         ]
     };
@@ -449,20 +446,20 @@
         ],
         series: [
             {
-                name:'平均收入',
+                name:'平均消费',
                 type:'bar',
                 itemStyle: {
                     normal: {
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#38fff3'},
-                                {offset: 1, color: '#616cd8'},
+                                {offset: 0, color: '#ff5338'},
+                                {offset: 1, color: '#ccd877'},
                             ]
                         )
                     }
                 },
-                data:[3000, 2000, 2000, 3000, 5000, 1300,2000,1800,1500,2200,1400,1800,1100,1900]
+                data:[3000, 2000, 2000, 3000, 5000, 1300,2000,2500,2000,2000,4000,1400,3000,2200]
             }
         ]
     };
@@ -471,73 +468,83 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
     option = {
-        color:['#7ecef4'],
         backgroundColor: 'rgba(1,202,217,.2)',
         grid: {
-            left:40,
-            right:20,
-            top:30,
-            bottom:0,
-            containLabel: true
+            left:'20%',
+            right:'3%',
+            top:'10%',
+            bottom:'13%',
         },
-        tooltip: {
+        // legend: {
+        //     top:10,
+        //     textStyle:{
+        //         fontSize: 10,
+        //         color:'rgba(255,255,255,.7)'
+        //     },
+        //     data:['平均收入']
+        // },
+        tooltip : {
             trigger: 'axis',
-            axisPointer: {
-                type: 'shadow'
-            }
+            formatter: "{b}: {c}元",
         },
+        xAxis: [
+            {
+                type: 'category',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel:{
+                    color:"rgba(255,255,255,.7)"
+                },
 
-        xAxis: {
-            type: 'value',
-            axisLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,0)'
+                data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+                axisPointer: {
+                    type: 'shadow'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} 次'
                 }
             },
-            splitLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,0)'
-                }
-            },
-            axisLabel:{
-                color:"rgba(255,255,255,0)"
-            },
-            boundaryGap: [0, 0.01]
-        },
-        yAxis: {
-            type: 'category',
-            axisLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.5)'
-                }
-            },
-            splitLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.1)'
-                }
-            },
-            axisLabel:{
-                color:"rgba(255,255,255,.5)"
-            },
-            data: ['差','较差','一般','良好','优秀']
-        },
+        ],
         series: [
             {
-                name: '2011年',
-                type: 'bar',
-                barWidth :20,
+                name:'超限次数',
+                type:'line',
                 itemStyle: {
                     normal: {
                         color: new echarts.graphic.LinearGradient(
-                            1, 0, 0, 1,
+                            0, 0, 0, 1,
                             [
-                                {offset: 0, color: 'rgba(230,253,139,.7)'},
-                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                                {offset: 0, color: '#ff5338'},
+                                {offset: 1, color: '#ccd877'},
                             ]
                         )
                     }
                 },
-                data: [18203, 23489, 29034, 104970, 131744]
+                data:[36, 23, 12, 37, 46, 31,29,25,35,22,40,14,31,22]
             }
         ]
     };

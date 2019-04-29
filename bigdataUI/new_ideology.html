@@ -1,0 +1,1048 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>大数据平台首页1.0</title>
+<link href="css/style1.0.css"  rel="stylesheet" type="text/css" media="all" />
+<script src="js/echarts.js" charset="utf-8"></script>
+<script src="js/jquery-3.2.0.min.js" charset="utf-8"></script>
+<script src="js/hubei.js"></script>
+<body>
+
+<!-- title & menu -->
+<div class="bnt">
+    <div class="topbnt_left fl">
+        <ul>
+            <li class="active"><a href="index.html">首页</a></li>
+            <li ><a href="monthly.html">报表查询</a></li>
+            <li ><a href="warningfrontpage.html">风险预警</a></li>
+            <li ><a href="multi-analysis.html">研判分析</a></li>
+        </ul>
+    </div>
+    <h1 class="tith1 fl">政工大数据平台</h1>
+    <div class=" fr topbnt_right">
+        <ul>
+            <li><a href="javascript:history.back(-1);">返回</a></li>
+            <li><a href="login.html">注销</a></li>
+        </ul>
+    </div>
+</div>
+<!--  title & menu end -->
+
+<!-- left1 -->
+<div class="left1" >
+    <div class="mrbox_top_right1">
+        <div class="hdrightboxtop" ><a href="warningfrontpage.html" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">优秀投稿推荐</h2></a>
+            <div class="lefttoday_tit" style="height:4%"><p class="fl"></p><p class="fr">更新时间：2018-06-10</p></div>
+            <div class="left2_table hdleft2_table">
+                <ul>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>宜昌市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>宜昌市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>宜昌市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>宜昌市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>宜昌市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>宜昌市支队</b><br>
+                            “关于***********”<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  left1 end -->
+
+<!-- left1 -->
+<div class="left6" style="margin-left: 1.0%">
+    <div class="plefttoday5">
+    <div class="plefttoday6" style="float: left;width:50%;"><h2 class="tith2" style="margin-top: 1.7%">投稿个数统计</h2>
+        <div id="lpeftmidbot11" class="lpeftmidbotcont"></div>
+    </div>
+    <div class="plefttoday6" style="float: left;width:50%"><h2 class="tith2" style="margin-top: 1.7%">敏感词统计</h2>
+        <div id="topic" class="lpeftmidbotcont"></div>
+    </div>
+    </div>
+    <div class="plefttoday4" ><h2 class="tith2" >投稿类别统计</h2>
+        <div id="lpeftmidbot12" class="lpeftmidbotcont"></div>
+    </div>
+</div>
+<!--  left1 end -->
+
+<!--  left2 end -->
+
+<!-- left1 -->
+<div class="left5">
+    <div class="mrbox_top_right1">
+        <div class="hdrightboxtop" ><a href="warningfrontpage.html" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">风险预警信息</h2></a>
+            <div class="lefttoday_tit" style="height:4%"><p class="fl">状态：待处理</p><p class="fr">时间：2018-06-10</p></div>
+            <div class="left2_table hdleft2_table">
+                <ul>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>宜昌市支队</b><br>
+                            宜昌市支队XXX存在投稿个数不达标情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在未进行投稿情况；<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li>
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+                    <li class="bg">
+                        <p class="fl"><b>武汉市支队</b><br>
+                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        </p>
+                        <p class="fr pt17">2018-06-22</p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  left1 end -->
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('lpeftmidbot12'));
+    option = {
+        color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['政策问题','管理问题','个人问题','工资问题']
+        },
+        grid: {
+            left: 10,
+            right: 10,
+            top: 40,
+            bottom: 10,
+            containLabel: true
+        },
+
+        xAxis : [
+            {
+                type : 'category',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+                data : ['武汉市','仙桃市','宜昌市','襄阳市','随州市','孝感市']
+            }
+        ],
+        yAxis : [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 1000,
+                interval: 100,
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+
+                axisLabel: {
+                    formatter: '{value} 个'
+                },
+                type : 'value'
+            }
+
+        ],
+        series : [
+
+            {
+                name:'政策问题',
+                type:'bar',
+                stack: '搜索引擎',
+                data:[120, 132, 101, 134, 290, 230]
+            },
+            {
+                name:'管理问题',
+                type:'bar',
+                stack: '搜索引擎',
+                data:[60, 72, 71, 74, 190, 130]
+            },
+            ,
+            {
+                name:'个人问题',
+                type:'bar',
+                stack: '搜索引擎',
+                data:[120, 132, 101, 134, 290, 230]
+            },
+            {
+                name:'工资问题',
+                type:'bar',
+                stack: '搜索引擎',
+                data:[60, 72, 71, 74, 190, 130]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<!-- js -->
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
+    var dataAxis = ['武汉市','仙桃市','宜昌市','襄阳市','随州市','孝感市'];
+    var data = [80, 85, 100, 95, 90, 70];
+    var yMax = 500;
+    var dataShadow = [];
+
+    for (var i = 0; i < data.length; i++) {
+        dataShadow.push(yMax);
+    }
+
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+
+        title: {
+            text: '',
+            subtext: ''
+        },
+        xAxis: {
+            data: dataAxis,
+            axisLabel: {
+                inside: true,
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            z: 10
+        },
+        yAxis: {
+            type: 'value',
+            name: '',
+            min: 0,
+            max: 100,
+            interval: 20,
+            axisLine: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            axisLabel: {
+                textStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        dataZoom: [
+            {
+                type: 'inside'
+            }
+        ],
+        series: [
+            { // For shadow
+                type: 'bar',
+                itemStyle: {
+                    normal: {color: 'rgba(0,0,0,0.05)'}
+                },
+                barGap:'-100%',
+                barCategoryGap:'40%',
+                data: dataShadow,
+                animation: false
+            },
+            {
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#83bff6'},
+                                {offset: 0.5, color: '#188df0'},
+                                {offset: 1, color: '#188df0'}
+                            ]
+                        )
+                    },
+                    emphasis: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#2378f7'},
+                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 1, color: '#83bff6'}
+                            ]
+                        )
+                    }
+                },
+                data: data
+            }
+        ]
+    };
+
+    // Enable data zoom when user click bar.
+    var zoomSize = 6;
+    myChart.on('click', function (params) {
+        console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+        myChart.dispatchAction({
+            type: 'dataZoom',
+            startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+            endValue: dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+        });
+    });;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('lpeftmidbot'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈']
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        xAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈'],
+
+        },
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            }
+        },
+        series: [{
+            data: [98, 60, 76, 90, 85, 69, 92],
+            type: 'bar'
+        }]
+    };
+
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('topic'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        series: [{
+            color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+            name: '话题',
+            type: 'treemap',
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            data: [{
+                name: '政事',            // First tree
+                value: 15,
+                children: [{
+                    name: '国家',       // First leaf of first tree
+                    value: 3
+                }, {
+                    name: '中国',       // Second leaf of first tree
+                    value: 2
+                },{
+                    name: '和平',       // Second leaf of first tree
+                    value: 2
+                },{
+                    name: '巴黎',       // Second leaf of first tree
+                    value: 1
+                },{
+                    name: '美国',       // Second leaf of first tree
+                    value: 1
+                }]
+            }, {
+                name: '体育',            // Second tree
+                value: 20,
+                children: [{
+                    name: '篮球',  // Granson of first tree
+                    value: 5
+                },{
+                    name: '足球',  // Granson of first tree
+                    value: 10
+                }]
+            }, {
+                name: '游戏',            // Second tree
+                value: 20,
+                children: [{
+                    name: '王者荣耀',  // Granson of first tree
+                    value: 10
+                },{
+                    name: '英雄联盟',  // Granson of first tree
+                    value: 10
+                }]
+            }]
+        }]
+    };
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pleftbox2top'));
+    option = {
+        color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left:20,
+            right:20,
+            top:0,
+            bottom:20
+        },
+        legend: {
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['主观题', '客观题','必修','选修','总分']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis:  {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            }
+        },
+        yAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['武汉','宜昌','鄂州','十堰','黄冈','仙桃','天门']
+        },
+        series: [
+            {
+                name: '主观题',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'insideRight'
+                    }
+                },
+                data: [40, 44, 49, 36, 45, 44, 48]
+            },
+            {
+                name: '客观题',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'insideRight'
+                    }
+                },
+                data: [45, 42, 41, 50, 43, 38, 35]
+            },
+            {
+                name: '必修',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'insideRight'
+                    }
+                },
+                data: [40, 44, 49, 36, 45, 44, 48]
+            },
+            {
+                name: '选修',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'insideRight'
+                    }
+                },
+                data: [45, 42, 41, 50, 43, 38, 35]
+            },
+            {
+                name: '总分',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'insideRight'
+                    }
+                },
+                data: [85, 86, 90, 86, 88, 82, 83]
+            }
+        ],
+        itemStyle: {
+            emphasis: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+        }
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pleftbox2midd'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip : {
+            trigger: 'axis'
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        legend: {
+            orient: 'vertical',
+            x : 'left',
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['武汉市','宜昌市','鄂州市']
+        },
+        calculable : true,
+        polar : [
+            {
+                indicator : [
+                    {text : '体育',color:'rgba(255,255,255,.7)', max  : 100},
+                    {text : '游戏',color:'rgba(255,255,255,.7)', max  : 100},
+                    {text : '书籍',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '音乐',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '植物',color:'rgba(255,255,255,.7)',  max  : 100},
+                    {text : '动物',color:'rgba(255,255,255,.7)',  max  : 100}
+                ],
+                radius : 60
+            }
+        ],
+        series : [
+            {
+                name: '完全实况球员数据',
+                type: 'radar',
+                itemStyle: {
+                    normal: {
+                        areaStyle: {
+                            type: 'default'
+                        }
+                    }
+                },
+                data : [
+                    {
+                        value : [97, 42, 38, 54, 60, 86],
+                        name : '武汉市'
+                    },
+                    {
+                        value : [45, 32, 74, 56, 89, 10],
+                        name : '鄂州市'
+                    },
+                    {
+                        value : [10, 80, 40, 65, 45, 60],
+                        name : '宜昌市'
+                    }
+                ]
+            }
+        ]
+    };
+
+
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
+    option = {
+        color:['#7ecef4'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left:40,
+            right:20,
+            top:30,
+            bottom:0,
+            containLabel: true
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+
+        xAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,0)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,0)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,0)"
+            },
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.5)"
+            },
+            data: ['差','较差','一般','良好','优秀']
+        },
+        series: [
+            {
+                name: '2011年',
+                type: 'bar',
+                barWidth :20,
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: 'rgba(230,253,139,.7)'},
+                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                            ]
+                        )
+                    }
+                },
+                data: [18203, 23489, 29034, 104970, 131744]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('prbottom_box1'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data: ['优秀','称职','基本称职','不称职']
+        },
+        series : [
+            {
+                name: '等级',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:335, name:'优秀'},
+                    {value:310, name:'称职'},
+                    {value:234, name:'基本称职'},
+                    {value:135, name:'不称职'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('prbottom_box2'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+            data:['武汉市','宜昌市','鄂州市','天门市','仙桃市']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.5)"
+            },
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月','9月','10月','11月','12月']
+        },
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel:{
+                color:"rgba(255,255,255,.5)"
+            },
+
+        },
+        series: [
+            {
+                name:'武汉市',
+                type:'line',
+                stack: '总量',
+                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
+            },
+            {
+                name:'宜昌市',
+                type:'line',
+                stack: '总量',
+                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
+            },
+            {
+                name:'鄂州市',
+                type:'line',
+                stack: '总量',
+                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
+            },
+            {
+                name:'天门市',
+                type:'line',
+                stack: '总量',
+                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
+            },
+            {
+                name:'仙桃市',
+                type:'line',
+                stack: '总量',
+                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('hubei_map'));
+    var option = {
+        tooltip: {
+            trigger: 'item',
+            formatter:function (params) {
+                var res = '';
+                res+=params['data'].name+'</br>';
+                return res;
+            }
+            //formatter: '{b}<br/>{c}'
+        },//鼠标放在地图上时，显示的内容及样式控制
+        visualMap: {
+            show: false,//色系条是否显示
+            min: 0,
+            max: 45000,//取其区间值就代表色系inRange中的一种颜色
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'], // 文本，默认为数值文本
+            calculable: true,
+            inRange:{
+                color: ['#42a8be','#00a69c', '#95ea95'],//上色范围
+            }
+        },//给地图上色
+        series: [{
+            name: '湖北省',
+            type: 'map',
+            mapType: '湖北',
+            zoom: 1.05,
+            selectedMode : 'single',
+            label: {
+                normal: {show: true},
+                emphasis: {show: true}
+            },
+            itemStyle: {
+                normal: {
+                    borderColor: '#fff',
+                    areaColor: '#fff',
+                    borderWidth: 2,
+                },//正常样式
+                emphasis: {
+                    areaColor: 'orange',
+                    borderWidth: 1,
+                    borderColor: 'yellow',
+                }//鼠标事件区块样式
+            },
+            data:[
+                {name: '武汉市', value: 40500},
+                {name: '黄石市', value: 23000},
+                {name: '十堰市', value: 22500},
+                {name: '宜昌市', value: 40500},
+                {name: '襄阳市', value: 45000},
+                {name: '鄂州市', value: 37000},
+                {name: '荆门市', value: 40500},
+                {name: '孝感市', value: 0},
+                {name: '荆州市', value: 11161},
+                {name: '黄冈市', value: 15000},
+                {name: '咸宁市', value: 20000},
+                {name: '随州市', value: 25000},
+                {name: '仙桃市', value: 30000},
+                {name: '潜江市', value: 35000},
+                {name: '天门市', value: 36000},
+                {name: '恩施土家族苗族自治州', value: 45000,value2:1024},
+                {name: '神农架林区', value: 23000,value2:1024},
+            ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
+            label: {
+                normal: {
+                    show: true,
+                    formatter:function(val){
+                        var area_content =  '{a|' + val.name + '}';
+                        return area_content.split("-").join("\n");
+                    },//让series 中的文字进行换行
+                    rich: {
+                        a: {
+                            color: 'WHITE'
+                        },
+                        b: {
+                            color: 'yellow',
+                            fontFamily: 'Microsoft YaHei',
+                            fontSize: 14,
+                        }
+                    },//富文本样式,就是上面的formatter中'{a|'和'{b|'
+                },
+                emphasis: {show: true}
+            },//地图中文字内容及样式控制
+        }]
+    };
+    myChart.setOption(option, true);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '武汉市':
+                location.href='group.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
+</script>
+<!-- js -->
+
+</body>
+</html>

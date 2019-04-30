@@ -16,9 +16,6 @@
    <ul>
        <li ><a href="new_index.html" >湖北总队</a></li>
        <li class="active" style="left:125px; position: absolute"><a href="new_index.html" >首页</a></li>
-       <!--<li ><a href="monthly.html">武汉支队</a></li>
-       <li ><a href="warningfrontpage.html">洪山大队</a></li>
-       <li ><a href="multi-analysis.html">卓刀泉中队</a></li>-->
    </ul>
       </ul>
   </div>
@@ -26,18 +23,18 @@
 <!--    <h2 class="tith1_sub1 fl">湖北总队</h2>-->
   <div class=" fr topbnt_right2" >
     <ul style="width: 100%">
-        <li><a href="javascript:history.back(-1);">返回</a></li>
-        <li><a href="login.html">注销</a></li>
-        <li><a href="src/政工大数据月报模板.pdf" target="_blank">生成报表</a></li>
-        <div style="float: left;right: 425px;position: absolute">
-            <div style="float:left;width: 100px">
+        <li style="right:-250px; position: absolute"><a href="javascript:history.back(-1);">返回</a></li>
+        <li style="right:-150px; position: absolute"><a href="login.html">注销</a></li>
+        <li style="right:-50px; position: absolute"><a href="src/政工大数据月报模板.pdf" target="_blank">生成报表</a></li>
+        <div style="float: left;right: 535px;position: absolute">
+            <div style="float:left;width: 75px;margin-top: 0.5%">
                 <select id="item0" onchange="items()" style="margin-top:5%;text-align:center;text-align-last:center;width:100%;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
                     <option value="0">月报</option>
                     <option value="1">季报</option>
                     <option value="2">年报</option>
                 </select>
             </div>
-            <div style="float:left;width: 100px">
+            <div style="float:left;width: 90px;margin-right: 5px";>
                 <select id="item" style="margin-top:5%;text-align:center;text-align-last:center;width:100%;float: left;color:#fff;border:none;padding:1.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);">
                     <option value="0">-----</option>
                     <option value="1">1月</option>
@@ -54,7 +51,28 @@
                     <option value="12">12月</option>
                 </select>
             </div>
-
+        </div>
+        <div>
+            <style>
+                input::-webkit-input-placeholder{
+                    color:white;
+                    font-size:16px;
+                }
+                input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+                    color:white;
+                    font-size:16px;
+                }
+                input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+                    color:white;
+                    font-size:16px;
+                }
+                input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+                    color:white;
+                    font-size:16px;
+                }
+            </style>
+            <div style="width:20%;float: left"><input style="right:330px;width:150px;position: absolute;color:#fff;border:1.0px solid white;;padding:10px 25px;border-radius:10px;background:rgba(255,255,255,.1);" type="text" placeholder="请输入"></div>
+            <div style="width:20%;float: left"><input style="margin-top:0.25%;right:334px;position: absolute;color:#fff;border:none;padding:5px 5px;border-radius:10px;background:rgba(74,180,255,.9);" type="button" value="人员搜索" onclick='location.href=("new_individual.html")' ></div>
         </div>
     </ul>
   </div>
@@ -134,29 +152,7 @@
         </div>
     </div>
     <div class="mrbox_top_right">
-        <div>
-            <style>
-                input::-webkit-input-placeholder{
-                    color:white;
-                    font-size:16px;
-                }
-                input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-                    color:white;
-                    font-size:16px;
-                }
-                input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-                    color:white;
-                    font-size:16px;
-                }
-                input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
-                    color:white;
-                    font-size:16px;
-                }
-            </style>
-            <div style="width:75%;float: left"><input style="width:75%;margin-left:7.5%;color:#fff;border:1.0px solid white;;padding:10px 25px;border-radius:10px;background:rgba(255,255,255,.1);" type="text" placeholder="请输入基本信息进行查询"></div>
-            <div style="width:20%;float: left"><input style="margin-top:2.5%;margin-left:20%;width:100%;color:#fff;border:none;padding:7.5px 5px;border-radius:10px;background:rgba(74,180,255,.9);" type="button" value="人员搜索" onclick='location.href=("new_individual.html")' ></div>
-        </div>
-        <div class="hdrightboxtop" style="margin-top: 15%; height: 82%"><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">风险预警信息</h2></a>
+        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">风险预警信息</h2></a>
             <div class="lefttoday_tit" style="height:4%"><p class="fl">状态：待处理</p><p class="fr">时间：2018-06-22</p></div>
             <div class="left2_table hdleft2_table">
                <ul>

@@ -82247,7 +82247,7 @@ function giveStore$1(ecModel) {
 * under the License.
 */
 DataZoomModel.extend({
-  type: 'dataZoom.select'
+  type: 'select'
 });
 
 /*
@@ -82269,7 +82269,7 @@ DataZoomModel.extend({
 * under the License.
 */
 DataZoomView.extend({
-  type: 'dataZoom.select'
+  type: 'select'
 });
 
 /*

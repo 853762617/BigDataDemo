@@ -1,54 +1,37 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>单位画像-学习教育</title>
-<link href="css/style-personal.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/echarts.min.js" charset="utf-8"></script>
+<title>个人画像-学习教育</title>
+<link href="../css/style-personal.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../js/echarts.min.js" charset="utf-8"></script>
 
 
 <body>
 <div class="bnt">
     <div class="topbnt_left fl">
-        <ul>
-            <li ><a href="index.html">首页</a></li>
-            <li ><a href="monthly.html">报表查询</a></li>
-            <li ><a href="warningfrontpage.html">风险预警</a></li>
-            <li class="active"><a href="multi-analysis.html">研判分析</a></li>
-        </ul>
+    <ul>
+        <li ><a href="index.html">首页</a></li>
+        <li ><a href="monthly.html">报表查询</a></li>
+        <li ><a href="warningfrontpage.html">风险预警</a></li>
+        <li class="active"><a href="multi-analysis.html">研判分析</a></li>
+    </ul>
     </div>
     <h1 class="tith1 fl">政工大数据平台</h1>
     <div class=" fr topbnt_right">
         <ul>
             <li><a href="javascript:history.back(-1);">返回</a></li>
-            <li><a href="login.html">注销</a></li>
-            <li><a href="#">生成月报</a></li>
+            <li><a href="../login.html">注销</a></li>
+            <li><a href="../src/政工大数据月报模板.docx" >生成月报</a></li>
         </ul>
         </ul>
     </div>
 </div>
 <!-- bnt end -->
 <div class="puleft fl">
-    <div class="pulefttop"><h2 class="tith2"><span>单位信息</span></h2>
-        <div class="lefttoday_number">
+    <div class="pulefttop"><h2 class="tith2"><span>个人信息</span></h2>
+        <div class="lefttoday_number" >
+            <p style="text-align: left;margin-left: 5%;margin-top:5%;">姓名：岳佳奇</p>
+            <p style="text-align: left;margin-left: 5%;margin-top:2%;">信息：......</p>
             <div class="widget-inline-box text-center fl">
-                <ul>
-
-                    <li>
-                        <p class="fl">
-                            武汉市支队
-                        </p>
-                    </li>
-
-                    <li class="bg">
-                        <p class="fl">
-                            队长：***
-                        </p>
-                    </li>
-
-                    <li>
-                        <p class="fl">
-                            指导员：****
-                        </p>
-                    </li>
             </div>
             <div class="widget-inline-box text-center">
             </div>
@@ -77,27 +60,26 @@
     <div class="pmidd_bott">
         <div class="pumiddboxttop1 fl">
             <h2 class="tith2 pt3">学习情况</h2>
-
             <div class="puleft2height">
                 <div class="widget-inline-box text-center " style="margin-top:2.5%">
                     <p>本月成绩</p>
                     <h3 class=" ceeb1fd f30">100</h3>
-                    <h4 class="text-muted ">环比<img src="img/iconup.png" height="16" />2%</h4>
+                    <h4 class="text-muted ">环比<img src="../img/iconup.png" height="16" />2%</h4>
                 </div>
-                <div class="widget-inline-box text-center "style="margin-top:2.5%">
+                <div class="widget-inline-box text-center " style="margin-top:2.5%">
                     <p>单位排名</p>
                     <h3 class=" c24c9ff f30">1</h3>
-                    <h4 class="text-muted ">环比<img src="img/iconup.png" height="16" />0%</h4>
+                    <h4 class="text-muted ">环比<img src="../img/iconup.png" height="16" />0%</h4>
                 </div>
-                <div class="widget-inline-box text-center "style="margin-top:1%">
+                <div class="widget-inline-box text-center " style="margin-top:1%">
                     <p>本月阅读时长</p>
                     <h3 class=" cffff00 f30">31</h3>
-                    <h4 class="text-muted ">环比<img src="img/icondown.png" height="16" />3%</h4>
+                    <h4 class="text-muted ">环比<img src="../img/icondown.png" height="16" />3%</h4>
                 </div>
-                <div class="widget-inline-box text-center "style="margin-top:1%">
+                <div class="widget-inline-box text-center " style="margin-top:1%">
                     <p>本月评论次数</p>
                     <h3 class=" ceeb1fd f30">54</h3>
-                    <h4 class="text-muted ">环比<img src="img/iconup.png" height="16" />2%</h4>
+                    <h4 class="text-muted ">环比<img src="../img/iconup.png" height="16" />2%</h4>
                 </div>
             </div>
         </div>
@@ -155,7 +137,7 @@
         <div id="purightboxmidd" class="purightboxmiddcont" style="margin-top:1%"></div>
     </div>
     <div class="purightboxbott"><h2 class="tith2 pt12">阅读次数统计图</h2>
-        <div id="purightboxbott" class="purightboxbottcont" style="margin-top:1%" ></div>
+        <div id="purightboxbott" class="purightboxbottcont" style="margin-top:1%"></div>
     </div>
 </div>
 <!-- mrbox_top_right end -->
@@ -227,7 +209,7 @@
                 stack: '总分',
                 data:[150, 232, 201, 154, 190, 330, 410, 201, 154, 190, 330, 410]
             },
-        ]
+           ]
     };
     myChart.setOption(option);
 </script>

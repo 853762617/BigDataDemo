@@ -71,12 +71,24 @@
 <!--  left1 end -->
 
 <!-- left1 -->
-<div class="left6" style="margin-left: 1.0%">
-    <div class="plefttoday4" style="margin-top: 2%"><h2 class="tith2">单位党员完成情况</h2>
+
+<div class="left7" style="margin-left: 1.0%">
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">组织生活积分统计</h2>
         <div id="lpeftmidbot11" class="lpeftmidbotcont"></div>
     </div>
-    <div class="plefttoday4" style="margin-top: 4%"><h2 class="tith2">困难党员情况</h2>
-        <div id="topic" class="lpeftmidbotcont"></div>
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">党员模范作用积分</h2>
+        <div id="pleftbox2bott_cont" class="lpeftmidbotcont"></div>
+    </div>
+</div>
+<!--  left1 end -->
+
+<!-- left2 -->
+<div class="left7">
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">党员工作积分</a></h2>
+        <div id="pleftbox2top" class="pleftbox2middcont"></div>
+    </div>
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">困难党员情况</h2>
+        <div id="topic"class="pleftbox2middcont"></div>
     </div>
 </div>
 <!--  left1 end -->
@@ -322,7 +334,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data:['组织生活积分','党员模范作用积分','党员工作积分']
+            data:['组织生活积分']
         },
         xAxis: [
             {
@@ -388,39 +400,7 @@
                 },
                 data:[90, 92, 85, 96, 75, 88,84,76,95,85,76,95,96,84]
             },
-            {
-                name:'党员模范作用积分',
-                type:'bar',
 
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#00f0ff'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        ),
-                    }
-                },
-                data:[87, 95, 64, 97, 86, 95,90, 92, 85, 96, 75,96,64,75 ]
-            },
-            {
-                name:'党员工作积分',
-                type:'bar',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#fffb34'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[88, 92, 99, 76, 82, 92,87, 95, 64, 97, 86,85,99,76]
-            },
 
         ]
     };
@@ -577,129 +557,92 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('pleftbox2top'));
     option = {
-        color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
         backgroundColor: 'rgba(1,202,217,.2)',
-        tooltip : {
-            trigger: 'axis',
-            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-            }
-        },
         grid: {
-            left:20,
+            left:60,
             right:20,
-            top:0,
-            bottom:20
+            top:45,
+            bottom:40
+        },
+
+        tooltip : {
+            trigger: 'axis'
         },
         legend: {
+            top:10,
             textStyle:{
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['主观题', '客观题','必修','选修','总分']
+            data:['党员工作积分']
         },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis:  {
-            type: 'value',
-            axisLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.2)'
+        xAxis: [
+            {
+                type: 'category',
+                name: '分',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel:{
+                    color:"rgba(255,255,255,.7)"
+                },
+
+                data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+                axisPointer: {
+                    type: 'shadow'
                 }
-            },
-            splitLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.1)'
-                }
-            }
-        },
-        yAxis: {
-            type: 'category',
-            axisLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.7)'
-                }
-            },
-            splitLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.1)'
-                }
-            },
-            data: ['武汉','宜昌','鄂州','十堰','黄冈','仙桃','天门']
-        },
-        series: [
-            {
-                name: '主观题',
-                type: 'bar',
-                stack: '总量',
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'insideRight'
-                    }
-                },
-                data: [40, 44, 49, 36, 45, 44, 48]
-            },
-            {
-                name: '客观题',
-                type: 'bar',
-                stack: '总量',
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'insideRight'
-                    }
-                },
-                data: [45, 42, 41, 50, 43, 38, 35]
-            },
-            {
-                name: '必修',
-                type: 'bar',
-                stack: '总量',
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'insideRight'
-                    }
-                },
-                data: [40, 44, 49, 36, 45, 44, 48]
-            },
-            {
-                name: '选修',
-                type: 'bar',
-                stack: '总量',
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'insideRight'
-                    }
-                },
-                data: [45, 42, 41, 50, 43, 38, 35]
-            },
-            {
-                name: '总分',
-                type: 'bar',
-                stack: '总量',
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'insideRight'
-                    }
-                },
-                data: [85, 86, 90, 86, 88, 82, 83]
             }
         ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 100,
+                interval: 20,
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+
+                axisLabel: {
+                    formatter: '{value} 分'
+                }
+            },
+        ],
+        series: [
+
+            {
+                name:'党员工作积分',
+                type:'bar',
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#fffb34'},
+                                {offset: 1, color: '#032a72'}
+                            ]
+                        )
+                    }
+                },
+                data:[88, 92, 99, 76, 82, 92,87, 95, 64, 97, 86,85,99,76]
+            },
+
+        ]
     };
     myChart.setOption(option);
 </script>
@@ -775,74 +718,93 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
     option = {
-        color:['#7ecef4'],
         backgroundColor: 'rgba(1,202,217,.2)',
         grid: {
-            left:40,
+            left:60,
             right:20,
-            top:30,
-            bottom:0,
-            containLabel: true
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'shadow'
-            }
+            top:45,
+            bottom:40
         },
 
-        xAxis: {
-            type: 'value',
-            axisLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,0)'
-                }
-            },
-            splitLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,0)'
-                }
-            },
-            axisLabel:{
-                color:"rgba(255,255,255,0)"
-            },
-            boundaryGap: [0, 0.01]
+        tooltip : {
+            trigger: 'axis'
         },
-        yAxis: {
-            type: 'category',
-            axisLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.5)'
-                }
+        legend: {
+            top:10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
             },
-            splitLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.1)'
-                }
-            },
-            axisLabel:{
-                color:"rgba(255,255,255,.5)"
-            },
-            data: ['差','较差','一般','良好','优秀']
+            data:['党员模范作用积分']
         },
-        series: [
+        xAxis: [
             {
-                name: '2011年',
-                type: 'bar',
-                barWidth :20,
+                type: 'category',
+                name: '分',
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.2)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.1)'
+                    }
+                },
+                axisLabel:{
+                    color:"rgba(255,255,255,.7)"
+                },
+
+                data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+                axisPointer: {
+                    type: 'shadow'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 100,
+                interval: 20,
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.3)'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'rgba(255,255,255,.01)'
+                    }
+                },
+
+                axisLabel: {
+                    formatter: '{value} 分'
+                }
+            },
+        ],
+        series: [
+
+            {
+                name:'党员模范作用积分',
+                type:'bar',
+
                 itemStyle: {
                     normal: {
                         color: new echarts.graphic.LinearGradient(
-                            1, 0, 0, 1,
+                            0, 0, 0, 1,
                             [
-                                {offset: 0, color: 'rgba(230,253,139,.7)'},
-                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                                {offset: 0, color: '#00f0ff'},
+                                {offset: 1, color: '#032a72'}
                             ]
-                        )
+                        ),
                     }
                 },
-                data: [18203, 23489, 29034, 104970, 131744]
-            }
+                data:[87, 95, 64, 97, 86, 95,90, 92, 85, 96, 75,96,64,75 ]
+            },
+
+
         ]
     };
     myChart.setOption(option);

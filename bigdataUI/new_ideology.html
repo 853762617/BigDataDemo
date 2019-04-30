@@ -325,7 +325,9 @@
             bottom: 10,
             containLabel: true
         },
-
+        tooltip : {
+            trigger: 'item',
+        },
         xAxis : [
             {
                 type : 'category',
@@ -402,12 +404,7 @@
     var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
     var dataAxis = ['武汉市','仙桃市','宜昌市','襄阳市','随州市','孝感市'];
     var data = [80, 85, 100, 95, 90, 70];
-    var yMax = 500;
     var dataShadow = [];
-
-    for (var i = 0; i < data.length; i++) {
-        dataShadow.push(yMax);
-    }
 
     option = {
         backgroundColor: 'rgba(1,202,217,.2)',
@@ -415,6 +412,10 @@
         title: {
             text: '',
             subtext: ''
+        },
+        tooltip : {
+            trigger: 'item',
+
         },
         xAxis: {
             data: dataAxis,
@@ -571,6 +572,10 @@
     var myChart = echarts.init(document.getElementById('topic'));
     option = {
         backgroundColor: 'rgba(1,202,217,.2)',
+        tooltip : {
+            trigger: 'axis',
+
+        },
         series: [{
             color:['#d2d17c','#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
             name: '话题',

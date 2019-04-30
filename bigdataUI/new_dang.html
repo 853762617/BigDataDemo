@@ -284,7 +284,7 @@
                     normal:{
                         show:true,
                         position:'right',
-                        formatter: "{c}",
+                        formatter: "{c} 分",
                     }
                 }
             }
@@ -313,7 +313,9 @@
             bottom:40
         },
 
-
+        tooltip : {
+            trigger: 'axis'
+        },
         legend: {
             top:10,
             textStyle:{
@@ -325,6 +327,7 @@
         xAxis: [
             {
                 type: 'category',
+                name: '分',
                 axisLine:{
                     lineStyle:{
                         color:'rgba(255,255,255,.2)'
@@ -380,7 +383,7 @@
                                 {offset: 0, color: '#b266ff'},
                                 {offset: 1, color: '#121b87'}
                             ]
-                        )
+                        ),
                     }
                 },
                 data:[90, 92, 85, 96, 75, 88,84,76,95,85,76,95,96,84]
@@ -397,7 +400,7 @@
                                 {offset: 0, color: '#00f0ff'},
                                 {offset: 1, color: '#032a72'}
                             ]
-                        )
+                        ),
                     }
                 },
                 data:[87, 95, 64, 97, 86, 95,90, 92, 85, 96, 75,96,64,75 ]
@@ -417,7 +420,8 @@
                     }
                 },
                 data:[88, 92, 99, 76, 82, 92,87, 95, 64, 97, 86,85,99,76]
-            }
+            },
+
         ]
     };
     myChart.setOption(option);
@@ -489,7 +493,10 @@
             top:45,
             bottom:40
         },
+        tooltip : {
+            trigger: 'item',
 
+        },
 
         legend: {
             top:10,

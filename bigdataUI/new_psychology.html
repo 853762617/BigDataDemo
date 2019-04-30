@@ -256,12 +256,7 @@
     var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
     var dataAxis = ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'];
     var data = [8,5, 9, 5, 7, 10,4,8,6,2,4,5,3,6];
-    var yMax = 500;
     var dataShadow = [];
-
-    for (var i = 0; i < data.length; i++) {
-        dataShadow.push(yMax);
-    }
 
     option = {
         backgroundColor: 'rgba(1,202,217,.2)',
@@ -269,6 +264,10 @@
         title: {
             text: '',
             subtext: ''
+        },
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}: {c}人",
         },
         xAxis: {
             data: dataAxis,
@@ -283,17 +282,20 @@
             },
             axisLine: {
                 show: false
+
             },
             z: 10
         },
         yAxis: {
             type: 'value',
-            name: '',
+            name: '人',
             min: 0,
-            max: 20,
-            interval: 5,
+            max: 10,
             axisLine: {
-                show: false
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
             },
             axisTick: {
                 show: false
@@ -327,8 +329,8 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#83bff6'},
-                                {offset: 0.5, color: '#188df0'},
+                                {offset: 0, color: '#d8d47a'},
+                                {offset: 0.5, color: '#66f7d9'},
                                 {offset: 1, color: '#188df0'}
                             ]
                         )
@@ -337,8 +339,8 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#2378f7'},
-                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 0, color: '#d8d47a'},
+                                {offset: 0.7, color: '#66f7d9'},
                                 {offset: 1, color: '#83bff6'}
                             ]
                         )
@@ -378,10 +380,10 @@
             data: ['武汉', '宜昌', '鄂州', '天门', '仙桃', '十堰', '黄冈']
         },
         tooltip : {
-            trigger: 'axis',
-            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-            }
+            tooltip : {
+                trigger: 'axis',
+                formatter: "{b}: {c}人",
+            },
         },
         xAxis: {
             type: 'category',
@@ -438,6 +440,10 @@
             text: '',
             subtext: ''
         },
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}: {c}人",
+        },
         xAxis: {
             data: dataAxis,
             axisLabel: {
@@ -456,12 +462,15 @@
         },
         yAxis: {
             type: 'value',
-            name: '',
+            name: '人',
             min: 0,
             max: 20,
             interval: 5,
             axisLine: {
-                show: false
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
             },
             axisTick: {
                 show: false
@@ -495,8 +504,8 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#83bff6'},
-                                {offset: 0.5, color: '#188df0'},
+                                {offset: 0, color: '#d8d47a'},
+                                {offset: 0.5, color: '#c5f0ee'},
                                 {offset: 1, color: '#188df0'}
                             ]
                         )
@@ -505,8 +514,8 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#2378f7'},
-                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 0, color: '#d8d47a'},
+                                {offset: 0.7, color: '#c5f0ee'},
                                 {offset: 1, color: '#83bff6'}
                             ]
                         )
@@ -549,6 +558,10 @@
             text: '',
             subtext: ''
         },
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}: {c}人",
+        },
         xAxis: {
             data: dataAxis,
             axisLabel: {
@@ -567,12 +580,15 @@
         },
         yAxis: {
             type: 'value',
-            name: '',
+            name: '人',
             min: 0,
             max: 20,
             interval: 5,
             axisLine: {
-                show: false
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
             },
             axisTick: {
                 show: false
@@ -606,8 +622,8 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#83bff6'},
-                                {offset: 0.5, color: '#188df0'},
+                                {offset: 0, color: '#d8d47a'},
+                                {offset: 0.5, color: '#c5f0ee'},
                                 {offset: 1, color: '#188df0'}
                             ]
                         )
@@ -616,8 +632,8 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#2378f7'},
-                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 0, color: '#d8d47a'},
+                                {offset: 0.7, color: '#95ffe9'},
                                 {offset: 1, color: '#83bff6'}
                             ]
                         )
@@ -641,75 +657,6 @@
     if (option && typeof option === "object") {
         myChart.setOption(option, true);
     }
-</script>
-<script type="text/javascript">
-    var myChart = echarts.init(document.getElementById('pleftbox2midd'));
-    option = {
-        backgroundColor: 'rgba(1,202,217,.2)',
-        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-        tooltip : {
-            trigger: 'axis'
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        legend: {
-            orient: 'vertical',
-            x : 'left',
-            textStyle:{
-                fontSize: 10,
-                color:'rgba(255,255,255,.7)'
-            },
-            data:['武汉','宜昌','鄂州']
-        },
-        calculable : true,
-        polar : [
-            {
-                indicator : [
-                    {text : '体育',color:'rgba(255,255,255,.7)', max  : 100},
-                    {text : '游戏',color:'rgba(255,255,255,.7)', max  : 100},
-                    {text : '书籍',color:'rgba(255,255,255,.7)',  max  : 100},
-                    {text : '音乐',color:'rgba(255,255,255,.7)',  max  : 100},
-                    {text : '植物',color:'rgba(255,255,255,.7)',  max  : 100},
-                    {text : '动物',color:'rgba(255,255,255,.7)',  max  : 100}
-                ],
-                radius : 60
-            }
-        ],
-        series : [
-            {
-                name: '完全实况球员数据',
-                type: 'radar',
-                itemStyle: {
-                    normal: {
-                        areaStyle: {
-                            type: 'default'
-                        }
-                    }
-                },
-                data : [
-                    {
-                        value : [97, 42, 38, 54, 60, 86],
-                        name : '武汉'
-                    },
-                    {
-                        value : [45, 32, 74, 56, 89, 10],
-                        name : '鄂州'
-                    },
-                    {
-                        value : [10, 80, 40, 65, 45, 60],
-                        name : '宜昌'
-                    }
-                ]
-            }
-        ]
-    };
-
-
-    myChart.setOption(option);
 </script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
@@ -729,6 +676,10 @@
             text: '',
             subtext: ''
         },
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}: {c}人",
+        },
         xAxis: {
             data: dataAxis,
             axisLabel: {
@@ -747,11 +698,14 @@
         },
         yAxis: {
             type: 'value',
-            name: '',
+            name: '人',
             min: 0,
             max: 400,
             axisLine: {
-                show: false
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,.7)'
+                }
             },
             axisTick: {
                 show: false
@@ -785,9 +739,9 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#83bff6'},
-                                {offset: 0.5, color: '#188df0'},
-                                {offset: 1, color: '#188df0'}
+                                {offset: 0, color: '#e0f682'},
+                                {offset: 0.5, color: '#c5f0ee'},
+                                {offset: 1, color: '#83bff6'}
                             ]
                         )
                     },
@@ -795,8 +749,8 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#2378f7'},
-                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 0, color: '#f7ef84'},
+                                {offset: 0.7, color: '#66f7d9'},
                                 {offset: 1, color: '#83bff6'}
                             ]
                         )
@@ -821,238 +775,7 @@
         myChart.setOption(option, true);
     }
 </script>
-<script type="text/javascript">
-    var myChart = echarts.init(document.getElementById('prbottom_box1'));
-    option = {
-        backgroundColor: 'rgba(1,202,217,.2)',
-        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-        tooltip : {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        legend: {
-            top:10,
-            textStyle:{
-                fontSize: 10,
-                color:'rgba(255,255,255,.7)'
-            },
-            data: ['优秀','称职','基本称职','不称职']
-        },
-        series : [
-            {
-                name: '等级',
-                type: 'pie',
-                radius : '55%',
-                center: ['50%', '60%'],
-                data:[
-                    {value:335, name:'优秀'},
-                    {value:310, name:'称职'},
-                    {value:234, name:'基本称职'},
-                    {value:135, name:'不称职'}
-                ],
-                itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                }
-            }
-        ]
-    };
-    myChart.setOption(option);
-</script>
-<script type="text/javascript">
-    var myChart = echarts.init(document.getElementById('prbottom_box2'));
-    option = {
-        backgroundColor: 'rgba(1,202,217,.2)',
-        color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            top:10,
-            textStyle:{
-                fontSize: 10,
-                color:'rgba(255,255,255,.7)'
-            },
-            data:['武汉','宜昌','鄂州','天门','仙桃']
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis: {
-            type: 'category',
-            boundaryGap: false,
-            axisLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.5)'
-                }
-            },
-            splitLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.1)'
-                }
-            },
-            axisLabel:{
-                color:"rgba(255,255,255,.5)"
-            },
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月','9月','10月','11月','12月']
-        },
-        yAxis: {
-            type: 'value',
-            axisLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.5)'
-                }
-            },
-            splitLine:{
-                lineStyle:{
-                    color:'rgba(255,255,255,.1)'
-                }
-            },
-            axisLabel:{
-                color:"rgba(255,255,255,.5)"
-            },
 
-        },
-        series: [
-            {
-                name:'武汉',
-                type:'line',
-                stack: '总量',
-                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-            },
-            {
-                name:'宜昌',
-                type:'line',
-                stack: '总量',
-                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-            },
-            {
-                name:'鄂州',
-                type:'line',
-                stack: '总量',
-                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-            },
-            {
-                name:'天门',
-                type:'line',
-                stack: '总量',
-                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-            },
-            {
-                name:'仙桃',
-                type:'line',
-                stack: '总量',
-                data:[820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320]
-            }
-        ]
-    };
-    myChart.setOption(option);
-</script>
-<script type="text/javascript">
-    var myChart = echarts.init(document.getElementById('hubei_map'));
-    var option = {
-        tooltip: {
-            trigger: 'item',
-            formatter:function (params) {
-                var res = '';
-                res+=params['data'].name+'</br>';
-                return res;
-            }
-            //formatter: '{b}<br/>{c}'
-        },//鼠标放在地图上时，显示的内容及样式控制
-        visualMap: {
-            show: false,//色系条是否显示
-            min: 0,
-            max: 45000,//取其区间值就代表色系inRange中的一种颜色
-            left: 'left',
-            top: 'bottom',
-            text: ['高', '低'], // 文本，默认为数值文本
-            calculable: true,
-            inRange:{
-                color: ['#42a8be','#00a69c', '#95ea95'],//上色范围
-            }
-        },//给地图上色
-        series: [{
-            name: '湖北省',
-            type: 'map',
-            mapType: '湖北',
-            zoom: 1.05,
-            selectedMode : 'single',
-            label: {
-                normal: {show: true},
-                emphasis: {show: true}
-            },
-            itemStyle: {
-                normal: {
-                    borderColor: '#fff',
-                    areaColor: '#fff',
-                    borderWidth: 2,
-                },//正常样式
-                emphasis: {
-                    areaColor: 'orange',
-                    borderWidth: 1,
-                    borderColor: 'yellow',
-                }//鼠标事件区块样式
-            },
-            data:[
-                {name: '武汉', value: 40500},
-                {name: '黄石', value: 23000},
-                {name: '十堰', value: 22500},
-                {name: '宜昌', value: 40500},
-                {name: '襄阳', value: 45000},
-                {name: '鄂州', value: 37000},
-                {name: '荆门', value: 40500},
-                {name: '孝感', value: 0},
-                {name: '荆州', value: 11161},
-                {name: '黄冈', value: 15000},
-                {name: '咸宁', value: 20000},
-                {name: '随州', value: 25000},
-                {name: '仙桃', value: 30000},
-                {name: '潜江', value: 35000},
-                {name: '天门', value: 36000},
-                {name: '恩施土家族苗族自治州', value: 45000,value2:1024},
-                {name: '神农架林区', value: 23000,value2:1024},
-            ],//value的值是上面visualMap属性中设置的颜色色系区间的值，即0~45000
-            label: {
-                normal: {
-                    show: true,
-                    formatter:function(val){
-                        var area_content =  '{a|' + val.name + '}';
-                        return area_content.split("-").join("\n");
-                    },//让series 中的文字进行换行
-                    rich: {
-                        a: {
-                            color: 'WHITE'
-                        },
-                        b: {
-                            color: 'yellow',
-                            fontFamily: 'Microsoft YaHei',
-                            fontSize: 14,
-                        }
-                    },//富文本样式,就是上面的formatter中'{a|'和'{b|'
-                },
-                emphasis: {show: true}
-            },//地图中文字内容及样式控制
-        }]
-    };
-    myChart.setOption(option, true);
-    myChart.on('click', function(params){
-        console.log(params.name);//此处写点击事件内容
-        switch(params.name){
-            case '武汉':
-                location.href='group.html';
-                break;
-            default:
-                break;
-        }
-    });//点击事件，此事件还可以用到柱状图等其他地图
-</script>
 <!-- js -->
 
 </body>

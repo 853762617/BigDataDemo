@@ -27,12 +27,13 @@ html,body{
 .bnt{ height:9%; width: 100%; display: inline-block;}
 .left1{ width: 18%; height: 97%;float: left; padding-left:1.5%;}
 .left2{width: 18%; height: 97%;float: left;padding-left:2.2%;}
-.left3{width: 18%; height: 97%;float: left;padding-left:1.2%;}
+.left3{width: 18%; height: 97%;float: left;padding-left:2.0%;}
 .left4{width: 18%; height: 97%;float: left;padding-left:7.0%;}
-.left5{width: 18%; height: 97%;float: left;padding-left:3%;}
+.left5{width: 18%; height: 97%;float: left;padding-left:2.0%;}
 .left6{width: 53%; height: 97%;float: left;padding-left:1.2%;}
 .left7{width: 27%; height: 97%;float: left;padding-left:1.2%;}
 .left8{width: 18%; height: 97%;float: left;padding-left:0.1%;}
+.left9{width: 18%; height: 97%;float: left;padding-left:2.8%;}
 .leftmain{width: 57.3%; height: 97%; float: left; padding-left: 1.5%;}
 .lefthorizontal{width: 100%; height: 29%; float: left; margin-bottom: 1.2%}
 .mrbox{float: left; width: 79%; height: 100%}

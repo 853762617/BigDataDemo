@@ -110,11 +110,11 @@ html,body{
 .fl{ float: left;}
 .fr{ float: right;}
 .topbnt_left{width: 33%}
-.topbnt_left ul{ padding-top: 5%; padding-left: 5%; width: 50%}
+.topbnt_left ul{ padding-top: 4.5%; padding-left: 5%; width: 50%}
 .topbnt_left li { background:url(../img/nav-activei.png) center;background-size:cover;font-size: 18px; line-height: 33px;background-repeat: no-repeat;width:150px; height:35px;float: left; text-align: center; margin-left: 1%}
 .topbnt_left li.active,.topbnt_right li.active{background:url(../img/navi.png) center;background-size:cover; background-repeat:no-repeat;width:150px; }
 .topbnt_left li a{ text-decoration: none; color: #fff;}
-.tith1{ width: 27%; text-align: center; padding-top: 16px; font-weight: bold; letter-spacing:8px; font-size: 36px;margin-left: 2.5%}
+.tith1{ width: 27%; text-align: center; padding-top: 16px; font-weight: bold; letter-spacing:8px; font-size: 36px;margin-left: 2.7%;margin-top: 0.2%}
 .tith1_sub1{ width: 8%; text-align: left; padding-top: 30px; padding-left: 10px; font-weight: bold; letter-spacing: 6px; font-size: 25px;}
 .tith1_sub2{ width: 17%; text-align: left; padding-top: 30px; padding-left: 10px; font-weight: bold; letter-spacing: 6px; font-size: 25px;}
 .topbnt_right{padding-top: 30px; padding-right:2.5%; width: 27%;}

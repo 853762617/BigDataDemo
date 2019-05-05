@@ -276,9 +276,10 @@
     })
 </script>
 <script type="text/javascript">
-    function auto() {
-        Notiflix.Report.Init();
-        Notiflix.Report.Warning( '风险警告', '武汉支队xxx存在近期成绩连续下滑情况', 'ok');
+    var timer=self.setInterval("remind()",5000)
+    function remind() {
+        Notiflix.Notify.Init();
+        Notiflix.Notify.Warning('洪山大队有新的风险预警情况!');
     }
 </script>
 <script type="text/javascript">

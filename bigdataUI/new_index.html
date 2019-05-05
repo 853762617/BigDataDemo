@@ -669,7 +669,7 @@
                       text: ['高', '低'], // 文本，默认为数值文本
                       calculable: true,
                       inRange:{
-                          color: ['#42a8be','#00a69c', '#95ea95'],//上色范围
+                          color: ['#42a8be','#00a69c', '#30ea8b'],//上色范围
                       }
                   },//给地图上色
                   series: [{
@@ -718,6 +718,7 @@
                           normal: {
                               show: true,
                               color:'#FFF',
+                              fontSize:14,
                               formatter:function(val){
                                   var area_content =  val['data'].name2 ;
                                   return area_content.split("-").join("\n");

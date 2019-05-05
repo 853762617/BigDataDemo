@@ -433,6 +433,10 @@
                     }
                 },
                 axisLabel:{
+                    formatter:function(value)
+                    {
+                        return value.split("").join("\n");
+                    },
                     color:"rgba(255,255,255,.7)"
                 },
 
@@ -582,7 +586,6 @@
                 axisLabel:{
                     color:"rgba(255,255,255,.7)"
                 },
-
                 data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
                 axisPointer: {
                     type: 'shadow'

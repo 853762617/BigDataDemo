@@ -349,9 +349,12 @@
         xAxis: {
             data: dataAxis,
             axisLabel: {
-                inside: true,
                 textStyle: {
-                    color: '#fff'
+                    color: '#fff',
+                },
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
                 }
             },
             axisTick: {
@@ -524,7 +527,10 @@
         xAxis: {
             data: dataAxis,
             axisLabel: {
-                inside: true,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                },
                 textStyle: {
                     color: '#fff'
                 }
@@ -642,7 +648,10 @@
         xAxis: {
             data: dataAxis,
             axisLabel: {
-                inside: true,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                },
                 textStyle: {
                     color: '#fff'
                 }
@@ -760,7 +769,10 @@
         xAxis: {
             data: dataAxis,
             axisLabel: {
-                inside: true,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                },
                 textStyle: {
                     color: '#fff'
                 }

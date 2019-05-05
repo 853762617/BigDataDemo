@@ -122,75 +122,75 @@
                 <ul>
                     <a href="#" id="msg-warning">
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     </a>
                     <li class="bg">
-                        <p class="fl"><b>宜昌市支队</b><br>
-                            宜昌市支队XXX存在投稿个数不达标情况；<br>
+                        <p class="fl"><b>宜昌支队</b><br>
+                            宜昌支队XXX存在投稿个数不达标情况；<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在未进行投稿情况；<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在未进行投稿情况；<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li>
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
                     <li class="bg">
-                        <p class="fl"><b>武汉市支队</b><br>
-                            武汉市支队XXX存在投稿个数连续下滑情况<br>
+                        <p class="fl"><b>武汉支队</b><br>
+                            武汉支队XXX存在投稿个数连续下滑情况<br>
                         </p>
                         <p class="fr pt17">2018-06-22</p>
                     </li>
@@ -445,7 +445,10 @@
         xAxis: {
             data: dataAxis,
             axisLabel: {
-                inside: true,
+                formatter:function(value)
+                {
+                    return value.split("").join("\n");
+                },
                 textStyle: {
                     color: '#fff'
                 }

@@ -85,7 +85,7 @@
 <!-- left1 -->
 <div class="left1" >
     <div class="mrbox_top_right1">
-        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">支队分数排名</h2></a>
+        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">总体分数排名</h2></a>
             <div class="lefttoday_tit" style="height:4%"><p class="fr">更新时间：2018-06-22</p></div>
                 <div class="left2_table hdleft2_table">
                     <div id="rank" class="vertical1"></div>
@@ -96,31 +96,20 @@
 <!--  left1 end -->
 
 <div class="leftmain" style="margin-left: 1.0%">
-    <div class="lefthorizontal" >
-        <div class="plefttodayhorizontal"><h2 class="tith2">必修分数统计</h2>
+    <div class="lefthorizonta2" >
+        <div class="plefttodayhorizonta2"><h2 class="tith2">必修分数统计</h2>
             <div id="bixiu" class="lpeftmidbotcont"></div>
         </div>
-        <div class="plefttodayhorizontal"><h2 class="tith2">选修分数统计</h2>
+        <div class="plefttodayhorizonta2"><h2 class="tith2">选修分数统计</h2>
             <div id="xuanxiu" class="pleftbox2middcont"></div>
         </div>
-        <div class="plefttodayhorizontal"><h2 class="tith2">参会情况统计</h2>
-            <div id="meetings" class="pleftbox2middcont"></div>
-        </div>
     </div>
-    <div class="lefthorizontal" >
-        <div class="rbottom_box4"><h2 class="tith2">总体分数统计</h2>
-            <div id="zongti" class="prbottom_box1cont1"></div>
-        </div>
-    </div>
-    <div class="lefthorizontal" >
-        <div class="plefttodayhorizontal"><h2 class="tith2">客观题分数统计</h2>
+    <div class="lefthorizonta2" >
+        <div class="plefttodayhorizonta2"><h2 class="tith2">客观题分数统计</h2>
             <div id="keguan" class="lpeftmidbotcont"></div>
         </div>
-        <div class="plefttodayhorizontal"><h2 class="tith2">主观题分数统计</h2>
+        <div class="plefttodayhorizonta2"><h2 class="tith2">主观题分数统计</h2>
             <div id="zhuguan" class="lpeftmidbotcont"></div>
-        </div>
-        <div class="plefttodayhorizontal"><h2 class="tith2">时长统计</h2>
-            <div id="shichang" class="lpeftmidbotcont"></div>
         </div>
     </div>
 </div>
@@ -363,11 +352,11 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['汉江','十堰','宜昌','随州','襄阳','恩施','鄂州','荆门','孝感','荆州','咸宁','黄冈','黄石','武汉']
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
         },
         series: [
             {
-                data: [4, 9, 10, 14, 15, 21, 22, 23, 32, 34, 35, 40, 46, 51],
+                data: [4, 9, 10, 14, 15, 21, 22, 23, 32, 34, 35, 40,],
                 type: 'bar',
                 label:{
                     normal:{
@@ -404,7 +393,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['分数', '合格率']
+
         },
         tooltip : {
             trigger: 'axis',
@@ -431,7 +420,7 @@
                     return value.split("").join("\n");
                 }
             },
-            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
 
         },
         yAxis:[
@@ -449,35 +438,15 @@
                     }
                 }
             },
-            {
-                type: 'value',
-                name: '合格率',
-                axisLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.5)'
-                    }
-                },
-                splitLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.1)'
-                    }
-                },
-                axisLabel: {
-                    formatter: '{value} %'
-                }
-            }
+
         ],
         series: [
             {
-                name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
+                name: '',
+                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85],
                 type: 'bar'
             },
-            {
-                name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92, 60, 60, 80, 90, 88, 77, 92],
-                type: 'line'
-            }
+
         ]
     };
 
@@ -506,7 +475,6 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['分数', '合格率']
         },
         tooltip : {
             trigger: 'axis',
@@ -533,7 +501,7 @@
                     return value.split("").join("\n");
                 }
             },
-            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
 
         },
         yAxis:[
@@ -551,35 +519,15 @@
                     }
                 }
             },
-            {
-                type: 'value',
-                name: '合格率',
-                axisLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.5)'
-                    }
-                },
-                splitLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.1)'
-                    }
-                },
-                axisLabel: {
-                    formatter: '{value} %'
-                }
-            }
+
         ],
         series: [
             {
-                name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
+                name: '',
+                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, ],
                 type: 'bar'
             },
-            {
-                name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92, 60, 60, 80, 90, 88, 77, 92],
-                type: 'line'
-            }
+
         ]
     };
 
@@ -712,7 +660,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['分数', '合格率']
+
         },
         tooltip : {
             trigger: 'axis',
@@ -732,7 +680,7 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
 
         },
         yAxis:[
@@ -750,35 +698,15 @@
                     }
                 }
             },
-            {
-                type: 'value',
-                name: '合格率',
-                axisLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.5)'
-                    }
-                },
-                splitLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.1)'
-                    }
-                },
-                axisLabel: {
-                    formatter: '{value} %'
-                }
-            }
+
         ],
         series: [
             {
-                name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92, 76, 90, 85, 69, 92, 85, 69],
+                name: '',
+                data: [98, 60, 76, 90, 85, 69, 92, 76, 90, 85, 69, 92,],
                 type: 'bar'
             },
-            {
-                name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92, 80, 90, 88, 77, 92, 88, 77],
-                type: 'line'
-            }
+
         ]
     };
 
@@ -807,7 +735,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['分数', '合格率']
+
         },
         tooltip : {
             trigger: 'axis',
@@ -834,7 +762,7 @@
                     return value.split("").join("\n");
                 }
             },
-            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
 
         },
         yAxis:[
@@ -852,35 +780,15 @@
                     }
                 }
             },
-            {
-                type: 'value',
-                name: '合格率',
-                axisLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.5)'
-                    }
-                },
-                splitLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.1)'
-                    }
-                },
-                axisLabel: {
-                    formatter: '{value} %'
-                }
-            }
+
         ],
         series: [
             {
-                name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
+                name: '',
+                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85,],
                 type: 'bar'
             },
-            {
-                name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92, 60, 60, 80, 90, 88, 77, 92],
-                type: 'line'
-            }
+
         ]
     };
 
@@ -909,7 +817,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['分数', '合格率']
+
         },
         tooltip : {
             trigger: 'axis',
@@ -936,7 +844,7 @@
                     return value.split("").join("\n");
                 }
             },
-            data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
 
         },
         yAxis:[
@@ -954,35 +862,15 @@
                     }
                 }
             },
-            {
-                type: 'value',
-                name: '合格率',
-                axisLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.5)'
-                    }
-                },
-                splitLine:{
-                    lineStyle:{
-                        color:'rgba(255,255,255,.1)'
-                    }
-                },
-                axisLabel: {
-                    formatter: '{value} %'
-                }
-            }
+
         ],
         series: [
             {
-                name: '分数',
-                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85, 69, 92],
+                name: '',
+                data: [98, 60, 76, 90, 85, 69, 92, 98, 60, 76, 90, 85,],
                 type: 'bar'
             },
-            {
-                name: '合格率',
-                data: [60, 60, 80, 90, 88, 77, 92, 60, 60, 80, 90, 88, 77, 92],
-                type: 'line'
-            }
+
         ]
     };
 

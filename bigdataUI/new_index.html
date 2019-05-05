@@ -14,8 +14,8 @@
 <div class="bnt">
   <div class="topbnt_left fl">
    <ul>
-       <li ><a href="new_index.html" >湖北总队</a></li>
-       <li class="active" style="left:125px; position: absolute"><a href="new_index.html" >首页</a></li>
+       <li  style="left:-10px; position: absolute"><a href="new_index.html" >湖北总队</a></li>
+       <li class="active" style="left:100px; position: absolute"><a href="new_index.html" >首页</a></li>
    </ul>
       </ul>
   </div>
@@ -258,7 +258,13 @@
         })
     })
 </script>
-
+<script type="text/javascript">
+    var timer=self.setInterval("remind()",5000)
+    function remind() {
+        Notiflix.Notify.Init();
+        Notiflix.Notify.Warning('武汉支队有新的风险预警情况!');
+    }
+</script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('lpeftmidbot11'));
     option = {

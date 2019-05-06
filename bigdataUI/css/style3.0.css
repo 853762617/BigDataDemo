@@ -221,6 +221,7 @@ html,body{
 .lpeft2bot{background:url(../img/pleft1middb.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width:97.8%; height:24.6%;  margin-top: 4.2%;}
 .lpeftb2otcont1{width:100%; height: 100%;}
 .hdrightboxtop{background:url(../img/hdbjr.png);background-size: 100% 100%; background-repeat: no-repeat;background-position: top center; width:105%; height: 87%;}
+.wnpg{background: rgba(1,202,217,.2) url(../img/icosjx.png) no-repeat  top left; position: relative;overflow: hidden; padding: 2% 6%; color:rgba(255,255,255,1); line-height: 150%}
 .indiv_photo{background:url(../img/photo.jpg);background-size: 100% 100%;width: 90.1%; margin-top: 2%; margin-left: 5.2%;height: 82%;}
 
 .lpeftb2otcont{width: 90.1%;margin-top: 2%; margin-left:5.2%;height: 82%;}

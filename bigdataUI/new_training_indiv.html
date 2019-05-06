@@ -84,7 +84,7 @@
 <!-- left1 -->
 <div class="left1" >
     <div class="mrbox_top_right1">
-        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">体能测试成绩排名统计</h2></a>
+        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">体能测试成绩统计</h2></a>
             <div class="lefttoday_tit" style="height:4%"><p class="fl"></p><p class="fr">更新时间：2018-06-22</p></div>
             <div class="left2_table hdleft2_table">
                 <div id="rank" class="vertical1"></div>
@@ -172,15 +172,10 @@
 <!-- left1 -->
 <!-- left1 -->
 <div class="left6" style="margin-left: 1.0%">
-    <div class="plefttoday5">
-        <div class="plefttoday6" style="height: 102%;float: left;width:49%;margin-right: 1%"><h2 class="tith2" style="margin-top: 1.7%">单位训练成绩统计</h2>
-            <div id="lpeftmidbot11" class="lpeftmidbotcont"></div>
-        </div>
-        <div class="plefttoday6" style="height: 102%;float: left;width:50%"><h2 class="tith2" style="margin-top: 1.7%">单位平均成绩变化趋势</h2>
+        <div class="plefttoday4" style="padding-bottom: 1%"><h2 class="tith2" style="margin-top: 1.7%">平均成绩变化趋势</h2>
             <div id="topic" class="lpeftmidbotcont"></div>
         </div>
-    </div>
-    <div class="plefttoday4" style=""><h2 class="tith2" >单位各项排名统计及推荐</h2>
+    <div class="plefttoday4" style="margin-top: 2%"><h2 class="tith2" >各项排名统计及推荐</h2>
         <div id="lpeftmidbot12" class="lpeftmidbotcont"></div>
     </div>
 </div>
@@ -377,11 +372,11 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['汉江','十堰','宜昌','随州','襄阳','恩施','鄂州','荆门','孝感','荆州','咸宁','黄冈','黄石','武汉']
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
         },
         series: [
             {
-                data: [73, 78, 79, 80, 82, 83, 83, 84, 85, 85, 87, 95, 95, 99],
+                data: [73, 78, 79, 80, 82, 83, 83, 84, 85, 85, 87, 95],
                 type: 'bar',
                 label:{
                     normal:{
@@ -571,7 +566,6 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data:['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江']
         },
         xAxis: [
             {
@@ -620,7 +614,7 @@
             }
         ],
         series: [{
-            name:'武汉',
+            name:'',
             type:'line',
             itemStyle: {
                 normal: {
@@ -633,217 +627,8 @@
                     )
                 }
             },
-            data:[95, 97, 92, 97, 97, 94, 95, 93, 94, 96, 95, 92]
+            data:[95, 84, 76, 97, 97, 94, 64, 93, 94, 96, 95, 92]
         },
-            {
-                name:'黄石',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#60acfc'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[79, 75, 75, 77, 79, 83, 81, 78, 81, 81, 78, 82]
-            },
-            {
-                name:'宜昌',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#60acfc'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[85, 81, 80, 79, 74, 73, 82, 74, 72, 84, 76, 75]
-            },
-            {
-                name:'襄阳',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#32d3eb'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[90, 91, 93, 92, 95, 93, 90, 92, 90, 94, 95, 95]
-            },
-            {
-                name:'鄂州',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#32d3eb'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[51, 66, 61, 50, 67, 48, 46, 60, 61, 61, 47, 62]
-            },
-            {
-                name:'荆门',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#32d3eb'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[72, 71, 71, 70, 72, 72, 72, 71, 72, 69, 72, 72]
-            },
-            {
-                name:'孝感',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#5bc49f'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[80, 75, 79, 75, 79, 78, 79, 79, 79, 79, 79, 76]
-            },
-            {
-                name:'荆州',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#5bc49f'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[50, 40, 47, 53, 53, 44, 47, 59, 48, 46, 57, 51]
-            },
-            {
-                name:'十堰',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#5bc49f'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[82, 88, 87, 82, 88, 84, 87, 82, 82, 84, 86, 81]
-            },
-            {
-                name:'咸宁',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#5bc49f'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[73, 86, 86, 73, 82, 76, 86, 82, 82, 80, 82, 78]
-            },
-            {
-                name:'随州',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#feb64d'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[67, 67, 75, 74, 64, 69, 65, 64, 73, 64, 74, 69]
-            },
-            {
-                name:'黄冈',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#feb64d'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[74, 53, 55, 80, 52, 53, 72, 60, 71, 59, 54, 82]
-            },
-            {
-                name:'恩施',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#feb64d'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[66, 82, 58, 47, 54, 64, 54, 59, 52, 42, 60, 59]
-            },
-            {
-                name:'汉江',
-                type:'line',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#feb64d'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data:[99, 80, 86, 69, 85, 69, 71, 65, 91, 83, 91, 90]
-            }
-
         ]
     };
     myChart.setOption(option);
@@ -890,7 +675,7 @@
                     color:"rgba(255,255,255,.7)"
                 },
 
-                data: ['武汉','黄石','宜昌','襄阳','鄂州','荆门','孝感','荆州','十堰','咸宁','随州','黄冈','恩施','汉江'],
+                data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
                 axisPointer: {
                     type: 'shadow'
                 }
@@ -935,7 +720,7 @@
                         )
                     }
                 },
-                data:[7, 9, 9, 6, 6, 3, 7, 8, 2, 7, 7, 2, 6, 6]
+                data:[7, 9, 9, 6, 6, 3, 7, 8, 2, 7, 7, 2]
             },
             {
                 name:'10米×4往返跑',
@@ -951,7 +736,7 @@
                         )
                     }
                 },
-                data:[3, 5, 8, 5, 8, 3, 10, 10, 3, 3, 9, 3, 6, 5]
+                data:[3, 5, 8, 5, 8, 3, 10, 10, 3, 3, 9, 3]
             },
             {
                 name:'1000米跑',
@@ -967,7 +752,7 @@
                         )
                     }
                 },
-                data:[8, 9, 5, 5, 10, 10, 8, 3, 2, 4, 7, 2, 8, 5]
+                data:[8, 9, 5, 5, 10, 10, 8, 3, 2, 4, 7, 2]
             },
             {
                 name:'原地跳高',
@@ -983,7 +768,7 @@
                         )
                     }
                 },
-                data:[7, 5, 7, 3, 7, 5, 10, 3, 7, 6, 5, 4, 4, 2]
+                data:[7, 5, 7, 3, 7, 5, 10, 3, 7, 6, 5, 4]
             }
         ]
     };

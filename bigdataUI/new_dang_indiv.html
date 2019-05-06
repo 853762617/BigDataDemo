@@ -84,7 +84,7 @@
 <!-- left1 -->
 <div class="left1" >
     <div class="mrbox_top_right1">
-        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">党建积分排名统计</h2></a>
+        <div class="hdrightboxtop" ><a href="" class="tith2" style=" text-decoration: none;color: #ffffff;"><h2 class="tith2">党建积分统计</h2></a>
             <div class="lefttoday_tit" style="height:4%"><p class="fl"></p><p class="fr">更新时间：2018-06-10</p></div>
             <div class="left2_table hdleft2_table">
                 <div id="rank" class="vertical1"></div>
@@ -112,8 +112,21 @@
     <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">党员工作积分</a></h2>
         <div id="pleftbox2top" class="pleftbox2middcont"></div>
     </div>
-    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">困难党员情况</h2>
-        <div id="topic"class="pleftbox2middcont"></div>
+    <div class="plefttoday7"><h2 class="tith2" style="padding-top: 2.3%">党员情况</h2>
+        <div class="left2_table hdleft2_table">
+            <ul>
+                    <li>
+                        <p class="fl"><br>
+                            是否及时缴纳党费：是<br>
+                        </p>
+                    </li>
+                <li class="bg">
+                    <p class="fl"><br>
+                        是否有困难情况：是<br>
+                    </p>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <!--  left1 end -->
@@ -311,11 +324,11 @@
                     color:'rgba(255,255,255,.1)'
                 }
             },
-            data: ['汉江','十堰','宜昌','随州','襄阳','恩施','鄂州','荆门','孝感','荆州','咸宁','黄冈','黄石','武汉']
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
         },
         series: [
             {
-                data: [65, 67, 67, 69, 70, 75, 76, 78, 78, 85, 90, 95, 95, 99],
+                data: [65, 67, 67, 69, 70, 75, 76, 78, 78, 85, 90, 95, ],
                 type: 'bar',
                 label:{
                     normal:{

@@ -85,7 +85,8 @@
                 <input id="bt" style="color:#fff;border:none;padding:5px 15px;border-radius:10px;background:rgba(74,180,255,.9);" type="button" value="切换至个人" onclick="switchs()" >
                 <p class="fr">更新时间：2018-06-22</p></div>
             <div class="left2_table hdleft2_table">
-                <div id="rank" class="vertical1"></div>
+                <div id="rank" class="vertical1" style="display: block;"></div>
+                <div id="rank2" class="vertical1" style="visibility: hidden;"></div>
             </div>
 <!--            <div style="float: left">-->
 <!--                <div style="float:left;margin-left:40%;width: 200px">-->
@@ -236,6 +237,71 @@
 
 <!-- js -->
 <script type="text/javascript">
+    function switchs(){
+        var r1=document.getElementById("rank");
+        var r2=document.getElementById("rank2");
+        var bt=document.getElementById("bt");
+
+        if(r1.style.display=="block"){
+            r1.style.display="none";
+            r2.style.visibility="visible";
+            bt.value="切换至单位";
+        }
+        else{
+            r1.style.display="block";
+            r2.style.visibility="hidden";
+            bt.value="切换至个人";
+        }
+    }
+    function switchs0(){
+        var r1=document.getElementById("page0");
+        var r2=document.getElementById("page1");
+        var bt2=document.getElementById("bt2");
+        var bt3=document.getElementById("bt3");
+        var time=document.getElementById("time");
+
+        if(r1.style.display=="block"){
+            r1.style.display="none";
+            r2.style.display="block";
+            time.style.display="none";
+            bt2.style.display="block";
+            bt3.style.display="block";
+        }
+    }
+    function switchs1(){
+        var r1=document.getElementById("page0");
+        var r2=document.getElementById("page1");
+        var bt=document.getElementById("bt2");
+        if(r1.style.display=="none"){
+            r1.style.display="block";
+            r2.style.display="none";
+            time.style.display="block";
+            bt2.style.display="none";
+            bt3.style.display="none";
+        }
+    }
+    function commit1(){
+        var b1=document.getElementById("bt-co1");
+        var b2=document.getElementById("bt-co2");
+        var time=document.getElementById("bt3");
+        var time1=document.getElementById("time");
+        b1.style.background="rgba(255,255,255,.1)";
+        time.innerText="状态： 已处理";
+        time1.innerText="        已处理总数：16    未处理总数：24";
+        Notiflix.Report.Warning( '预警推送', '已提交处理情况！', 'ok');
+        b1.disabled="disabled";
+
+    }
+    function commit2(){
+        var b1=document.getElementById("bt-co1");
+        var b2=document.getElementById("bt-co2");
+        var time=document.getElementById("bt3");
+        b2.style.background="rgba(255,255,255,.1)";
+        Notiflix.Report.Warning( '预警推送', '已推送至预警单位！', 'ok');
+        b2.disabled="disabled";
+    }
+</script>
+<script type="text/javascript">
     var myChart = echarts.init(document.getElementById('rank'));
     option = {
         backgroundColor: 'rgba(1,202,217,.2)',
@@ -307,6 +373,84 @@
         switch(params.name){
             case '武汉':
                 location.href='new_wuhanindex.html';
+                break;
+            default:
+                break;
+        }
+    });//点击事件，此事件还可以用到柱状图等其他地图
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('rank2'));
+    option = {
+        backgroundColor: 'rgba(1,202,217,.2)',
+
+        color:['#81dabe','#5fc5ce'],
+        grid:{
+            top:'3%',
+            bottom:'6%',
+            left:'20%',
+            right:'15%'
+        },
+        legend: {
+            top: 10,
+            textStyle:{
+                fontSize: 10,
+                color:'rgba(255,255,255,.7)'
+            },
+        },
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}: {c}分",
+        },
+        xAxis: {
+            type: 'value',
+            name: '分',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.9)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+
+        },
+        yAxis: {
+            type: 'category',
+            axisLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,1)'
+                }
+            },
+            splitLine:{
+                lineStyle:{
+                    color:'rgba(255,255,255,.1)'
+                }
+            },
+            data: ['郭宸志','肖思为','胡宏宇','涂杨','李四','李四','李四','李四','李四','李四','李四','李四','张三','岳佳奇']
+        },
+        series: [
+            {
+                data: [15, 28, 34, 44, 50, 56, 60, 72, 74, 75, 80, 94, 98, 100],
+                type: 'bar',
+                label:{
+                    normal:{
+                        show:true,
+                        position:'right',
+                        formatter: "{c}",
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+    myChart.on('click', function(params){
+        console.log(params.name);//此处写点击事件内容
+        switch(params.name){
+            case '岳佳奇':
+                location.href='new_individual.html';
                 break;
             default:
                 break;

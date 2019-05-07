@@ -359,6 +359,15 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('lpeftmidbot'));
     option = {
+        title:{
+            show:true,
+            text:'党建积分平均成绩',
+            x:'center',
+            textStyle:{
+                color:'rgba(255,255,255,.7)',
+                fontSize:16,
+            },
+        },
         backgroundColor: 'rgba(1,202,217,.2)',
 
         color:['#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
@@ -429,6 +438,15 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('consume'));
     option = {
+        title:{
+            show:true,
+            text:'网络消费总体情况',
+            x:'center',
+            textStyle:{
+                color:'rgba(255,255,255,.7)',
+                fontSize:16,
+            },
+        },
         backgroundColor: 'rgba(1,202,217,.2)',
         color:['#d2d17c','#7fd7b1', '#7091cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
         tooltip: {
@@ -446,7 +464,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['合格','未参与','不合格']
+            data: ['','','合格','未参与','不合格']
         },
         series: [
             {
@@ -469,8 +487,8 @@
     var myChart = echarts.init(document.getElementById('pleftbox2top'));
     option = {
         title:{
-            show:false,
-            text:'心理健康情况',
+            show:true,
+            text:'心理健康总体统计',
             x:'center',
             textStyle:{
                 color:'rgba(255,255,255,.7)',
@@ -494,7 +512,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['健康人数','未参与人数','不健康人数']
+            data: ['','','健康人数','未参与人数','不健康人数']
         },
         series: [{
             type:'pie',
@@ -520,6 +538,15 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
     option = {
+        title:{
+            show:true,
+            text:'绩效考核总体统计\n',
+            x:'center',
+            textStyle:{
+                color:'rgba(255,255,255,.7)',
+                fontSize:16,
+            },
+        },
         color:['#d88b74','#d2d17c','#00b7ee', '#5578cf'],
         backgroundColor: 'rgba(1,202,217,.2)',
         grid:{
@@ -538,7 +565,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['不称职','基本称职','称职','优秀']
+            data: ['','','不称职','基本称职','称职','优秀']
         },
         series: [
             {
@@ -565,6 +592,15 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('prbottom_box1'));
     option = {
+        title:{
+            show:true,
+            text:'思想政治总体情况\n',
+            x:'center',
+            textStyle:{
+                color:'rgba(255,255,255,.7)',
+                fontSize:16,
+            },
+        },
         backgroundColor: 'rgba(1,202,217,.2)',
         color:['#d8715a','#d7d26d', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
         tooltip : {
@@ -576,7 +612,7 @@
                 fontSize: 10,
                 color:'rgba(255,255,255,.7)'
             },
-            data: ['异常','不积极','积极']
+            data: ['','','异常','不积极','积极']
         },
         series : [
             {
@@ -603,6 +639,15 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('prbottom_box2'));
     option = {
+        title:{
+            show:true,
+            text:'体能训练平均成绩\n',
+            x:'center',
+            textStyle:{
+                color:'rgba(255,255,255,.7)',
+                fontSize:16,
+            },
+        },
         backgroundColor: 'rgba(1,202,217,.2)',
         color:['#d2d17c','#7fd7b1', '#5578cf', '#5ebbeb', '#d16ad8','#f8e19a',  '#00b7ee', '#81dabe','#5fc5ce'],
         tooltip: {
